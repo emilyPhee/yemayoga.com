@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import { ChakraProvider } from "@chakra-ui/react";
+import { ThemeProvider } from "@emotion/react";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  const getLayout = Component.getLayout || ((page) => page);
+
+  return (
+    <ThemeProvider>
+      <ChakraProvider>{getLayout(<Component {...pageProps} />)}</ChakraProvider>
+    </ThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
