@@ -1,8 +1,8 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from 'react';
 
 const supportLanguages = Object.freeze({
-  English: Symbol("en"),
-  Korean: Symbol("kr"),
+  English: Symbol('en'),
+  Korean: Symbol('kr'),
 });
 
 const LanguageContext = createContext();

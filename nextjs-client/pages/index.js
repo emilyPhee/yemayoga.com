@@ -1,5 +1,5 @@
-import Layout from "@components/Layout";
-import styled from "@emotion/styled";
+import Layout from '@components/Layout';
+import styled from '@emotion/styled';
 
 const Container = styled.div``;
 export default function Home() {
