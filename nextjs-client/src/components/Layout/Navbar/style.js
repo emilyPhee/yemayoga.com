@@ -13,9 +13,13 @@ export const Container = styled.div`
     background-color: green;
 
     .logo-wrapper {
-      width: 140px;
-      height: 30px;
+      width: 120px;
+      height: 47px;
       position: relative;
+    }
+
+    .menu-items-wrapper {
+      display: flex;
     }
   }
 
@@ -24,4 +28,10 @@ export const Container = styled.div`
     height: 100%;
     background-color: green;
   }
+`;
+
+export const MenuItem = styled.div`
+  background-color: grey;
+  padding: 2rem;
+  font-size: 1.8rem;
 `;

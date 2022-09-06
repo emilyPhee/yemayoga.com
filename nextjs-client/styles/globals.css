@@ -7,6 +7,13 @@
 }
 
 html {
+  /* 
+  what we want is 10px, so divide default px (16px) to 10 
+  10/16 = 0.625 
+  .625*16 = 10
+  we are converting this to percent because each user may have different font size as a default
+  so that we want to provide the right font size according to user's default value (px)
+  */
   font-size: 62.5%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
