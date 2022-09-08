@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
+import { theme } from '@styles/theme';
 
 export const Container = styled.div`
   display: flex;
@@ -48,20 +49,18 @@ export const Container = styled.div`
 `;
 
 export const MenuItem = styled.div`
+  color: ${theme.colors.navbarInactive};
   padding: 1.5rem 2.6rem;
   font-size: 1.5rem;
 
   &:hover {
-    color: #101010;
+    color: ${theme.colors.navbarActive};
   }
 
   ${({ active }) =>
     active
       ? css`
-          /* border: 1px solid red;  */
-          color: ${'#101010'};
+          color: ${theme.colors.navbarActive};
         `
-      : css`
-          color: ${'#B3B3B3'};
-        `}
+      : null}
 `;
