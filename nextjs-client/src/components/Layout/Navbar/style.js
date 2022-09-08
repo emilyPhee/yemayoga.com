@@ -18,6 +18,7 @@ export const Container = styled.div`
       height: 4.5rem;
       position: relative;
       margin: 1rem;
+      cursor: pointer;
     }
 
     .menu-items-wrapper {
@@ -51,7 +52,8 @@ export const Container = styled.div`
 export const MenuItem = styled.div`
   color: ${theme.colors.navbarInactive};
   padding: 1.5rem 2.6rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  transition: color 300ms ease-in-out;
 
   &:hover {
     color: ${theme.colors.navbarActive};

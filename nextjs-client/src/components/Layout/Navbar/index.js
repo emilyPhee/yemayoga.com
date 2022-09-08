@@ -10,23 +10,25 @@ const Navbar = ({ currentPage }) => {
     <Container>
       <div className="left-box">
         <div className="logo-wrapper">
-          <Image src="/images/logo.png" alt="logo" layout="fill" />
+          <Link href="/">
+            <Image src="/images/logo.png" alt="logo" layout="fill" />
+          </Link>
         </div>
         <div className="menu-items-wrapper">
           <MenuItem active={currentPage === 'home'}>
-            <Link href="/">Home</Link>
+            <Link href="/">HOME</Link>
           </MenuItem>
 
           <MenuItem active={currentPage === 'about'}>
-            <Link href="/about">About</Link>
+            <Link href="/about">ABOUT</Link>
           </MenuItem>
 
           <MenuItem active={currentPage === 'schedule'}>
-            <Link href="/schedule">Schedule</Link>
+            <Link href="/schedule">SCHEDULE</Link>
           </MenuItem>
 
           <MenuItem active={currentPage === 'contact'}>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">CONTACT</Link>
           </MenuItem>
         </div>
       </div>
