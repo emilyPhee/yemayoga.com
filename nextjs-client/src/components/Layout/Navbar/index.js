@@ -3,11 +3,9 @@ import { Container, MenuItem } from './style';
 import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-// import the icons you need
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-const Navbar = props => {
+const Navbar = ({ currentPage }) => {
   return (
     <Container>
       <div className="left-box">
@@ -15,19 +13,19 @@ const Navbar = props => {
           <Image src="/images/logo.png" alt="logo" layout="fill" />
         </div>
         <div className="menu-items-wrapper">
-          <MenuItem>
+          <MenuItem active={currentPage === 'home'}>
             <Link href="/">Home</Link>
           </MenuItem>
 
-          <MenuItem>
+          <MenuItem active={currentPage === 'about'}>
             <Link href="/about">About</Link>
           </MenuItem>
 
-          <MenuItem>
+          <MenuItem active={currentPage === 'schedule'}>
             <Link href="/schedule">Schedule</Link>
           </MenuItem>
 
-          <MenuItem>
+          <MenuItem active={currentPage === 'contact'}>
             <Link href="/contact">Contact</Link>
           </MenuItem>
         </div>

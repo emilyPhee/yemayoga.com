@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 export const Container = styled.div`
   display: flex;
@@ -12,8 +13,8 @@ export const Container = styled.div`
     align-items: center;
 
     .logo-wrapper {
-      width: 11rem;
-      height: 4.6rem;
+      width: 10rem;
+      height: 4.5rem;
       position: relative;
       margin: 1rem;
     }
@@ -37,16 +38,30 @@ export const Container = styled.div`
     width: 5rem;
     height: 5rem;
 
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 
   .language-toggle-wrapper {
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `;
 
 export const MenuItem = styled.div`
-  padding: 2rem 2.6rem;
-  font-size: 1.7rem;
+  padding: 1.5rem 2.6rem;
+  font-size: 1.5rem;
+
+  &:hover {
+    color: #101010;
+  }
+
+  ${({ active }) =>
+    active
+      ? css`
+          /* border: 1px solid red;  */
+          color: ${'#101010'};
+        `
+      : css`
+          color: ${'#B3B3B3'};
+        `}
 `;

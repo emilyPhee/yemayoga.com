@@ -1,10 +1,10 @@
 import Navbar from './Navbar';
 import { Container } from './style';
 
-const Layout = ({ children }) => {
+const Layout = ({ currentPage, children }) => {
   return (
     <Container>
-      <Navbar />
+      <Navbar currentPage={currentPage} />
       {children}
     </Container>
   );

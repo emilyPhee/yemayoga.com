@@ -1,5 +1,9 @@
-const Contact = () => {
-  return <h1>Contact Page</h1>;
-};
+import Layout from '@components/Layout';
 
-export default Contact;
+export default function Contact() {
+  return <h1>Contact Page</h1>;
+}
+
+Contact.getLayout = function getLayout(page) {
+  return <Layout currentPage="contact">{page}</Layout>;
+};
