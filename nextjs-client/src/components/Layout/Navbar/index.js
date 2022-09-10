@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import LanguageToggle from '@components/LanguageToggle';
 
 const Navbar = ({ currentPage }) => {
   return (
@@ -16,19 +17,19 @@ const Navbar = ({ currentPage }) => {
         </div>
         <div className="menu-items-wrapper">
           <MenuItem active={currentPage === 'home'}>
-            <Link href="/">HOME</Link>
+            <Link href="/">Home</Link>
           </MenuItem>
 
           <MenuItem active={currentPage === 'about'}>
-            <Link href="/about">ABOUT</Link>
+            <Link href="/about">About</Link>
           </MenuItem>
 
           <MenuItem active={currentPage === 'schedule'}>
-            <Link href="/schedule">SCHEDULE</Link>
+            <Link href="/schedule">Schedule</Link>
           </MenuItem>
 
           <MenuItem active={currentPage === 'contact'}>
-            <Link href="/contact">CONTACT</Link>
+            <Link href="/contact">Contact</Link>
           </MenuItem>
         </div>
       </div>
@@ -36,7 +37,9 @@ const Navbar = ({ currentPage }) => {
         <div className="insta-icon-wrapper">
           <FontAwesomeIcon icon={faInstagram} />
         </div>
-        <div className="language-toggle-wrapper">KR | EN</div>
+        <div className="language-toggle-wrapper">
+          <LanguageToggle />
+        </div>
       </div>
     </Container>
   );
