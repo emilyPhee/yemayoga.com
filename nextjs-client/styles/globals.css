@@ -1,16 +1,42 @@
-html,
-body {
-  padding: 0;
+*,
+*::after,
+*::before {
   margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 
+  what we want is 10px, so divide default px (16px) to 10 
+  10/16 = 0.625 
+  .625*16 = 10
+  we are converting this to percent because each user may have different font size as a default
+  so that we want to provide the right font size according to user's default value (px)
+  */
+  font-size: 62.5%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 63.75%;
+  }
 }
 
-* {
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 72.5%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 77.5%;
+  }
+}
+
+body {
   box-sizing: border-box;
 }
