@@ -5,7 +5,8 @@ export const Container = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${theme.colors.footerBg};
+  background-color: ${theme.colors.brandColor1};
+  font-family: ${theme.fonts.nunito};
   height: 27rem;
   position: relative;
 
@@ -17,6 +18,7 @@ export const Container = styled.footer`
     font-size: 1.5rem;
     padding: 1rem 0;
     letter-spacing: 0.3rem;
+    font-weight: 600;
   }
 
   .info {
