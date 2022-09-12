@@ -9,10 +9,7 @@ export const Container = styled.footer`
   font-family: ${theme.fonts.nunito};
   height: 27rem;
   position: relative;
-
-  .left-box {
-    padding: 3rem 9.4rem;
-  }
+  padding: 0 ${theme.sizes.paddingFullScreen};
 
   .title {
     font-size: 1.5rem;
@@ -35,13 +32,10 @@ export const Container = styled.footer`
     font-size: 1.4rem;
   }
 
-  .right-box {
-    padding: 8rem;
-  }
-
   .copyright {
     position: absolute;
     bottom: 0;
+    left: 0;
     font-size: 1.3rem;
     padding: 5px;
   }

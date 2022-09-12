@@ -8,9 +8,9 @@ export const theme = {
     bodyBg: '#F5F5F5',
     navbarActive: '#333333',
     navbarInactive: '#B9B9B9',
-    darkText: '#171717',
-    mediumDarkText: '#404040',
-    lightDarkText: '#575757',
+    blackText: '#171717',
+    mediumBlackText: '#404040',
+    greyText: '#575757',
     whiteText: '#FFFFFF',
   },
   fonts: {
@@ -19,9 +19,9 @@ export const theme = {
     nunito: 'Nunito, sans-serif',
   },
   sizes: {
-    marginFullScreen: '9.5rem',
-    marginMediumScreen: '',
-    marginSmallScreen: '',
+    paddingFullScreen: '9.5rem',
+    paddingMediumScreen: '',
+    paddingSmallScreen: '',
   },
 };
 
