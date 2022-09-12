@@ -46,8 +46,6 @@ export const Container = styled.div`
     font-size: 2.1rem;
   }
 
-  .language-toggle-wrapper {
-  }
 `;
 
 export const MenuItem = styled.div`
