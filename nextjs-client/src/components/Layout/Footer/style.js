@@ -28,12 +28,12 @@ export const Container = styled.footer`
     align-items: center;
     justify-content: space-between;
     width: 8.5rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     font-size: 1.4rem;
   }
 
   .right-box {
-    /* margin-right: 7rem; */
     padding: 8rem;
   }
 
@@ -41,6 +41,6 @@ export const Container = styled.footer`
     position: absolute;
     bottom: 0;
     font-size: 1.3rem;
-    padding: 3px;
+    padding: 5px;
   }
 `;

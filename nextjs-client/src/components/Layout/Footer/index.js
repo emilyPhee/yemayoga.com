@@ -24,11 +24,11 @@ const Footer = () => {
           src="/images/footer-logo.png"
           alt="footer logo"
           layout="fixed"
-          width={170}
-          height={180}
+          width={130}
+          height={140}
         />
       </div>
-      <p className="copyright"> 2022 yemayoga. All right reserved</p>
+      <p className="copyright"> © 2022 yemayoga. All right reserved</p>
     </Container>
   );
 };
