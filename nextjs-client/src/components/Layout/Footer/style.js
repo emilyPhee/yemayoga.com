@@ -33,9 +33,8 @@ export const Container = styled.footer`
   }
 
   .right-box {
-    width: 23rem;
-    height: 16rem;
-    margin-right: 7em;
+    /* margin-right: 7rem; */
+    padding: 8rem;
   }
 
   .copyright {

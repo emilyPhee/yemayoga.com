@@ -23,9 +23,9 @@ const Footer = () => {
         <Image
           src="/images/footer-logo.png"
           alt="footer logo"
-          layout="intrinsic"
-          width={294}
-          height={213}
+          layout="fixed"
+          width={170}
+          height={180}
         />
       </div>
       <p className="copyright"> 2022 yemayoga. All right reserved</p>

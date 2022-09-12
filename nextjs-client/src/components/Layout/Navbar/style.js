@@ -5,8 +5,8 @@ import { theme } from '@styles/theme';
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  /* position: sticky;
-  top: 0; */
+  position: sticky;
+  top: 0;
   height: 6rem;
   background-color: white;
   padding: 0 9.4rem;
