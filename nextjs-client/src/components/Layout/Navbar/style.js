@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { theme } from '@styles/theme';
 
-export const Container = styled.div`
+export const Container = styled.nav`
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -45,7 +45,6 @@ export const Container = styled.div`
 
     font-size: 2.1rem;
   }
-
 `;
 
 export const MenuItem = styled.div`

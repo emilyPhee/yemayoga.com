@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { theme } from '@styles/theme';
 
-export const Container = styled.footer`
+export const Container = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
