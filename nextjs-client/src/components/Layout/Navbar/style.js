@@ -7,7 +7,7 @@ export const Container = styled.nav`
   justify-content: space-between;
   position: sticky;
   top: 0;
-  height: 6rem;
+  height: 6.5rem;
   background-color: white;
   padding: 0 9.4rem;
 
@@ -44,6 +44,7 @@ export const Container = styled.nav`
     height: 5rem;
 
     font-size: 2.1rem;
+    color: ${theme.colors.greyText};
   }
 `;
 

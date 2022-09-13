@@ -4,7 +4,7 @@ import { theme } from '@styles/theme';
 
 const Container = styled.section`
   background: url('/images/home-intro.jpg') center/cover no-repeat;
-  height: 93vh;
+  height: 92vh;
   color: ${theme.colors.whiteText};
   font-family: ${theme.fonts.cantarell};
   padding-left: ${theme.sizes.paddingFullScreen};
