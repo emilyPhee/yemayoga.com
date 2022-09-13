@@ -11,11 +11,11 @@ const Container = styled.section`
   padding-top: 18rem;
 
   .title {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .introduction {
-    font-size: 2.3rem;
+    font-size: 2rem;
     width: 50rem;
   }
 `;
