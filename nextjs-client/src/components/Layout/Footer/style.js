@@ -8,9 +8,13 @@ export const Container = styled.section`
   background-color: ${theme.colors.brandColor1};
   font-family: ${theme.fonts.nunito};
   height: 27rem;
-  position: relative;
-  padding: 0 ${theme.sizes.paddingFullScreen};
 
+  padding: 0 ${theme.sizes.paddingFullScreen};
+  position: relative;
+
+  .left-box {
+    margin-top: 2rem;
+  }
   .title {
     font-size: 1.5rem;
     padding: 1rem 0;
@@ -33,10 +37,12 @@ export const Container = styled.section`
   }
 
   .copyright {
+    font-size: 1.3rem;
     position: absolute;
     bottom: 0;
-    left: 0;
-    font-size: 1.3rem;
-    padding: 5px;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: ${theme.colors.greyText};
   }
 `;

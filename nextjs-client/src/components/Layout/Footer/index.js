@@ -28,6 +28,7 @@ const Footer = () => {
           height={140}
         />
       </div>
+
       <p className="copyright"> © 2022 yemayoga. All right reserved</p>
     </Container>
   );
