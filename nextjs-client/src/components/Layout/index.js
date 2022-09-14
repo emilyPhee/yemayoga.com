@@ -1,3 +1,4 @@
+import Footer from './Footer';
 import Navbar from './Navbar';
 import { Container } from './style';
 
@@ -6,6 +7,7 @@ const Layout = ({ currentPage, children }) => {
     <Container>
       <Navbar currentPage={currentPage} />
       {children}
+      <Footer />
     </Container>
   );
 };
