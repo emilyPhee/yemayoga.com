@@ -21,16 +21,6 @@ const yogaClassesData = [
     duration: null,
     level: ['Beginner'],
   },
-  {
-    name: 'Private',
-    duration: null,
-    level: ['Beginner'],
-  },
-  {
-    name: 'Private',
-    duration: null,
-    level: ['Beginner'],
-  },
 ];
 
 const Container = styled.div``;

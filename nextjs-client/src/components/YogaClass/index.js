@@ -8,7 +8,7 @@ const YogaClass = ({ classInfo }) => {
     <Container>
       <div className="class-img">
         <Image
-          alt=""
+          alt="yoga class"
           width={4096}
           height={3072}
           src="/images/temp.jpg"

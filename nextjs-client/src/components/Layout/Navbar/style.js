@@ -11,6 +11,7 @@ export const Container = styled.div`
   background-color: white;
   padding: 0 9.4rem;
   z-index: 10;
+  /* border-bottom: 0.5px solid ${theme.colors.navbarInactive}; */
 
   .left-box {
     display: flex;
