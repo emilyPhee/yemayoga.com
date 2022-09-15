@@ -11,11 +11,12 @@ export const theme = {
     blackText: '#171717',
     mediumBlackText: '#404040',
     greyText: '#575757',
+    lightGreyText: '#7A7A7A',
     whiteText: '#FFFFFF',
   },
   fonts: {
     cantarell: 'Cantarell, sans-serif',
-    sansSerif: 'Nanum Gothic, sans-serif',
+    nanumGothic: 'Nanum Gothic, sans-serif',
     nunito: 'Nunito, sans-serif',
   },
   sizes: {

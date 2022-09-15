@@ -10,6 +10,7 @@ export const Container = styled.div`
   height: 6rem;
   background-color: white;
   padding: 0 9.4rem;
+  z-index: 10;
 
   .left-box {
     display: flex;
@@ -45,7 +46,6 @@ export const Container = styled.div`
 
     font-size: 2.1rem;
   }
-
 `;
 
 export const MenuItem = styled.div`
