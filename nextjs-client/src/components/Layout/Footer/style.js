@@ -9,7 +9,7 @@ export const Container = styled.footer`
   font-family: ${theme.fonts.nunito};
   height: 27rem;
   position: relative;
-  padding: 0 ${theme.sizes.paddingFullScreen};
+  padding: 2rem ${theme.sizes.paddingFullScreen};
 
   .title {
     font-size: 1.5rem;

@@ -3,34 +3,14 @@ import YogaClassesList from '@components/YogaClassList';
 import styled from '@emotion/styled';
 import client from '@sanity-client/client';
 import { yogaClassesQuery } from '@sanity-client/queries/index';
-import Image from 'next/image';
-// temporary mock data
-const yogaClassesData = [
-  {
-    name: 'Ashtanga',
-    duration: 90,
-    level: ['All level'],
-  },
-  {
-    name: 'Vinyaga',
-    duration: 90,
-    level: ['Beginner', 'Intermediate'],
-  },
-  {
-    name: 'Private',
-    duration: null,
-    level: ['Beginner'],
-  },
-];
 
 const Container = styled.div``;
 export default function Home({ data }) {
+  console.log('data from home', data);
   return (
     <Container>
       <h1>Home Page</h1>
-
-      {/* temporary mock data */}
-      <YogaClassesList classData={yogaClassesData} />
+      <YogaClassesList data={data} />
     </Container>
   );
 }

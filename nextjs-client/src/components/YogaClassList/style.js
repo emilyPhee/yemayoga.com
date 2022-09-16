@@ -15,7 +15,9 @@ export const Container = styled.section`
   }
 
   .title {
-    font-size: 1.9rem;
+    font-size: ${theme.sizes.fontsTitleSize};
     padding: 2rem;
+    font-family: ${theme.fonts.nanumGothic};
+    color: ${theme.colors.greyText};
   }
 `;

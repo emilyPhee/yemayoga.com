@@ -1,9 +1,8 @@
 import { Container } from './style';
 import Image from 'next/image';
 
-const YogaClass = ({ classInfo }) => {
-  const { name, duration, level } = classInfo;
-  console.log('name', name);
+const YogaClass = ({ data }) => {
+  const { duration, level, name } = data;
   return (
     <Container>
       <div className="class-img">
@@ -16,7 +15,6 @@ const YogaClass = ({ classInfo }) => {
         />
         <h4 className="name">{name}</h4>
       </div>
-
       <p className="level">
         {level.length === 1 ? level : `${level[0]} | ${level[1]}`}
       </p>
