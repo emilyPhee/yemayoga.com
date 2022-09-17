@@ -26,7 +26,6 @@ const Container = styled.section`
 `;
 
 export default function Home({ data }) {
-  console.log('data from home', data);
   return (
     <Container>
       <div className="home-intro">
