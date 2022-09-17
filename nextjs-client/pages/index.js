@@ -3,13 +3,34 @@ import YogaClassesList from '@components/YogaClassList';
 import styled from '@emotion/styled';
 import client from '@sanity-client/client';
 import { yogaClassesQuery } from '@sanity-client/queries/index';
+import { theme } from '@styles/theme';
 
-const Container = styled.div``;
+const Container = styled.section`
+  background: url('/images/home-intro.jpg') center/cover no-repeat;
+  height: 92vh;
+  color: ${theme.colors.whiteText};
+  font-family: ${theme.fonts.cantarell};
+  padding-left: ${theme.sizes.paddingFullScreen};
+  padding-top: 18rem;
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .introduction {
+    font-size: 2rem;
+    width: 50rem;
+  }
+`;
+
 export default function Home({ data }) {
   console.log('data from home', data);
   return (
     <Container>
-      <h1>Home Page</h1>
+      <h1 className="title">Breathe and move with Yemayoga </h1>
+      <p className="introduction">
+        See yourself grow through yoga and learn how you feel you can do it.
+      </p>
       <YogaClassesList data={data} />
     </Container>
   );

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { theme } from '@styles/theme';
 
-export const Container = styled.footer`
+export const Container = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +11,10 @@ export const Container = styled.footer`
   position: relative;
   padding: 2rem ${theme.sizes.paddingFullScreen};
 
+
+  .left-box {
+    margin-top: 2rem;
+  }
   .title {
     font-size: 1.5rem;
     padding: 1rem 0;
@@ -33,10 +37,12 @@ export const Container = styled.footer`
   }
 
   .copyright {
+    font-size: 1.3rem;
     position: absolute;
     bottom: 0;
-    left: 0;
-    font-size: 1.3rem;
-    padding: 5px;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: ${theme.colors.greyText};
   }
 `;

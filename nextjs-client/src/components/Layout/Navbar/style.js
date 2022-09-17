@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { theme } from '@styles/theme';
 
-export const Container = styled.div`
+export const Container = styled.nav`
   display: flex;
   justify-content: space-between;
   position: sticky;
   top: 0;
-  height: 6rem;
+  height: 6.5rem;
   background-color: white;
   padding: 0 9.4rem;
   z-index: 10;
@@ -46,6 +46,7 @@ export const Container = styled.div`
     height: 5rem;
 
     font-size: 2.1rem;
+    color: ${theme.colors.greyText};
   }
 `;
 
