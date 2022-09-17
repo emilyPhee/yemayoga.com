@@ -1,5 +1,7 @@
 import Layout from '@components/Layout';
 import styled from '@emotion/styled';
+import client from '@sanity-client/client';
+import { yogaClassesQuery } from '@sanity-client/queries/index';
 import { theme } from '@styles/theme';
 
 const Container = styled.section`
@@ -20,7 +22,7 @@ const Container = styled.section`
   }
 `;
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <Container>
       <h1 className="title">Breathe and move with Yemayoga </h1>
@@ -34,3 +36,16 @@ export default function Home() {
 Home.getLayout = function getLayout(page) {
   return <Layout currentPage="home">{page}</Layout>;
 };
+
+export async function getStaticProps() {
+  const yogaClassData = await client.fetch(yogaClassesQuery);
+
+  const data = { yogaClassData };
+
+  return {
+    props: {
+      data,
+    },
+    revalidate: 10,
+  };
+}
