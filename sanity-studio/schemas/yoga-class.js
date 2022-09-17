@@ -10,6 +10,14 @@ export default {
       validation: (Rule) => Rule.required().max(80),
     },
     {
+      title: 'Card image',
+      name: 'image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       title: 'Duration in minutes',
       name: 'duration',
       type: 'number',
@@ -34,6 +42,12 @@ export default {
       name: 'monthlyPrice',
       type: 'number',
       validation: (Rule) => Rule.min(0),
+    },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+      hidden: true,
     },
   ],
 };
