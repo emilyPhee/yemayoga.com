@@ -1,4 +1,5 @@
 import Layout from '@components/Layout';
+import YogaClassesList from '@components/YogaClassList';
 import styled from '@emotion/styled';
 import client from '@sanity-client/client';
 import { yogaClassesQuery } from '@sanity-client/queries/index';
@@ -23,12 +24,14 @@ const Container = styled.section`
 `;
 
 export default function Home({ data }) {
+  console.log('data from home', data);
   return (
     <Container>
       <h1 className="title">Breathe and move with Yemayoga </h1>
       <p className="introduction">
         See yourself grow through yoga and learn how you feel you can do it.
       </p>
+      <YogaClassesList data={data} />
     </Container>
   );
 }

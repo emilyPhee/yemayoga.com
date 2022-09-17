@@ -8,9 +8,9 @@ export const Container = styled.section`
   background-color: ${theme.colors.brandColor1};
   font-family: ${theme.fonts.nunito};
   height: 27rem;
-
-  padding: 0 ${theme.sizes.paddingFullScreen};
   position: relative;
+  padding: 2rem ${theme.sizes.paddingFullScreen};
+
 
   .left-box {
     margin-top: 2rem;
