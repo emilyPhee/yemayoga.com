@@ -28,6 +28,11 @@ export const theme = {
     fontsDescriptionTitleSub: '1.7rem',
     fontsSystemTitle: '2.2rem',
   },
+  mediaQuery: {
+    desktop: '@media screen and (min-width: 1024px)',
+    tablet: '@media screen and (min-width: 768px) and (max-width: 1023px)',
+    smartphone: '@media screen and (max-width: 767px)',
+  },
 };
 
 export const chakraExtendedTheme = extendTheme({});
