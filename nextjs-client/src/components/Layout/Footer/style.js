@@ -11,7 +11,6 @@ export const Container = styled.section`
   position: relative;
   padding: 2rem ${theme.sizes.paddingFullScreen};
 
-
   .left-box {
     margin-top: 2rem;
   }
