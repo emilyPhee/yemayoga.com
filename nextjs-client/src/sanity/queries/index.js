@@ -1,6 +1,6 @@
 export const yogaClassesQuery = `
 	*[_type == 'yogaClass'] | order(order asc)
 	{
-  	name, duration, level
+  	name, duration, level, image
 	}
 `;

@@ -5,29 +5,33 @@ export const Container = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 4rem;
+  margin: 2rem 6rem;
 
   .class-img {
-    width: 29rem;
+    width: 25rem;
+    height: 32rem;
     position: relative;
     margin-bottom: 1.5rem;
   }
 
   .name {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
+    bottom: 1.5rem;
+    left: 2rem;
     color: ${theme.colors.whiteText};
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
   }
 
   .level,
   .duration {
-    font-size: 1.1rem;
-    text-transform: uppercase;
+    font-size: 1.3rem;
     color: ${theme.colors.lightGreyText};
     font-family: ${theme.fonts.nanumGothic};
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .level {
+    padding-bottom: 0.3rem;
   }
 `;

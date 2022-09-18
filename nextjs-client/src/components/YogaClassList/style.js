@@ -6,7 +6,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 0;
+  padding: 10rem 0 12rem 0;
 
   .class-list {
     display: flex;
@@ -16,7 +16,7 @@ export const Container = styled.section`
 
   .title {
     font-size: ${theme.sizes.fontsTitleSize};
-    padding: 2rem;
+    margin-bottom: 4rem;
     font-family: ${theme.fonts.nanumGothic};
     color: ${theme.colors.greyText};
   }

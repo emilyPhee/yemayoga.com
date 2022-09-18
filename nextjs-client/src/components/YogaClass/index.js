@@ -1,26 +1,22 @@
 import { Container } from './style';
 import Image from 'next/image';
+import { urlFor } from '../../sanity/image-url';
 
 const YogaClass = ({ data }) => {
-  const { duration, level, name } = data;
+  const { duration, level, name, image } = data;
+
   return (
     <Container>
-      <div className="class-img">
+      <div className='class-img'>
         <Image
-          alt="yoga class"
-          width={4096}
-          height={3072}
-          src="/images/temp.jpg"
-          layout="responsive"
+          alt='yoga class'
+          src={urlFor(image).width(250).height(320).url()}
+          layout='fill'
         />
-        <h4 className="name">{name}</h4>
+        <h4 className='name'>{name}</h4>
       </div>
-      <p className="level">
-        {level.length === 1 ? level : `${level[0]} | ${level[1]}`}
-      </p>
-      <p className="duration">
-        {duration} {duration ? 'MIN' : ''}
-      </p>
+      <p className='level'>{level.join(' | ')}</p>
+      {duration ? <p className='duration'>{`${duration} min`}</p> : null}
     </Container>
   );
 };
