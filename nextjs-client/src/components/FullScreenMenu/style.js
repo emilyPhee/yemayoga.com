@@ -2,15 +2,13 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { theme } from '@styles/theme';
 
-export const Container = styled.nav`
+export const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
   min-height: 7vh;
   background-color: white;
   padding: 0 9.4rem;
-  z-index: 10;
+
   /* border-bottom: 0.5px solid ${theme.colors.navbarInactive}; */
 
   .left-box {
@@ -51,14 +49,6 @@ export const Container = styled.nav`
 
   ${theme.mediaQuery.tablet} {
     background-color: aliceblue;
-    /* .left-box {
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .menu-items-wrapper {
-      flex-direction: column;
-    } */
   }
 `;
 

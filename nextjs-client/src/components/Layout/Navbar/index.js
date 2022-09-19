@@ -7,6 +7,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import LanguageToggle from '@components/LanguageToggle';
 import FullScreenMenu from '@components/FullScreenMenu';
 import { useCallback, useEffect, useState } from 'react';
+import HamburgerMenu from '@components/HamburgerMenu';
 
 const useMediaQUery = width => {
   const [targetReached, setTargetReached] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = ({ currentPage }) => {
   return (
     <Container>
       {isBreakpoint ? (
-        <h1>Hamburger menu</h1>
+        <HamburgerMenu />
       ) : (
         <FullScreenMenu currentPage={currentPage} />
       )}

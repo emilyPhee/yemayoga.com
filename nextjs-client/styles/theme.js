@@ -21,7 +21,7 @@ export const theme = {
   },
   sizes: {
     paddingFullScreen: '9.5rem',
-    paddingMediumScreen: '',
+    paddingMediumScreen: '2.5rem',
     paddingSmallScreen: '',
     fontsTitleSize: '2.1rem',
     fontsDescriptionTitle: '2.7rem',
