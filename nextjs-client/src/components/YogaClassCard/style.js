@@ -7,11 +7,21 @@ export const Container = styled.li`
   align-items: center;
   margin: 2rem 6rem;
 
-  .class-img {
+  .card-wrapper {
+    position: relative;
     width: 25rem;
     height: 30rem;
-    position: relative;
     margin-bottom: 1.5rem;
+    background-color: black;
+  }
+
+  .class-img {
+    transition: all 200ms ease-in-out;
+  }
+
+  .class-img:hover {
+    opacity: 0.5;
+    cursor: pointer;
   }
 
   .name {
