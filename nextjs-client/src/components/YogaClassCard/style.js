@@ -9,7 +9,7 @@ export const Container = styled.li`
 
   .class-img {
     width: 25rem;
-    height: 32rem;
+    height: 30rem;
     position: relative;
     margin-bottom: 1.5rem;
   }
@@ -29,6 +29,7 @@ export const Container = styled.li`
     color: ${theme.colors.lightGreyText};
     font-family: ${theme.fonts.nanumGothic};
     letter-spacing: 0.1rem;
+    text-transform: capitalize;
   }
 
   .level {

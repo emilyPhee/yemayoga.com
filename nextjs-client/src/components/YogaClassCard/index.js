@@ -2,7 +2,7 @@ import { Container } from './style';
 import Image from 'next/image';
 import { urlFor } from '../../sanity/image-url';
 
-const YogaClass = ({ data }) => {
+const YogaClassCard = ({ data }) => {
   const { duration, level, name, image } = data;
 
   return (
@@ -10,7 +10,7 @@ const YogaClass = ({ data }) => {
       <div className="class-img">
         <Image
           alt="yoga class"
-          src={urlFor(image).width(250).height(320).url()}
+          src={urlFor(image).width(250).height(300).url()}
           layout="fill"
         />
         <h4 className="name">{name}</h4>
@@ -20,4 +20,4 @@ const YogaClass = ({ data }) => {
     </Container>
   );
 };
-export default YogaClass;
+export default YogaClassCard;
