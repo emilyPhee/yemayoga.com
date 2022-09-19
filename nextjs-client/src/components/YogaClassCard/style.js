@@ -20,7 +20,7 @@ export const Container = styled.li`
   }
 
   .class-img:hover {
-    opacity: 0.5;
+    opacity: 0.7;
     cursor: pointer;
   }
 
