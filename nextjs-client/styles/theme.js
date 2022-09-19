@@ -30,8 +30,7 @@ export const theme = {
   },
   mediaQuery: {
     desktop: '@media screen and (min-width: 1024px)',
-    tablet: '@media screen and (min-width: 768px) and (max-width: 1023px)',
-    smartphone: '@media screen and (max-width: 767px)',
+    smallScreen: '@media screen and (max-width: 768px)',
   },
 };
 

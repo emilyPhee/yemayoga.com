@@ -5,12 +5,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Container, MenuItem } from './style';
+import { useEffect, useState } from 'react';
 
 const HamburgerMenu = ({ currentPage }) => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  function toggle() {
+    setOpenMenu(!openMenu);
+    console.log('toggle', openMenu);
+  }
+
+  useEffect(() => {}, [openMenu]);
   return (
     <Container>
       <div className="top-box">
-        <div className="hamburger-icon-wrapper">
+        <div className="hamburger-icon-wrapper" onClick={toggle}>
           <Image
             src="/images/hamburger-icon.svg"
             height={30}
@@ -33,7 +42,10 @@ const HamburgerMenu = ({ currentPage }) => {
         </div>
       </div>
 
-      <div className="bottom-box">
+      <div
+        className="bottom-box"
+        style={{ display: openMenu ? 'block' : 'none' }}
+      >
         <div className="menu-items-wrapper">
           <MenuItem active={currentPage === 'home'}>
             <Link href="/">Home</Link>
