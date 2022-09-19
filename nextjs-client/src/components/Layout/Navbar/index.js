@@ -5,42 +5,42 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import LanguageToggle from '@components/LanguageToggle';
+import FullScreenMenu from '@components/FullScreenMenu';
+import { useCallback, useEffect, useState } from 'react';
+
+const useMediaQUery = width => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback(e => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addEventListener('change', updateTarget);
+
+    // check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+  }, []);
+  return targetReached;
+};
 
 const Navbar = ({ currentPage }) => {
+  const isBreakpoint = useMediaQUery(768);
+
   return (
     <Container>
-      <div className="left-box">
-        <div className="logo-wrapper">
-          <Link href="/">
-            <Image src="/images/logo.png" alt="logo" layout="fill" />
-          </Link>
-        </div>
-        <div className="menu-items-wrapper">
-          <MenuItem active={currentPage === 'home'}>
-            <Link href="/">Home</Link>
-          </MenuItem>
-
-          <MenuItem active={currentPage === 'about'}>
-            <Link href="/about">About</Link>
-          </MenuItem>
-
-          <MenuItem active={currentPage === 'schedule'}>
-            <Link href="/schedule">Schedule</Link>
-          </MenuItem>
-
-          <MenuItem active={currentPage === 'contact'}>
-            <Link href="/contact">Contact</Link>
-          </MenuItem>
-        </div>
-      </div>
-      <div className="right-box">
-        <div className="insta-icon-wrapper">
-          <FontAwesomeIcon icon={faInstagram} />
-        </div>
-        <div className="language-toggle-wrapper">
-          <LanguageToggle />
-        </div>
-      </div>
+      {isBreakpoint ? (
+        <h1>Hamburger menu</h1>
+      ) : (
+        <FullScreenMenu currentPage={currentPage} />
+      )}
     </Container>
   );
 };
