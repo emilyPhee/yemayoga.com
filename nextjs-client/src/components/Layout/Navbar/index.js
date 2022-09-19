@@ -38,7 +38,7 @@ const Navbar = ({ currentPage }) => {
   return (
     <Container>
       {isBreakpoint ? (
-        <HamburgerMenu />
+        <HamburgerMenu currentPage={currentPage} />
       ) : (
         <FullScreenMenu currentPage={currentPage} />
       )}

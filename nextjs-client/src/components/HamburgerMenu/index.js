@@ -17,8 +17,6 @@ const HamburgerMenu = ({ currentPage }) => {
             width={30}
             alt="hamburger icon"
           />
-
-          {/* <img src="/images/hamburger-icon.svg" alt="hamburger icon"></img> */}
         </div>
         <div className="logo-wrapper">
           <Link href="/">

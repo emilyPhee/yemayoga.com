@@ -3,22 +3,32 @@ import { css } from '@emotion/react';
 import { theme } from '@styles/theme';
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-
   .top-box {
+    background-color: #fff;
     padding: 0 ${theme.sizes.paddingMediumScreen};
-    background-color: aliceblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .hamburger-icon-wrapper {
+      color: ${theme.colors.greyText};
+      cursor: pointer;
+    }
+
+    .logo-wrapper {
+      width: 10rem;
+      height: 4.4rem;
+      position: relative;
+      margin: 1rem;
+      margin-left: 6rem;
+      cursor: pointer;
+    }
 
     .right-box {
       display: flex;
       align-items: center;
 
       .insta-icon-wrapper {
-        background-color: blue;
         width: 4rem;
         height: 4rem;
         font-size: 2rem;
@@ -29,22 +39,17 @@ export const Container = styled.div`
     }
   }
 
-  .logo-wrapper {
-    width: 10rem;
-    height: 4.4rem;
-    position: relative;
-    margin: 1rem;
-    cursor: pointer;
-  }
-
   .bottom-box {
-    background-color: pink;
+    text-align: center;
   }
 `;
 
 export const MenuItem = styled.div`
+  background-color: #fff;
+  border-top: solid 1px #f0f0f0;
+
   color: ${theme.colors.navbarInactive};
-  padding: 1.5rem 2.6rem;
+  padding: 2rem 2.6rem;
   font-size: 1.5rem;
   transition: color 200ms ease-in-out;
 
