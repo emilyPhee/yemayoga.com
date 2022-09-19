@@ -41,6 +41,11 @@ export const Container = styled.div`
 
   .bottom-box {
     text-align: center;
+    display: none;
+  }
+
+  .bottom-box.open {
+    display: block;
   }
 `;
 

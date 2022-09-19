@@ -42,24 +42,33 @@ const HamburgerMenu = ({ currentPage }) => {
         </div>
       </div>
 
-      <div
-        className="bottom-box"
-        style={{ display: openMenu ? 'block' : 'none' }}
-      >
+      <div className={`bottom-box ${openMenu ? 'open' : null}`}>
         <div className="menu-items-wrapper">
-          <MenuItem active={currentPage === 'home'}>
+          <MenuItem
+            active={currentPage === 'home'}
+            onClick={() => setOpenMenu(false)}
+          >
             <Link href="/">Home</Link>
           </MenuItem>
 
-          <MenuItem active={currentPage === 'about'}>
+          <MenuItem
+            active={currentPage === 'about'}
+            onClick={() => setOpenMenu(false)}
+          >
             <Link href="/about">About</Link>
           </MenuItem>
 
-          <MenuItem active={currentPage === 'schedule'}>
+          <MenuItem
+            active={currentPage === 'schedule'}
+            onClick={() => setOpenMenu(false)}
+          >
             <Link href="/schedule">Schedule</Link>
           </MenuItem>
 
-          <MenuItem active={currentPage === 'contact'}>
+          <MenuItem
+            active={currentPage === 'contact'}
+            onClick={() => setOpenMenu(false)}
+          >
             <Link href="/contact">Contact</Link>
           </MenuItem>
         </div>
