@@ -7,7 +7,7 @@ export const Container = styled.nav`
   justify-content: space-between;
   position: sticky;
   top: 0;
-  height: 6.5rem;
+  min-height: 7vh;
   background-color: white;
   padding: 0 9.4rem;
   z-index: 10;
