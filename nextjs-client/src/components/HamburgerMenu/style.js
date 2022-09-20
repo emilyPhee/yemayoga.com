@@ -5,14 +5,41 @@ import { theme } from '@styles/theme';
 export const Container = styled.div`
   .top-box {
     background-color: #fff;
+    min-height: 5rem;
     padding: 0 ${theme.sizes.paddingMediumScreen};
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    min-height: 7vh;
 
-    .hamburger-icon-wrapper {
-      color: ${theme.colors.greyText};
+    top: 0;
+    z-index: 10;
+
+    .hamburger {
       cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 2px;
+      margin: 6px auto;
+      transition: all 0.3s ease-in-out;
+      background-color: ${theme.colors.greyText};
     }
 
     .logo-wrapper {
@@ -41,17 +68,21 @@ export const Container = styled.div`
 
   .bottom-box {
     text-align: center;
-    display: none;
+    position: fixed;
+    left: -100%;
+    top: 6.2rem;
+    width: 100%;
+    transition: 0.3s ease-in-out;
   }
 
   .bottom-box.open {
-    display: block;
+    left: 0;
   }
 `;
 
 export const MenuItem = styled.div`
   background-color: #fff;
-  border-top: solid 1px #f0f0f0;
+  border-bottom: solid 1px #f0f0f0;
 
   color: ${theme.colors.navbarInactive};
   padding: 2rem 2.6rem;
