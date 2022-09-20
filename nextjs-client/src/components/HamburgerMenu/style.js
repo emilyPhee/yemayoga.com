@@ -21,15 +21,15 @@ export const Container = styled.div`
       cursor: pointer;
     }
 
-    .hamburger.active .bar:nth-child(2) {
+    .hamburger.active .bar:nth-of-type(2) {
       opacity: 0;
     }
 
-    .hamburger.active .bar:nth-child(1) {
+    .hamburger.active .bar:nth-of-type(1) {
       transform: translateY(8px) rotate(45deg);
     }
 
-    .hamburger.active .bar:nth-child(3) {
+    .hamburger.active .bar:nth-of-type(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
 
@@ -47,7 +47,7 @@ export const Container = styled.div`
       height: 4.4rem;
       position: relative;
       margin: 1rem;
-      margin-left: 6rem;
+      margin-left: 6.5rem;
       cursor: pointer;
     }
 

@@ -10,11 +10,14 @@ const FullScreenMenu = ({ currentPage }) => {
   return (
     <Container>
       <div className="left-box">
-        <div className="logo-wrapper">
-          <Link href="/">
-            <Image src="/images/logo.png" alt="logo" layout="fill" />
-          </Link>
-        </div>
+        <Link href="/">
+          <a>
+            <div className="logo-wrapper">
+              <Image src="/images/logo.png" alt="logo" layout="fill" />
+            </div>
+          </a>
+        </Link>
+
         <div className="menu-items-wrapper">
           <MenuItem active={currentPage === 'home'}>
             <Link href="/">Home</Link>

@@ -25,11 +25,15 @@ const HamburgerMenu = ({ currentPage }) => {
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
-        <div className="logo-wrapper">
-          <Link href="/">
-            <Image src="/images/logo.png" alt="logo" layout="fill" />
-          </Link>
-        </div>
+
+        <Link href="/">
+          <a>
+            <div className="logo-wrapper">
+              <Image src="/images/logo.png" alt="logo" layout="fill" />
+            </div>
+          </a>
+        </Link>
+
         <div className="right-box">
           <div className="insta-icon-wrapper">
             <FontAwesomeIcon icon={faInstagram} />
