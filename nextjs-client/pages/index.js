@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import client from '../src/sanity/client';
 import { yogaClassesQuery } from '../src/sanity/queries/index';
 import { theme } from '@styles/theme';
+import ClassReview from '@components/ClassReview';
 
 const Container = styled.section`
   .home-intro {
@@ -28,20 +29,21 @@ const Container = styled.section`
 export default function Home({ data }) {
   return (
     <Container>
-      <div className='home-intro'>
-        <h1 className='title'>Breathe and move with Yemayoga </h1>
-        <p className='introduction'>
+      <div className="home-intro">
+        <h1 className="title">Breathe and move with Yemayoga </h1>
+        <p className="introduction">
           See yourself grow through yoga and learn how you feel you can do it.
         </p>
       </div>
 
       <YogaClassesList data={data} />
+      <ClassReview />
     </Container>
   );
 }
 
 Home.getLayout = function getLayout(page) {
-  return <Layout currentPage='home'>{page}</Layout>;
+  return <Layout currentPage="home">{page}</Layout>;
 };
 
 export async function getStaticProps() {
