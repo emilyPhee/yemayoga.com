@@ -66,7 +66,7 @@ export const Container = styled.div`
 
     display: flex;
     justify-content: flex-end;
-    padding: 2rem 0;
+    padding: 3rem 2rem;
   }
   .embla__button {
     outline: 0;

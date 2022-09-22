@@ -63,7 +63,7 @@ export const EmblaCarousel = () => {
                   layout="fill"
                 />
               </div>
-              <p style={{ fontSize: '1.4rem' }}>
+              <p style={{ fontSize: '1.5rem', lineHeight: '3rem' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -79,7 +79,7 @@ export const EmblaCarousel = () => {
                   layout="fill"
                 />
               </div>
-              <p style={{ fontSize: '1.4rem' }}>
+              <p style={{ fontSize: '1.5rem', lineHeight: '3rem' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam!
@@ -94,7 +94,7 @@ export const EmblaCarousel = () => {
                   layout="fill"
                 />
               </div>
-              <p style={{ fontSize: '1.4rem' }}>
+              <p style={{ fontSize: '1.5rem', lineHeight: '3rem' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
