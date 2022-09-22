@@ -7,11 +7,21 @@ export const Container = styled.li`
   align-items: center;
   margin: 2rem 6rem;
 
-  .class-img {
-    width: 25rem;
-    height: 32rem;
+  .card-wrapper {
     position: relative;
+    width: 25rem;
+    height: 30rem;
     margin-bottom: 1.5rem;
+    background-color: black;
+  }
+
+  .class-img {
+    transition: all 200ms ease-in-out;
+  }
+
+  .class-img:hover {
+    opacity: 0.7;
+    cursor: pointer;
   }
 
   .name {
@@ -29,6 +39,7 @@ export const Container = styled.li`
     color: ${theme.colors.lightGreyText};
     font-family: ${theme.fonts.nanumGothic};
     letter-spacing: 0.1rem;
+    text-transform: capitalize;
   }
 
   .level {

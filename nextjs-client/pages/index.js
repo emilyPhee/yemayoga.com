@@ -1,5 +1,5 @@
 import Layout from '@components/Layout';
-import YogaClassesList from '@components/YogaClassList';
+import YogaClassesList from '@components/YogaClassCardList';
 import styled from '@emotion/styled';
 import client from '../src/sanity/client';
 import { yogaClassesQuery } from '../src/sanity/queries/index';
@@ -23,6 +23,22 @@ const Container = styled.section`
   .introduction {
     font-size: 2rem;
     width: 50rem;
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    .home-intro {
+      padding-left: 0;
+      padding: 0;
+      /* padding-top: 10rem;
+      padding-left: 1.5rem; */
+    }
+    .title {
+      font-size: 3rem;
+    }
+    .introduction {
+      font-size: 1.7rem;
+      width: 40rem;
+    }
   }
 `;
 
