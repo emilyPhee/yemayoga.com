@@ -4,7 +4,7 @@ import { Container } from './style';
 const ClassReview = () => {
   return (
     <Container>
-      <h1>Class review</h1>
+      <h1 className="title">Yemayoga Stories</h1>
       <EmblaCarousel />
     </Container>
   );

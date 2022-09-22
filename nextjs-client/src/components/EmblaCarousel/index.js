@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { Container } from './style';
+import Image from 'next/image';
 
 export const PrevButton = ({ enabled, onClick }) => (
   <button
@@ -54,13 +55,61 @@ export const EmblaCarousel = () => {
       <div className="embla">
         <div className="embla__viewport" ref={viewportRef}>
           <div className="embla__container">
-            <div className="embla__slide">Slide 1</div>
-            <div className="embla__slide">Slide 2</div>
-            <div className="embla__slide">Slide 3</div>
+            <div className="embla__slide">
+              <div className="quote-icon-wrapper">
+                <Image
+                  src="/images/block-quote-line.svg"
+                  alt=""
+                  layout="fill"
+                />
+              </div>
+              <p style={{ fontSize: '1.4rem' }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <p className="reviewer-name">John Doe</p>
+            </div>
+            <div className="embla__slide">
+              <div className="quote-icon-wrapper">
+                <Image
+                  src="/images/block-quote-line.svg"
+                  alt=""
+                  layout="fill"
+                />
+              </div>
+              <p style={{ fontSize: '1.4rem' }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam!
+              </p>
+              <p className="reviewer-name">Mary Jane</p>
+            </div>
+            <div className="embla__slide">
+              <div className="quote-icon-wrapper">
+                <Image
+                  src="/images/block-quote-line.svg"
+                  alt=""
+                  layout="fill"
+                />
+              </div>
+              <p style={{ fontSize: '1.4rem' }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+              <p className="reviewer-name">John Park</p>
+            </div>
           </div>
         </div>
-        <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-        <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+        <div className="btn-container">
+          <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+          <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+        </div>
       </div>
     </Container>
   );
