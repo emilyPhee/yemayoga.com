@@ -35,6 +35,7 @@ export const EmblaCarousel = () => {
     {
       align: 'center',
       skipSnaps: false,
+      loop: true,
     },
     [ClassNames(options)]
   );
@@ -69,7 +70,13 @@ export const EmblaCarousel = () => {
                   layout="fill"
                 />
               </div>
-              <p style={{ fontSize: '1.5rem', lineHeight: '3rem' }}>
+              <p
+                style={{
+                  fontSize: '1.5rem',
+                  lineHeight: '3rem',
+                  marginBottom: '2rem',
+                }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -85,7 +92,13 @@ export const EmblaCarousel = () => {
                   layout="fill"
                 />
               </div>
-              <p style={{ fontSize: '1.5rem', lineHeight: '3rem' }}>
+              <p
+                style={{
+                  fontSize: '1.5rem',
+                  lineHeight: '3rem',
+                  marginBottom: '2rem',
+                }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam!
@@ -100,15 +113,104 @@ export const EmblaCarousel = () => {
                   layout="fill"
                 />
               </div>
-              <p style={{ fontSize: '1.5rem', lineHeight: '3rem' }}>
+              <p
+                style={{
+                  fontSize: '1.5rem',
+                  lineHeight: '3rem',
+                  marginBottom: '2rem',
+                }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
+                amet, consectetur adipiscing elit.
               </p>
               <p className="reviewer-name">John Park</p>
+            </div>
+            <div className="embla__slide">
+              <div className="quote-icon-wrapper">
+                <Image
+                  src="/images/block-quote-line.svg"
+                  alt=""
+                  layout="fill"
+                />
+              </div>
+              <p
+                style={{
+                  fontSize: '1.5rem',
+                  lineHeight: '3rem',
+                  marginBottom: '2rem',
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam!
+              </p>
+              <p className="reviewer-name">Mary Jane</p>
+            </div>
+            <div className="embla__slide">
+              <div className="quote-icon-wrapper">
+                <Image
+                  src="/images/block-quote-line.svg"
+                  alt=""
+                  layout="fill"
+                />
+              </div>
+              <p
+                style={{
+                  fontSize: '1.5rem',
+                  lineHeight: '3rem',
+                  marginBottom: '2rem',
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam!
+              </p>
+              <p className="reviewer-name">Mary Jane</p>
+            </div>
+            <div className="embla__slide">
+              <div className="quote-icon-wrapper">
+                <Image
+                  src="/images/block-quote-line.svg"
+                  alt=""
+                  layout="fill"
+                />
+              </div>
+              <p
+                style={{
+                  fontSize: '1.5rem',
+                  lineHeight: '3rem',
+                  marginBottom: '2rem',
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam!
+              </p>
+              <p className="reviewer-name">Mary Jane</p>
+            </div>
+            <div className="embla__slide">
+              <div className="quote-icon-wrapper">
+                <Image
+                  src="/images/block-quote-line.svg"
+                  alt=""
+                  layout="fill"
+                />
+              </div>
+              <p
+                style={{
+                  fontSize: '1.5rem',
+                  lineHeight: '3rem',
+                  marginBottom: '2rem',
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam!
+              </p>
+              <p className="reviewer-name">Mary Jane</p>
             </div>
           </div>
         </div>

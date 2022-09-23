@@ -3,20 +3,17 @@ import { theme } from '@styles/theme';
 import { css } from '@emotion/react';
 
 export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+
   .embla {
-    position: relative;
-    /* background-color: #fff; */
-    /* padding: 20px; */
-    /* padding: 4rem 1rem 0 1rem; */
-    /* max-width: 90%; */
-    /* padding: 5rem; */
-    min-height: 40rem;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
   }
 
   .embla__viewport {
+    overflow: hidden;
     width: 100%;
   }
 
@@ -31,7 +28,6 @@ export const Container = styled.div`
 
   .embla__container {
     display: flex;
-
     user-select: none;
     -webkit-touch-callout: none;
     -khtml-user-select: none;
@@ -40,12 +36,11 @@ export const Container = styled.div`
   }
 
   .embla__slide {
-    /* position: relative; */
-    min-width: 60%;
-
-    padding: 2rem 6rem 6rem 6rem;
+    min-width: 30%;
+    padding: 2rem 4rem 7rem 4rem;
     background-color: #fff;
     margin: 2rem;
+    position: relative;
   }
 
   .quote-icon-wrapper {
@@ -56,18 +51,18 @@ export const Container = styled.div`
 
   .reviewer-name {
     font-size: 1.4rem;
-    text-align: end;
-    margin-top: 2rem;
+    position: absolute;
+    bottom: 2rem;
   }
 
   /* button style */
   .btn-container {
     padding: 1rem;
-
     display: flex;
     justify-content: flex-end;
-    padding: 3rem 2rem;
+    padding: 3rem 10rem;
   }
+
   .embla__button {
     outline: 0;
     cursor: pointer;
@@ -93,5 +88,16 @@ export const Container = styled.div`
   .embla__button__svg {
     width: 100%;
     height: 100%;
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    .btn-container {
+      padding: 1rem 3rem;
+    }
+
+    .embla__slide {
+      padding: 3rem;
+      min-width: 70%;
+    }
   }
 `;
