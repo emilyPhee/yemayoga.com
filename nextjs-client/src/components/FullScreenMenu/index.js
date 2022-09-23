@@ -1,3 +1,4 @@
+import { useScrollPosition } from 'src/hooks/useScrollPosition';
 import Image from 'next/image';
 import { Container, MenuItem } from './style';
 import Link from 'next/link';
@@ -7,8 +8,10 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import LanguageToggle from '@components/LanguageToggle';
 
 const FullScreenMenu = ({ currentPage }) => {
+  const scrollPosition = useScrollPosition();
+
   return (
-    <Container>
+    <Container scroll={scrollPosition > 0}>
       <div className="left-box">
         <Link href="/">
           <a>

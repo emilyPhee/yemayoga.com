@@ -6,16 +6,19 @@ import Link from 'next/link';
 
 import { Container, MenuItem } from './style';
 import { useState } from 'react';
+import { useScrollPosition } from 'src/hooks/useScrollPosition';
 
 const HamburgerMenu = ({ currentPage }) => {
   const [openMenu, setOpenMenu] = useState(false);
+
+  const scrollPosition = useScrollPosition();
 
   function toggle() {
     setOpenMenu(!openMenu);
   }
 
   return (
-    <Container>
+    <Container scroll={scrollPosition > 0 && !openMenu}>
       <div className="top-box">
         <div
           className={`hamburger ${openMenu ? 'active' : null}`}

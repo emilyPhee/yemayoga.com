@@ -27,17 +27,15 @@ const Container = styled.section`
 
   ${theme.mediaQuery.smallScreen} {
     .home-intro {
-      padding-left: 0;
       padding: 0;
-      /* padding-top: 10rem;
-      padding-left: 1.5rem; */
+      padding: 12rem 2rem 0 2rem;
     }
     .title {
       font-size: 3rem;
     }
     .introduction {
       font-size: 1.7rem;
-      width: 40rem;
+      width: 30rem;
     }
   }
 `;
