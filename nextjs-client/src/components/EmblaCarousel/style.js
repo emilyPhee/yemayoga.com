@@ -9,7 +9,7 @@ export const Container = styled.div`
     /* padding: 20px; */
     /* padding: 4rem 1rem 0 1rem; */
     /* max-width: 90%; */
-    padding: 5rem;
+    /* padding: 5rem; */
     min-height: 40rem;
     margin-left: auto;
     margin-right: auto;

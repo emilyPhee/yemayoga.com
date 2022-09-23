@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
 import { Container } from './style';
+
+import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
+import ClassNames from 'embla-carousel-class-names';
 
 export const PrevButton = ({ enabled, onClick }) => (
   <button
@@ -28,10 +30,14 @@ export const NextButton = ({ enabled, onClick }) => (
 );
 
 export const EmblaCarousel = () => {
-  const [viewportRef, embla] = useEmblaCarousel({
-    align: 'center',
-    skipSnaps: false,
-  });
+  const options = { draggable: 'is-draggable', dragging: 'is-dragging' };
+  const [viewportRef, embla] = useEmblaCarousel(
+    {
+      align: 'center',
+      skipSnaps: false,
+    },
+    [ClassNames(options)]
+  );
 
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
