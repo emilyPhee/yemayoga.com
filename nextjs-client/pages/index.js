@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import client from '../src/sanity/client';
 import { yogaClassesQuery } from '../src/sanity/queries/index';
 import { theme } from '@styles/theme';
+import ClassReview from '@components/ClassReview';
 
 const Container = styled.section`
   .home-intro {
@@ -52,6 +53,7 @@ export default function Home({ data }) {
       </div>
 
       <YogaClassesList data={data} />
+      <ClassReview />
     </Container>
   );
 }
