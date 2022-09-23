@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: center;
 
   .embla {
-    max-width: 90%;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -36,7 +36,8 @@ export const Container = styled.div`
   }
 
   .embla__slide {
-    min-width: 30%;
+    /* min-width: 30%; */
+    min-width: 35rem;
     padding: 2rem 4rem 7rem 4rem;
     background-color: #fff;
     margin: 2rem;
@@ -47,6 +48,12 @@ export const Container = styled.div`
     position: relative;
     width: 7rem;
     height: 7rem;
+  }
+
+  .review {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
   }
 
   .reviewer-name {
@@ -92,12 +99,13 @@ export const Container = styled.div`
 
   ${theme.mediaQuery.smallScreen} {
     .btn-container {
-      padding: 1rem 3rem;
+      padding: 2rem 1rem;
     }
 
     .embla__slide {
       padding: 3rem;
-      min-width: 70%;
+      /* min-width: 80%; */
+      min-width: 30rem;
     }
   }
 `;
