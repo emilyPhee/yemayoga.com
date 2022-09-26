@@ -33,7 +33,7 @@ export const EmblaCarousel = ({ reviewSlides }) => {
   const options = { draggable: 'is-draggable', dragging: 'is-dragging' };
   const [viewportRef, embla] = useEmblaCarousel(
     {
-      align: 'center',
+      align: 'start',
       skipSnaps: false,
       loop: true,
     },
