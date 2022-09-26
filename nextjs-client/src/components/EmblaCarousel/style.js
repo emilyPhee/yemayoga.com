@@ -51,7 +51,7 @@ export const Container = styled.div`
   }
 
   .review {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 3rem;
     margin-bottom: 2rem;
     height: 18rem;
@@ -59,7 +59,7 @@ export const Container = styled.div`
   }
 
   .reviewer-name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     position: absolute;
     bottom: 2rem;
   }
