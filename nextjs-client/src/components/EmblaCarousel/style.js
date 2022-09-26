@@ -36,9 +36,9 @@ export const Container = styled.div`
   }
 
   .embla__slide {
-    /* min-width: 30%; */
     min-width: 35rem;
-    padding: 2rem 4rem 7rem 4rem;
+    height: 37rem;
+    padding: 1rem 3rem 3rem 3rem;
     background-color: #fff;
     margin: 2rem;
     position: relative;
@@ -54,6 +54,8 @@ export const Container = styled.div`
     font-size: 1.5rem;
     line-height: 3rem;
     margin-bottom: 2rem;
+    height: 18rem;
+    overflow: scroll;
   }
 
   .reviewer-name {
@@ -102,10 +104,12 @@ export const Container = styled.div`
       padding: 2rem 1rem;
     }
 
+    .embla {
+      max-width: 80%;
+    }
+
     .embla__slide {
-      padding: 3rem;
-      /* min-width: 80%; */
-      min-width: 30rem;
+      min-width: 100%;
     }
   }
 `;

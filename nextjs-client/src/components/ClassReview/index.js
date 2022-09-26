@@ -10,17 +10,17 @@ const ClassReview = () => {
     },
     {
       review:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ',
       name: 'Mary Jane',
     },
     {
       review:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation!',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation!Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation!Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation!Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation!',
       name: 'Emily Park',
     },
     {
       review:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.laborisnisi ut aliquip ex ea commodo consequat.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.',
       name: 'Anthony Park',
     },
     {

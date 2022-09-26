@@ -71,7 +71,9 @@ export const EmblaCarousel = ({ reviewSlides }) => {
                     layout="fill"
                   />
                 </div>
-                <p className="review">{reviewSlide.review}</p>
+
+                <div className="review">{reviewSlide.review}</div>
+
                 <p className="reviewer-name">{reviewSlide.name}</p>
               </div>
             ))}
