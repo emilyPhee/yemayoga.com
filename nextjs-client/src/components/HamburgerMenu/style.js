@@ -17,6 +17,13 @@ export const Container = styled.div`
     top: 0;
     z-index: 10;
 
+    ${({ scroll }) =>
+      scroll
+        ? css`
+            border-bottom: 2px solid #f7f7f7;
+          `
+        : null}
+
     .hamburger {
       cursor: pointer;
     }

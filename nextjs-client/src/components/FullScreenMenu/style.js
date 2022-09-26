@@ -8,8 +8,15 @@ export const Container = styled.div`
   min-height: 7vh;
   background-color: white;
   padding: 0 9.4rem;
+  border-bottom: 2px solid #fff;
+  transition: all 200ms ease-in-out;
 
-  /* border-bottom: 0.5px solid ${theme.colors.navbarInactive}; */
+  ${({ scroll }) =>
+    scroll
+      ? css`
+          border-bottom: 2px solid #f7f7f7;
+        `
+      : null}
 
   .left-box {
     display: flex;
