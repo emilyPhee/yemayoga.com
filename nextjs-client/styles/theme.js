@@ -26,7 +26,7 @@ export const theme = {
     bodyFontsSize: '1.5rem',
     fontsTitleSize: '2.1rem',
     fontsDescriptionTitle: '2.2rem',
-    fontsDescriptionTitleSub: '1.2rem',
+    fontsDescriptionTitleSub: '1.5rem',
     fontsSystemTitle: '2.2rem',
   },
   mediaQuery: {

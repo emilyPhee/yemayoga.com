@@ -9,7 +9,7 @@ const Container = styled.div``;
 export default function Ashtanga({ data }) {
   return (
     <Container>
-      <YogaIntro data={data} />
+      <YogaIntro data={data.ashtangaData} />
     </Container>
   );
 }
