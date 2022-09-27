@@ -23,9 +23,10 @@ export const theme = {
     paddingFullScreen: '9.5rem',
     paddingMediumScreen: '2.5rem',
     paddingSmallScreen: '',
+    bodyFontsSize: '1.5rem',
     fontsTitleSize: '2.1rem',
-    fontsDescriptionTitle: '2.7rem',
-    fontsDescriptionTitleSub: '1.7rem',
+    fontsDescriptionTitle: '2.2rem',
+    fontsDescriptionTitleSub: '1.2rem',
     fontsSystemTitle: '2.2rem',
   },
   mediaQuery: {

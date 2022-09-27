@@ -15,7 +15,7 @@ export default function Ashtanga({ data }) {
 }
 
 Ashtanga.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
+  return <Layout currentPage="ashtanga">{page}</Layout>;
 };
 
 export async function getStaticProps() {

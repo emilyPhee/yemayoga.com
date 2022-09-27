@@ -15,8 +15,9 @@ html {
   so that we want to provide the right font size according to user's default value (px)
   */
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: 'Nunito', sans-serif;
 }
 
 @media screen and (min-width: 1400px) {
