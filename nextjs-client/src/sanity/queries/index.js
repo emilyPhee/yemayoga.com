@@ -6,7 +6,14 @@ export const yogaClassesQuery = `
 `;
 
 export const ashtangaQuery = `
-	*[name == 'Ashtanga'] 
+	*[_type == 'yogaClass' && name == 'Ashtanga'] 
+	{
+		name, image
+	}[0]
+`;
+
+export const vinyasaQuery = `
+	*[_type == 'yogaClass' && name == 'Vinyasa'] 
 	{
 		name, image
 	}

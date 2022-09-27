@@ -1,18 +1,16 @@
 import Layout from '@components/Layout';
 import YogaIntro from '@components/YogaClassInfo/YogaIntro';
-import { useRouter } from 'next/router';
-import Image from 'next/image';
-import { urlFor } from 'src/sanity/image-url';
+import styled from '@emotion/styled';
 import client from 'src/sanity/client';
 import { ashtangaQuery } from 'src/sanity/queries';
-export default function Ashtanga({ data }) {
-  console.log('data', data);
-  return (
-    <>
-      <h1>Ashtanga Page...</h1>
 
-      <YogaIntro />
-    </>
+const Container = styled.div``;
+
+export default function Ashtanga({ data }) {
+  return (
+    <Container>
+      <YogaIntro data={data} />
+    </Container>
   );
 }
 
