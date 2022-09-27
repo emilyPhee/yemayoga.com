@@ -38,7 +38,7 @@ export const Container = styled.div`
   .embla__slide {
     min-width: 35rem;
     height: 37rem;
-    padding: 1rem 3rem 3rem 3rem;
+    padding: 1rem 4rem 3rem 4rem;
     background-color: #fff;
     margin: 2rem;
     position: relative;

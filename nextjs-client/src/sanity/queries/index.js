@@ -4,3 +4,10 @@ export const yogaClassesQuery = `
   	name, duration, level, image
 	}
 `;
+
+export const ashtangaQuery = `
+	*[name == 'Ashtanga'] 
+	{
+		name, image
+	}
+`;
