@@ -53,5 +53,10 @@ export const Container = styled.section`
     .main-wrapper {
       padding: 0;
     }
+
+    .description-wrapper {
+      padding: 4rem;
+      padding-bottom: 0;
+    }
   }
 `;
