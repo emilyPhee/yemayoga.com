@@ -1,13 +1,31 @@
 import Layout from '@components/Layout';
+import YogaIntro from '@components/YogaClassInfo/YogaIntro';
+import styled from '@emotion/styled';
+import client from 'src/sanity/client';
+import { privateQuery } from 'src/sanity/queries';
 
-export default function Private() {
+const Container = styled.div``;
+
+export default function Private({ data }) {
   return (
-    <>
-      <h1>Private Page...</h1>
-    </>
+    <Container>
+      <YogaIntro data={data.privateData} />
+    </Container>
   );
 }
 
 Private.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
+  return <Layout currentPage="private">{page}</Layout>;
 };
+
+export async function getStaticProps() {
+  const privateData = await client.fetch(privateQuery);
+
+  const data = { privateData };
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
