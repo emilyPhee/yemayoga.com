@@ -38,8 +38,9 @@ export const Container = styled.div`
   .embla__slide {
     min-width: 35rem;
     height: 37rem;
-    padding: 1rem 3rem 3rem 3rem;
-    background-color: #fff;
+    padding: 1rem 3rem 3rem 4rem;
+    background-color: rgba(243, 242, 240, 0.7);
+
     margin: 2rem;
     position: relative;
   }
@@ -56,6 +57,7 @@ export const Container = styled.div`
     margin-bottom: 2rem;
     height: 18rem;
     overflow: scroll;
+    color: ${theme.colors.blackText};
   }
 
   .reviewer-name {

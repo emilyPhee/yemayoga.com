@@ -25,6 +25,17 @@ const Container = styled.section`
     width: 50rem;
   }
 
+  .line {
+    width: 90%;
+    height: 1px;
+    background-color: #e4e4e4;
+  }
+
+  .line-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   ${theme.mediaQuery.smallScreen} {
     .home-intro {
       padding: 0;
@@ -51,6 +62,9 @@ export default function Home({ data }) {
       </div>
 
       <YogaClassesList data={data} />
+      <div className="line-wrapper">
+        <div className="line"></div>
+      </div>
       <ClassReview />
     </Container>
   );
