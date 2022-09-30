@@ -5,6 +5,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import ClassNames from 'embla-carousel-class-names';
 
+import { supportLanguages, useLanguages } from '@contexts/languageContext';
+
 export const PrevButton = ({ enabled, onClick }) => (
   <button
     className="embla__button embla__button--prev"
@@ -29,7 +31,10 @@ export const NextButton = ({ enabled, onClick }) => (
   </button>
 );
 
-export const EmblaCarousel = ({ reviewSlides }) => {
+export const EmblaCarousel = ({ reviewData }) => {
+  const { preferredLanguage } = useLanguages();
+  const [language, setLanguage] = useState('content_en');
+
   const options = { draggable: 'is-draggable', dragging: 'is-dragging' };
   const [viewportRef, embla] = useEmblaCarousel(
     {
@@ -62,7 +67,7 @@ export const EmblaCarousel = ({ reviewSlides }) => {
       <div className="embla">
         <div className="embla__viewport" ref={viewportRef}>
           <div className="embla__container">
-            {reviewSlides.map((reviewSlide, index) => (
+            {reviewData.map((review, index) => (
               <div key={index} className="embla__slide">
                 <div className="quote-icon-wrapper">
                   <Image
@@ -71,10 +76,12 @@ export const EmblaCarousel = ({ reviewSlides }) => {
                     layout="fill"
                   />
                 </div>
-
-                <div className="review">{reviewSlide.review}</div>
-
-                <p className="reviewer-name">{reviewSlide.name}</p>
+                {preferredLanguage === supportLanguages.English ? (
+                  <div className="review">{review.content_en}</div>
+                ) : (
+                  <div className="review">{review.content_kr}</div>
+                )}
+                <p className="reviewer-name">{review.name}</p>
               </div>
             ))}
           </div>

@@ -5,6 +5,7 @@ import client from '../src/sanity/client';
 import { yogaClassesQuery } from '../src/sanity/queries/index';
 import { theme } from '@styles/theme';
 import ClassReview from '@components/ClassReview';
+import { reviewQuery } from 'src/sanity/queries/review';
 
 const Container = styled.section`
   .home-intro {
@@ -61,11 +62,11 @@ export default function Home({ data }) {
         </p>
       </div>
 
-      <YogaClassesList data={data} />
+      <YogaClassesList data={data.yogaClassData} />
       <div className="line-wrapper">
         <div className="line"></div>
       </div>
-      <ClassReview />
+      <ClassReview reviewData={data.reviewData} />
     </Container>
   );
 }
@@ -76,8 +77,9 @@ Home.getLayout = function getLayout(page) {
 
 export async function getStaticProps() {
   const yogaClassData = await client.fetch(yogaClassesQuery);
+  const reviewData = await client.fetch(reviewQuery);
 
-  const data = { yogaClassData };
+  const data = { yogaClassData, reviewData };
 
   return {
     props: {
