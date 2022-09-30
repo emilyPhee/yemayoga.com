@@ -7,7 +7,7 @@ export default {
       title: 'Name',
       name: 'name',
       type: 'string',
-      validation: (Rule) => Rule.required().max(80),
+      validation: Rule => Rule.required().max(80),
     },
     {
       title: 'Card image',
@@ -21,7 +21,7 @@ export default {
       title: 'Duration in minutes',
       name: 'duration',
       type: 'number',
-      validation: (Rule) => Rule.min(1).max(1000),
+      validation: Rule => Rule.min(1).max(1000),
     },
     {
       title: 'Level',
@@ -41,13 +41,29 @@ export default {
       title: 'Monthly Price',
       name: 'monthlyPrice',
       type: 'number',
-      validation: (Rule) => Rule.min(0),
+      validation: Rule => Rule.min(0),
     },
     {
       name: 'order',
       title: 'Order',
       type: 'number',
       hidden: true,
+    },
+    {
+      title: 'Short Description',
+      name: 'short_description',
+      type: 'string',
+    },
+    {
+      title: 'Yoga Description',
+      name: 'yoga_description',
+      type: 'text',
+    },
+    {
+      title: 'Yoga Systems',
+      name: 'yoga_systems',
+      type: 'array',
+      of: [{ type: 'system' }],
     },
   ],
 };
