@@ -22,7 +22,14 @@ const FullScreenMenu = ({ currentPage }) => {
         </Link>
 
         <div className="menu-items-wrapper">
-          <MenuItem active={currentPage === 'home'}>
+          <MenuItem
+            active={
+              currentPage === 'home' ||
+              currentPage === 'ashtanga' ||
+              currentPage === 'vinyasa' ||
+              currentPage === 'private'
+            }
+          >
             <Link href="/">Home</Link>
           </MenuItem>
 

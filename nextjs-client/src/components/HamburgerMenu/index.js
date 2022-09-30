@@ -49,7 +49,12 @@ const HamburgerMenu = ({ currentPage }) => {
 
       <div className={`bottom-box ${openMenu ? 'open' : null}`}>
         <MenuItem
-          active={currentPage === 'home'}
+          active={
+            currentPage === 'home' ||
+            currentPage === 'ashtanga' ||
+            currentPage === 'vinyasa' ||
+            currentPage === 'private'
+          }
           onClick={() => setOpenMenu(false)}
         >
           <Link href="/">Home</Link>

@@ -38,7 +38,7 @@ export const Container = styled.div`
   .embla__slide {
     min-width: 35rem;
     height: 37rem;
-    padding: 1rem 3rem 3rem 3rem;
+    padding: 1rem 4rem 3rem 4rem;
     background-color: #fff;
     margin: 2rem;
     position: relative;
@@ -51,7 +51,7 @@ export const Container = styled.div`
   }
 
   .review {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 3rem;
     margin-bottom: 2rem;
     height: 18rem;
@@ -59,7 +59,7 @@ export const Container = styled.div`
   }
 
   .reviewer-name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     position: absolute;
     bottom: 2rem;
   }
