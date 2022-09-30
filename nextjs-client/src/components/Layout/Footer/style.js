@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${theme.colors.brandColor1};
+  background-color: ${theme.colors.mainBackground};
   font-family: ${theme.fonts.nunito};
   height: 27rem;
   position: relative;

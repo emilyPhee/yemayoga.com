@@ -5,6 +5,7 @@ import client from '../src/sanity/client';
 import { yogaClassesQuery } from '../src/sanity/queries/index';
 import { theme } from '@styles/theme';
 import ClassReview from '@components/ClassReview';
+import { reviewQuery } from 'src/sanity/queries/review';
 
 const Container = styled.section`
   .home-intro {
@@ -23,6 +24,17 @@ const Container = styled.section`
   .introduction {
     font-size: 2rem;
     width: 50rem;
+  }
+
+  .line {
+    width: 90%;
+    height: 1px;
+    background-color: #e4e4e4;
+  }
+
+  .line-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   ${theme.mediaQuery.smallScreen} {
@@ -50,8 +62,11 @@ export default function Home({ data }) {
         </p>
       </div>
 
-      <YogaClassesList data={data} />
-      <ClassReview />
+      <YogaClassesList data={data.yogaClassData} />
+      <div className="line-wrapper">
+        <div className="line"></div>
+      </div>
+      <ClassReview reviewData={data.reviewData} />
     </Container>
   );
 }
@@ -62,8 +77,9 @@ Home.getLayout = function getLayout(page) {
 
 export async function getStaticProps() {
   const yogaClassData = await client.fetch(yogaClassesQuery);
+  const reviewData = await client.fetch(reviewQuery);
 
-  const data = { yogaClassData };
+  const data = { yogaClassData, reviewData };
 
   return {
     props: {
