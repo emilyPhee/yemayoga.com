@@ -33,7 +33,6 @@ export const NextButton = ({ enabled, onClick }) => (
 
 export const EmblaCarousel = ({ reviewData }) => {
   const { preferredLanguage } = useLanguages();
-  const [language, setLanguage] = useState('content_en');
 
   const options = { draggable: 'is-draggable', dragging: 'is-dragging' };
   const [viewportRef, embla] = useEmblaCarousel(
