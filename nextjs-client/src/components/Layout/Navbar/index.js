@@ -1,11 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import Image from 'next/image';
 import { Container, MenuItem } from './style';
-import Link from 'next/link';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import LanguageToggle from '@components/LanguageToggle';
 import FullScreenMenu from '@components/FullScreenMenu';
 import HamburgerMenu from '@components/HamburgerMenu';
 

@@ -4,3 +4,25 @@ export const yogaClassesQuery = `
   	name, duration, level, image
 	}
 `;
+
+export const ashtangaQuery = `
+	*[_type == 'yogaClass' && name == 'Ashtanga'] 
+	{
+		name, image
+	}[0]
+`;
+
+export const vinyasaQuery = `
+	*[_type == 'yogaClass' && name == 'Vinyasa'] 
+	{
+		name, image
+	}[0]
+`;
+
+export const privateQuery = `
+	*[_type == 'yogaClass' && name == 'Private']
+
+	{
+		name, image
+	}[0]
+`;
