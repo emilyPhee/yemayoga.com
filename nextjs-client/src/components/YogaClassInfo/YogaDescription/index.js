@@ -1,16 +1,17 @@
 import { Container } from './style';
-import Image from 'next/image';
-import { urlFor } from 'src/sanity/image-url';
 
-const YogaDescription = () => {
+const YogaDescription = ({ data }) => {
+  const { name, short_description, yoga_description } = data;
+
   return (
     <Container>
       <div className="left-box">
-        <h2>Yoga Title</h2>
-        <p>Sub title</p>
+        <h2 className="title">{name}</h2>
+        <p className="sub-title">{short_description}</p>
       </div>
-
-      <div className="right-box"></div>
+      <div className="right-box">
+        <p className="description">{yoga_description}</p>
+      </div>
     </Container>
   );
 };

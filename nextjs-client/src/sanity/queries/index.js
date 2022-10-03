@@ -8,7 +8,7 @@ export const yogaClassesQuery = `
 export const ashtangaQuery = `
 	*[_type == 'yogaClass' && name == 'Ashtanga'] 
 	{
-		name, image
+		name, image, short_description, yoga_description, yoga_systems
 	}[0]
 `;
 
