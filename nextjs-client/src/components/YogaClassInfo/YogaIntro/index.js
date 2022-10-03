@@ -8,7 +8,7 @@ const YogaIntro = ({ data }) => {
   return (
     <Container>
       <div className="main-wrapper">
-        <div>
+        <div className="yoga-img-wrapper">
           <div className="yoga-img">
             <Image
               alt="yoga class"

@@ -4,7 +4,7 @@ import { theme } from '@styles/theme';
 export const Container = styled.section`
   display: flex;
   justify-content: center;
-  padding: 0 10rem;
+  padding: 0 5%;
 
   .left-box {
     width: 40rem;
@@ -27,6 +27,7 @@ export const Container = styled.section`
     margin: 3rem;
 
     .description {
+      display: inline-block;
       font-size: ${theme.sizes.bodyFontsSize};
       line-height: 200%;
       font-family: ${theme.fonts.nunito};
@@ -37,8 +38,8 @@ export const Container = styled.section`
     padding: 1rem;
     flex-direction: column;
 
-    .description {
-      width: 80%;
+    .right-box {
+      width: 90%;
     }
   }
 `;
