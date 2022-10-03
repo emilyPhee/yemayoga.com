@@ -5,6 +5,7 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 import yogaClass from './yoga-class';
 import review from './review';
+import system from './system';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -16,5 +17,6 @@ export default createSchema({
     /* Your types here! */
     yogaClass,
     review,
+    system,
   ]),
 });
