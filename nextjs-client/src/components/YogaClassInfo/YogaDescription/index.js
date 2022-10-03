@@ -4,9 +4,14 @@ import { urlFor } from 'src/sanity/image-url';
 
 const YogaDescription = () => {
   return (
-    <div>
-      <h1>Yoga description</h1>
-    </div>
+    <Container>
+      <div className="left-box">
+        <h2>Yoga Title</h2>
+        <p>Sub title</p>
+      </div>
+
+      <div className="right-box"></div>
+    </Container>
   );
 };
 
