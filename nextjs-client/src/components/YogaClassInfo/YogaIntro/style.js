@@ -60,6 +60,7 @@ export const Container = styled.section`
       flex-direction: column;
       width: 90%;
       justify-content: center;
+      align-items: center;
     }
 
     .yoga-img-wrapper {
