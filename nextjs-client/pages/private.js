@@ -1,4 +1,5 @@
 import Layout from '@components/Layout';
+import YogaDescription from '@components/YogaClassInfo/YogaDescription';
 import YogaIntro from '@components/YogaClassInfo/YogaIntro';
 import styled from '@emotion/styled';
 import client from 'src/sanity/client';
@@ -10,6 +11,7 @@ export default function Private({ data }) {
   return (
     <Container>
       <YogaIntro data={data.privateData} />
+      <YogaDescription data={data.privateData} />
     </Container>
   );
 }

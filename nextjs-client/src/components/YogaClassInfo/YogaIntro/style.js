@@ -4,16 +4,20 @@ import { theme } from '@styles/theme';
 export const Container = styled.section`
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   padding: 7rem 1rem;
   padding-bottom: 0;
 
   .main-wrapper {
     display: flex;
-    /* justify-content: space-around; */
     justify-content: center;
-    padding: 0 17rem;
-    flex-wrap: wrap;
+
+    padding: 0 4rem;
+  }
+
+  .yoga-img-wrapper {
+    width: 40rem;
   }
 
   .yoga-img {
@@ -24,6 +28,7 @@ export const Container = styled.section`
 
   .description-wrapper {
     padding: 7rem 3rem;
+    width: 60rem;
 
     .description-title {
       font-size: ${theme.sizes.fontsDescriptionTitle};
@@ -52,11 +57,24 @@ export const Container = styled.section`
   ${theme.mediaQuery.smallScreen} {
     .main-wrapper {
       padding: 0;
+      flex-direction: column;
+      width: 90%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .yoga-img-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .yoga-img {
+      padding: 10rem;
     }
 
     .description-wrapper {
       padding: 4rem;
       padding-bottom: 0;
+      width: 90%;
     }
   }
 `;

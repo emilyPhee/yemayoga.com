@@ -1,4 +1,5 @@
 import Layout from '@components/Layout';
+import YogaDescription from '@components/YogaClassInfo/YogaDescription';
 import YogaIntro from '@components/YogaClassInfo/YogaIntro';
 import client from 'src/sanity/client';
 import { vinyasaQuery } from 'src/sanity/queries';
@@ -7,6 +8,7 @@ export default function Vinyasa({ data }) {
   return (
     <>
       <YogaIntro data={data.vinyasaData} />
+      <YogaDescription data={data.vinyasaData} />
     </>
   );
 }
