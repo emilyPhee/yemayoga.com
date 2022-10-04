@@ -6,6 +6,7 @@ export const theme = {
     brandColor2: '#F7F4F2',
     brandColor3: '#FAFAFA',
     mainBackground: '#F3F2F0',
+    mainLightBackground: 'rgba(243, 242, 240, 0.7)',
     navbarActive: '#333333',
     navbarInactive: '#B9B9B9',
     blackText: '#313030',

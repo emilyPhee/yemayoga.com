@@ -11,7 +11,7 @@ const YogaSystem = ({ yogaSystem }) => {
           <div className="system-img">
             <Image
               alt="yoga system"
-              src={urlFor(image).width(300).height(300).url()}
+              src={urlFor(image).width(350).height(320).url()}
               layout="fill"
             />
           </div>

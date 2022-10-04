@@ -8,7 +8,7 @@ const YogaSystemList = ({ data }) => {
     <Container>
       <h1 className="title">Systems</h1>
       {yoga_systems.map(system => {
-        return <YogaSystem key={system.key} yogaSystem={system} />;
+        return <YogaSystem key={system._key} yogaSystem={system} />;
       })}
     </Container>
   );

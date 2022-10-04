@@ -39,7 +39,7 @@ export const Container = styled.div`
     min-width: 35rem;
     height: 37rem;
     padding: 1rem 3rem 3rem 4rem;
-    background-color: rgba(243, 242, 240, 0.7);
+    background-color: ${theme.colors.mainLightBackground};
 
     margin: 2rem;
     position: relative;
