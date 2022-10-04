@@ -20,6 +20,7 @@ export const Container = styled.section`
       font-size: ${theme.sizes.fontsDescriptionTitleSub};
       font-family: ${theme.fonts.nanumGothic};
       line-height: 2rem;
+      color: ${theme.colors.greyText};
     }
   }
 
