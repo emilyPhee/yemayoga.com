@@ -32,7 +32,7 @@ export const Container = styled.div`
 
     .description {
       font-size: ${theme.sizes.bodyFontsSize};
-      line-height: 200%;
+      line-height: 220%;
     }
   }
 
