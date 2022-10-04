@@ -4,7 +4,7 @@ import { theme } from '@styles/theme';
 export const Container = styled.section`
   display: flex;
   justify-content: center;
-  padding: 0 5%;
+  padding: 5rem 5%;
 
   .left-box {
     width: 40rem;
@@ -13,6 +13,7 @@ export const Container = styled.section`
     .title {
       font-size: ${theme.sizes.fontsDescriptionTitle};
       font-family: ${theme.fonts.nanumGothic};
+      padding-bottom: 0.5rem;
     }
 
     .sub-title {
