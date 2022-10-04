@@ -24,10 +24,10 @@ export const theme = {
     paddingMediumScreen: '2.5rem',
     paddingSmallScreen: '',
     bodyFontsSize: '1.4rem',
-    fontsTitleSize: '2.1rem',
+    fontsTitleSize: '2.2rem',
     fontsDescriptionTitle: '2.2rem',
     fontsDescriptionTitleSub: '1.4rem',
-    fontsSystemTitle: '2.2rem',
+    fontsSystemTitle: '2rem',
   },
   mediaQuery: {
     desktop: '@media screen and (min-width: 1024px)',

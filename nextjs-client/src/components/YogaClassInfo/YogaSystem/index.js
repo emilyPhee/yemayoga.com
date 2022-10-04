@@ -2,10 +2,25 @@ import { Container } from './style';
 import Image from 'next/image';
 import { urlFor } from 'src/sanity/image-url';
 
-const YogaSystem = () => {
+const YogaSystem = ({ yogaSystem }) => {
+  const { title, image, description } = yogaSystem;
   return (
     <Container>
-      <h1>Yoga System</h1>
+      <div className="left-box">
+        <div className="system-img-wrapper">
+          <div className="system-img">
+            <Image
+              alt="yoga system"
+              src={urlFor(image).width(300).height(300).url()}
+              layout="fill"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="right-box">
+        <h2 className="title">{title}</h2>
+        <p className="description">{description}</p>
+      </div>
     </Container>
   );
 };

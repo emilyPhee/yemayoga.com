@@ -1,7 +1,17 @@
-import Container from './style';
+import YogaSystem from '../YogaSystem';
+import { Container } from './style';
 
-const YogaSystemList = () => {
-  return <div></div>;
+const YogaSystemList = ({ data }) => {
+  const { yoga_systems } = data;
+
+  return (
+    <Container>
+      <h1 className="title">Systems</h1>
+      {yoga_systems.map(system => {
+        return <YogaSystem key={system.key} yogaSystem={system} />;
+      })}
+    </Container>
+  );
 };
 
 export default YogaSystemList;
