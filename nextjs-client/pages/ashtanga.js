@@ -1,4 +1,5 @@
 import Layout from '@components/Layout';
+import MoonDays from '@components/YogaClassInfo/MoonDays';
 import YogaDescription from '@components/YogaClassInfo/YogaDescription';
 import YogaIntro from '@components/YogaClassInfo/YogaIntro';
 import YogaSystemList from '@components/YogaClassInfo/YogaSystemList';
@@ -14,6 +15,7 @@ export default function Ashtanga({ data }) {
       <YogaIntro data={data.ashtangaData} />
       <YogaDescription data={data.ashtangaData} />
       <YogaSystemList data={data.ashtangaData} />
+      <MoonDays />
     </Container>
   );
 }

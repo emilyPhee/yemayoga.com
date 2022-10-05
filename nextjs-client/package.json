@@ -21,6 +21,7 @@
     "embla-carousel-class-names": "^7.0.3",
     "embla-carousel-react": "^7.0.3",
     "framer-motion": "^7.2.1",
+    "lune": "^0.4.0",
     "next": "12.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
