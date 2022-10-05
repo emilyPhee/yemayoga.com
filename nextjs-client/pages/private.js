@@ -1,5 +1,6 @@
 import Layout from '@components/Layout';
 import YogaDescription from '@components/YogaClassInfo/YogaDescription';
+import YogaEtiquette from '@components/YogaClassInfo/YogaEtiquette';
 import YogaIntro from '@components/YogaClassInfo/YogaIntro';
 import YogaSystemList from '@components/YogaClassInfo/YogaSystemList';
 import styled from '@emotion/styled';
@@ -9,11 +10,14 @@ import { privateQuery } from 'src/sanity/queries';
 const Container = styled.div``;
 
 export default function Private({ data }) {
+  const privateData = data.privateData;
+
   return (
     <Container>
-      <YogaIntro data={data.privateData} />
-      <YogaDescription data={data.privateData} />
-      <YogaSystemList data={data.privateData} />
+      <YogaIntro data={privateData} />
+      <YogaDescription data={privateData} />
+      <YogaSystemList data={privateData} />
+      <YogaEtiquette data={privateData} />
     </Container>
   );
 }

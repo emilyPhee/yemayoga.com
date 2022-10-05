@@ -10,12 +10,14 @@ import { ashtangaQuery } from 'src/sanity/queries';
 const Container = styled.div``;
 
 export default function Ashtanga({ data }) {
+  const ashtangaData = data.ashtangaData;
+
   return (
     <Container>
-      <YogaIntro data={data.ashtangaData} />
-      <YogaDescription data={data.ashtangaData} />
-      <YogaSystemList data={data.ashtangaData} />
-      <YogaEtiquette data={data.ashtangaData} />
+      <YogaIntro data={ashtangaData} />
+      <YogaDescription data={ashtangaData} />
+      <YogaSystemList data={ashtangaData} />
+      <YogaEtiquette data={ashtangaData} />
     </Container>
   );
 }

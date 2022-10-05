@@ -2,7 +2,7 @@ import { Container } from './style';
 
 const YogaEtiquette = ({ data }) => {
   const { name, etiquette } = data;
-  console.log(name, etiquette);
+
   return (
     <Container>
       <div className="left-box">
