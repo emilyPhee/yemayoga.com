@@ -1,6 +1,7 @@
 import Layout from '@components/Layout';
 import YogaDescription from '@components/YogaClassInfo/YogaDescription';
 import YogaIntro from '@components/YogaClassInfo/YogaIntro';
+import YogaSystemList from '@components/YogaClassInfo/YogaSystemList';
 import client from 'src/sanity/client';
 import { vinyasaQuery } from 'src/sanity/queries';
 
@@ -9,6 +10,7 @@ export default function Vinyasa({ data }) {
     <>
       <YogaIntro data={data.vinyasaData} />
       <YogaDescription data={data.vinyasaData} />
+      <YogaSystemList data={data.vinyasaData} />
     </>
   );
 }
