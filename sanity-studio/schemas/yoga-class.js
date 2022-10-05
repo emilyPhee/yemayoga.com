@@ -65,5 +65,11 @@ export default {
       type: 'array',
       of: [{ type: 'system' }],
     },
+    {
+      title: 'Etiquette',
+      name: 'etiquette',
+      type: 'array',
+      of: [{ type: 'string' }],
+    },
   ],
 };
