@@ -8,7 +8,18 @@ import styled from '@emotion/styled';
 import client from 'src/sanity/client';
 import { ashtangaQuery } from 'src/sanity/queries';
 
-const Container = styled.div``;
+const Container = styled.div`
+  .line {
+    width: 90%;
+    height: 1px;
+    background-color: #e4e4e4;
+  }
+
+  .line-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+`;
 
 export default function Ashtanga({ data }) {
   const ashtangaData = data.ashtangaData;
@@ -19,6 +30,10 @@ export default function Ashtanga({ data }) {
       <YogaDescription data={ashtangaData} />
       <YogaSystemList data={ashtangaData} />
       <YogaEtiquette data={ashtangaData} />
+      <div className="line-wrapper">
+        <div className="line"></div>
+      </div>
+      <MoonDays />
     </Container>
   );
 }

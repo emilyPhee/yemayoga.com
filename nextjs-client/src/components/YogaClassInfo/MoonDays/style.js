@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 7rem 0 5rem 0;
+  padding: 10rem 0 10rem 0;
 
   .title {
     font-size: ${theme.sizes.fontsTitleSize};

@@ -4,7 +4,7 @@ import { theme } from '@styles/theme';
 export const Container = styled.li`
   display: flex;
   align-items: center;
-  justify-content: center;
+
   width: 15rem;
   height: 15rem;
 
@@ -13,7 +13,7 @@ export const Container = styled.li`
   .month-name {
     font-family: ${theme.fonts.nunito};
     font-size: ${theme.sizes.fontsMoondayTitle};
-    margin: 2rem;
+    margin-right: 2rem;
     letter-spacing: 0.1rem;
     font-weight: bold;
     color: ${theme.colors.greyText};
