@@ -1,8 +1,33 @@
 import { Container } from './style';
 
+const monthList = [
+  'JAN',
+  'FEB',
+  'MAR',
+  'APR',
+  'MAY',
+  'JUN',
+  'JUL',
+  'AUG',
+  'SEP',
+  'OCT',
+  'NOV',
+  'DEC',
+];
+
+const dayList = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
+
 const MoonDay = ({ currentYear, month }) => {
   const getLastDayOfMonth = (year, specificMonth) => {
-    let date = new Date(year, specificMonth, 0);
+    let date = new Date(year, specificMonth + 1, 0);
     date.setHours(23);
     date.setMinutes(59);
     date.setSeconds(59);
@@ -10,49 +35,44 @@ const MoonDay = ({ currentYear, month }) => {
   };
 
   const lastDayOfMonth = getLastDayOfMonth(currentYear, month);
-  const firstDayOfMonth = new Date(`${currentYear}, ${month}, 1`);
+  const firstDayOfMonth = new Date(`${currentYear}, ${month + 1}, 1`);
   const lune = require('lune');
 
-  const phase_full_list = lune.phase_range(
+  const phaseFullList = lune.phase_range(
     firstDayOfMonth,
     lastDayOfMonth,
     lune.PHASE_FULL
   );
 
-  const phase_new_list = lune.phase_range(
+  const phaseNewList = lune.phase_range(
     firstDayOfMonth,
     lastDayOfMonth,
     lune.PHASE_NEW
   );
 
-  //   phase_full_list.forEach(full => console.log(full));
-  const fullMoonArray = Object.values([
-    new Date(phase_full_list).getDate(),
-    new Date(phase_full_list).getDay(),
-  ]);
-  const newMoonArray = Object.values([
-    new Date(phase_new_list).getDate(),
-    new Date(phase_new_list).getDay(),
-  ]);
-
-  console.log(phase_new_list);
-
-  //   console.log(fullMoonArray);
+  const fullMoonArray = phaseFullList.map(fullMoonDate => fullMoonDate);
+  const newMoonArray = phaseNewList.map(newMoonDate => newMoonDate);
 
   return (
     <Container>
-      <h1>Moon day</h1>
-      <h1>MONTH: {month}</h1>
-      {fullMoonArray.length > 0
-        ? fullMoonArray.map((full, inx) => (
-            <div key={inx}>
-              <h4>FULL: {full}</h4>
-            </div>
-          ))
-        : null}
-      {/* {newMoonArray.map((newMoon, inx) => (
-        <h4 key={inx}>NEW: {newMoon}</h4>
-      ))} */}
+      <h1>MONTH: {monthList[month]}</h1>
+      {fullMoonArray.map((fullMoonDate, inx) => {
+        return (
+          <div className="date-info" key={inx}>
+            <h4>{fullMoonDate.getDate()}</h4>
+            <h4>{dayList[fullMoonDate.getDay()]}</h4>
+          </div>
+        );
+      })}
+
+      {newMoonArray.map((newMoonDate, inx) => {
+        return (
+          <div className="date-info" key={inx}>
+            <h4>{newMoonDate.getDate()}</h4>
+            <h4>{dayList[newMoonDate.getDay()]}</h4>
+          </div>
+        );
+      })}
     </Container>
   );
 };

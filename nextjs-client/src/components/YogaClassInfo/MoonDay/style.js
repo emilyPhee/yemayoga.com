@@ -6,4 +6,10 @@ export const Container = styled.div`
 
   margin: 2rem;
   font-size: 3rem;
+
+  .date-info {
+    display: flex;
+    background-color: powderblue;
+    margin: 1rem;
+  }
 `;
