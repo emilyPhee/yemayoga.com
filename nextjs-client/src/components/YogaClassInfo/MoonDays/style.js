@@ -25,6 +25,13 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #e4e4e4;
+    border-bottom: 1px solid #efefef;
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    .moonday-list-wrapper {
+      grid-template-columns: 1fr 1fr;
+      width: 90%;
+    }
   }
 `;
