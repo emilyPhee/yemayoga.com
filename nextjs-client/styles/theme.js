@@ -27,8 +27,9 @@ export const theme = {
     bodyFontsSize: '1.4rem',
     fontsTitleSize: '2.2rem',
     fontsDescriptionTitle: '2.2rem',
-    fontsDescriptionTitleSub: '1.4rem',
+    fontsDescriptionTitleSub: '1.5rem',
     fontsSystemTitle: '2rem',
+    fontsMoondayTitle: '1.7rem',
   },
   mediaQuery: {
     desktop: '@media screen and (min-width: 1024px)',

@@ -34,8 +34,9 @@ const MoonDay = ({ currentYear, month }) => {
     return date;
   };
 
-  const lastDayOfMonth = getLastDayOfMonth(currentYear, month);
-  const firstDayOfMonth = new Date(`${currentYear}, ${month + 1}, 1`);
+  const lastDayOfMonth = getLastDayOfMonth(currentYear, Number(month));
+  console.log(month);
+  const firstDayOfMonth = new Date(`${currentYear}, ${Number(month) + 1}, 1`);
   const lune = require('lune');
 
   const phaseFullList = lune.phase_range(
@@ -57,15 +58,21 @@ const MoonDay = ({ currentYear, month }) => {
 
   return (
     <Container>
-      <h1>{monthList[month]}</h1>
-      {moonDayDateArray.map((moonDay, inx) => {
-        return (
-          <div className="date-info" key={inx}>
-            <h4>{moonDay.getDate()}</h4>
-            <h4>{dayList[moonDay.getDay()]}</h4>
-          </div>
-        );
-      })}
+      <div className="left-box">
+        <h2 className="month-name">
+          {moonDayDateArray.length > 0 ? monthList[month] : null}
+        </h2>
+      </div>
+      <div className="right-box">
+        {moonDayDateArray.map((moonDay, inx) => {
+          return (
+            <div className="date-info" key={inx}>
+              <p className="date">{moonDay.getDate()}</p>
+              <p className="day">{dayList[moonDay.getDay()]}</p>
+            </div>
+          );
+        })}
+      </div>
     </Container>
   );
 };
