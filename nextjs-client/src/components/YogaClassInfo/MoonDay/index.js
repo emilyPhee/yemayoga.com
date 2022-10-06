@@ -52,24 +52,17 @@ const MoonDay = ({ currentYear, month }) => {
 
   const fullMoonArray = phaseFullList.map(fullMoonDate => fullMoonDate);
   const newMoonArray = phaseNewList.map(newMoonDate => newMoonDate);
+  const moonDayDateArray = fullMoonArray.concat(newMoonArray);
+  moonDayDateArray.sort((a, b) => a - b);
 
   return (
     <Container>
-      <h1>MONTH: {monthList[month]}</h1>
-      {fullMoonArray.map((fullMoonDate, inx) => {
+      <h1>{monthList[month]}</h1>
+      {moonDayDateArray.map((moonDay, inx) => {
         return (
           <div className="date-info" key={inx}>
-            <h4>{fullMoonDate.getDate()}</h4>
-            <h4>{dayList[fullMoonDate.getDay()]}</h4>
-          </div>
-        );
-      })}
-
-      {newMoonArray.map((newMoonDate, inx) => {
-        return (
-          <div className="date-info" key={inx}>
-            <h4>{newMoonDate.getDate()}</h4>
-            <h4>{dayList[newMoonDate.getDay()]}</h4>
+            <h4>{moonDay.getDate()}</h4>
+            <h4>{dayList[moonDay.getDay()]}</h4>
           </div>
         );
       })}
