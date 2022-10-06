@@ -30,6 +30,7 @@ export const theme = {
     fontsDescriptionTitleSub: '1.5rem',
     fontsSystemTitle: '2rem',
     fontsMoondayTitle: '1.7rem',
+    fontsMoondayDate: '1.5rem',
   },
   mediaQuery: {
     desktop: '@media screen and (min-width: 1024px)',

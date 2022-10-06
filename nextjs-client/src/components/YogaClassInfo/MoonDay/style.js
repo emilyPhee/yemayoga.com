@@ -14,13 +14,16 @@ export const Container = styled.li`
     font-family: ${theme.fonts.nunito};
     font-size: ${theme.sizes.fontsMoondayTitle};
     margin: 2rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    color: ${theme.colors.greyText};
   }
 
   .date-info {
     display: flex;
-    background-color: powderblue;
+    gap: 10px;
     margin: 1rem;
-    font-size: ${theme.sizes.bodyFontsSize};
+    font-size: ${theme.sizes.fontsMoondayDate};
     font-family: ${theme.fonts.nunito};
   }
 `;

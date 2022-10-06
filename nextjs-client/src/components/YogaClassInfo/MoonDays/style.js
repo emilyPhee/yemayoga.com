@@ -17,7 +17,6 @@ export const Container = styled.section`
 
   .moonday-list-wrapper {
     width: 80%;
-    background-color: aliceblue;
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -26,5 +25,6 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid #e4e4e4;
   }
 `;

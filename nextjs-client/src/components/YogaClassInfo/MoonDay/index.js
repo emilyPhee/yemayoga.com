@@ -35,7 +35,6 @@ const MoonDay = ({ currentYear, month }) => {
   };
 
   const lastDayOfMonth = getLastDayOfMonth(currentYear, Number(month));
-  console.log(month);
   const firstDayOfMonth = new Date(`${currentYear}, ${Number(month) + 1}, 1`);
   const lune = require('lune');
 
@@ -67,7 +66,11 @@ const MoonDay = ({ currentYear, month }) => {
         {moonDayDateArray.map((moonDay, inx) => {
           return (
             <div className="date-info" key={inx}>
-              <p className="date">{moonDay.getDate()}</p>
+              <p className="date">
+                {Array.from(String(moonDay.getDate())).length === 1
+                  ? `0${moonDay.getDate()}`
+                  : moonDay.getDate()}
+              </p>
               <p className="day">{dayList[moonDay.getDay()]}</p>
             </div>
           );
