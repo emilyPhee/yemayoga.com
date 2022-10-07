@@ -5,6 +5,7 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   padding: 5rem 5%;
+  color: ${theme.colors.blackText};
 
   .left-box {
     width: 40rem;
@@ -20,7 +21,7 @@ export const Container = styled.section`
       font-size: ${theme.sizes.fontsDescriptionTitleSub};
       font-family: ${theme.fonts.nanumGothic};
       line-height: 2rem;
-      color: ${theme.colors.greyText};
+      color: ${theme.colors.lightGreyText};
     }
   }
 
@@ -39,6 +40,10 @@ export const Container = styled.section`
   ${theme.mediaQuery.smallScreen} {
     padding: 1rem;
     flex-direction: column;
+
+    .left-box {
+      width: 90%;
+    }
 
     .right-box {
       width: 90%;

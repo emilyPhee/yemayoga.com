@@ -6,10 +6,10 @@ export const Container = styled.section`
   justify-content: space-between;
   align-items: center;
   background-color: ${theme.colors.mainBackground};
+  color: ${theme.colors.blackText};
   font-family: ${theme.fonts.nunito};
-  height: 27rem;
   position: relative;
-  padding: 2rem ${theme.sizes.paddingFullScreen};
+  padding: 3rem ${theme.sizes.paddingFullScreen};
 
   .left-box {
     margin-top: 2rem;
@@ -43,5 +43,27 @@ export const Container = styled.section`
     left: 50%;
     transform: translate(-50%, -50%);
     color: ${theme.colors.greyText};
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    flex-direction: column;
+    padding: 5rem 2rem;
+
+    .left-box {
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .right-box {
+      padding: 4rem;
+    }
+
+    .copyright {
+      width: 90%;
+      text-align: center;
+    }
   }
 `;

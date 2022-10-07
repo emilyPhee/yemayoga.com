@@ -5,6 +5,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: ${theme.colors.blackText};
 
   padding: 7rem 1rem;
   padding-bottom: 0;
@@ -37,7 +38,7 @@ export const Container = styled.section`
 
     .sub-title {
       font-size: ${theme.sizes.fontsDescriptionTitleSub};
-      font-family: ${theme.fonts.cantarell};
+      font-family: ${theme.fonts.nanumGothic};
       letter-spacing: 1px;
     }
   }
@@ -58,7 +59,6 @@ export const Container = styled.section`
     .main-wrapper {
       padding: 0;
       flex-direction: column;
-      width: 90%;
       justify-content: center;
       align-items: center;
     }

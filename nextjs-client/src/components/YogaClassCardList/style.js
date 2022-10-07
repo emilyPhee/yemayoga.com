@@ -7,6 +7,8 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   padding: 10rem 0 12rem 0;
+  text-align: center;
+  color: ${theme.colors.blackText};
 
   .class-list {
     display: flex;
@@ -18,6 +20,5 @@ export const Container = styled.section`
     font-size: ${theme.sizes.fontsTitleSize};
     margin-bottom: 4rem;
     font-family: ${theme.fonts.nanumGothic};
-    color: ${theme.colors.greyText};
   }
 `;

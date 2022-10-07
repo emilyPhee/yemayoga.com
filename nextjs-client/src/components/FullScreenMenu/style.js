@@ -53,10 +53,6 @@ export const Container = styled.div`
     font-size: 2.1rem;
     color: ${theme.colors.greyText};
   }
-
-  ${theme.mediaQuery.tablet} {
-    background-color: aliceblue;
-  }
 `;
 
 export const MenuItem = styled.div`

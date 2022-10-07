@@ -6,6 +6,7 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   padding: 5rem 5%;
+  color: ${theme.colors.blackText};
 
   li {
     display: list-item;
