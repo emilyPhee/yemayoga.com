@@ -40,6 +40,10 @@ export const Container = styled.section`
     padding: 1rem;
     flex-direction: column;
 
+    .left-box {
+      width: 90%;
+    }
+
     .right-box {
       width: 90%;
     }

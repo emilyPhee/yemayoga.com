@@ -58,7 +58,6 @@ export const Container = styled.section`
     .main-wrapper {
       padding: 0;
       flex-direction: column;
-      width: 90%;
       justify-content: center;
       align-items: center;
     }
