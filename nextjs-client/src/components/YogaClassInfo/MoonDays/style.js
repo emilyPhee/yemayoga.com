@@ -6,12 +6,12 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   padding: 10rem 0 10rem 0;
+  color: ${theme.colors.blackText};
 
   .title {
     font-size: ${theme.sizes.fontsTitleSize};
     margin-bottom: 3rem;
     font-family: ${theme.fonts.nanumGothic};
-    color: ${theme.colors.greyText};
     text-align: center;
   }
 

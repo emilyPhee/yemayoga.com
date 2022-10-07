@@ -1,4 +1,5 @@
 import { Container } from './style';
+import lune from 'lune';
 
 const monthList = [
   'JAN',
@@ -36,7 +37,6 @@ const MoonDay = ({ currentYear, month }) => {
 
   const lastDayOfMonth = getLastDayOfMonth(currentYear, Number(month));
   const firstDayOfMonth = new Date(`${currentYear}, ${Number(month) + 1}, 1`);
-  const lune = require('lune');
 
   const phaseFullList = lune.phase_range(
     firstDayOfMonth,
@@ -58,9 +58,7 @@ const MoonDay = ({ currentYear, month }) => {
   return (
     <Container>
       <div className="left-box">
-        <h2 className="month-name">
-          {moonDayDateArray.length > 0 ? monthList[month] : null}
-        </h2>
+        <h2 className="month-name">{monthList[month]}</h2>
       </div>
       <div className="right-box">
         {moonDayDateArray.map((moonDay, inx) => {
