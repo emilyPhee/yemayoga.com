@@ -6,6 +6,7 @@ export const Container = styled.section`
   justify-content: space-between;
   align-items: center;
   background-color: ${theme.colors.mainBackground};
+  color: ${theme.colors.blackText};
   font-family: ${theme.fonts.nunito};
   position: relative;
   padding: 3rem ${theme.sizes.paddingFullScreen};
@@ -58,6 +59,11 @@ export const Container = styled.section`
 
     .right-box {
       padding: 4rem;
+    }
+
+    .copyright {
+      width: 90%;
+      text-align: center;
     }
   }
 `;

@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: 4rem 0;
+  color: ${theme.colors.blackText};
 
   .left-box {
     display: flex;
@@ -26,7 +27,6 @@ export const Container = styled.div`
 
     .title {
       font-size: ${theme.sizes.fontsSystemTitle};
-
       margin-top: 1rem;
     }
 

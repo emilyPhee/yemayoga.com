@@ -6,6 +6,10 @@
   box-sizing: inherit;
 }
 
+body {
+  box-sizing: border-box;
+}
+
 html {
   /* 
   what we want is 10px, so divide default px (16px) to 10 
@@ -36,8 +40,4 @@ html {
   html {
     font-size: 77.5%;
   }
-}
-
-body {
-  box-sizing: border-box;
 }

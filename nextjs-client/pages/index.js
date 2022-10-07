@@ -40,14 +40,15 @@ const Container = styled.section`
   ${theme.mediaQuery.smallScreen} {
     .home-intro {
       padding: 0;
-      padding: 12rem 2rem 0 2rem;
+      padding: 12rem 0 0 5rem;
     }
     .title {
       font-size: 3rem;
+      width: 90%;
     }
     .introduction {
       font-size: 1.7rem;
-      width: 30rem;
+      width: 90%;
     }
   }
 `;
