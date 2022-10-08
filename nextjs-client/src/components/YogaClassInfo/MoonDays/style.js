@@ -49,5 +49,14 @@ export const Container = styled.section`
       grid-template-columns: 1fr 1fr;
       width: 85%;
     }
+
+    .tooltip-wrapper {
+      justify-content: center;
+    }
+
+    .tooltip {
+      margin: 0;
+      margin-top: 3rem;
+    }
   }
 `;
