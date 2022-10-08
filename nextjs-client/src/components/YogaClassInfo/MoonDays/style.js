@@ -28,10 +28,35 @@ export const Container = styled.section`
     border-bottom: 1px solid #efefef;
   }
 
+  .tooltip-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .tooltip {
+    font-size: ${theme.sizes.bodyFontsSize};
+    font-family: ${theme.fonts.nunito};
+    text-decoration: underline;
+    color: ${theme.colors.greyText};
+    cursor: pointer;
+    margin-right: 15%;
+    margin-top: 3rem;
+  }
+
   ${theme.mediaQuery.smallScreen} {
     .moonday-list-wrapper {
       grid-template-columns: 1fr 1fr;
-      width: 90%;
+      width: 85%;
+    }
+
+    .tooltip-wrapper {
+      justify-content: center;
+    }
+
+    .tooltip {
+      margin: 0;
+      margin-top: 3rem;
     }
   }
 `;
