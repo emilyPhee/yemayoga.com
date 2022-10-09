@@ -1,4 +1,5 @@
 import { Container } from './style';
+import { useEffect, useState } from 'react';
 import lune from 'lune';
 
 const monthList = [
@@ -26,50 +27,51 @@ const dayList = [
   'Saturday',
 ];
 
+const getFirstDateOfMonth = (year, month) => {
+  return new Date(
+    `${year}-${(month + 1).toLocaleString('en-US', {
+      minimumIntegerDigits: 2,
+    })}-01T00:00:00.000`
+  );
+};
+
+const getLastDateOfMonth = (year, month) => {
+  const lastDate = new Date(year, month + 1, 0);
+
+  return new Date(
+    `${year}-${(month + 1).toLocaleString('en-US', {
+      minimumIntegerDigits: 2,
+    })}-${lastDate.getDate()}T23:59:59.999`
+  );
+};
+
+const getMoonDays = (firstDate, lastDate) => {
+  const fullMoonDays = lune.phase_range(firstDate, lastDate, lune.PHASE_FULL);
+  const newMoonDays = lune.phase_range(firstDate, lastDate, lune.PHASE_NEW);
+
+  return [...fullMoonDays, ...newMoonDays].sort((a, b) => a - b);
+};
+
 const MoonDay = ({ currentYear, month }) => {
-  const getLastDayOfMonth = (year, specificMonth) => {
-    let date = new Date(year, specificMonth + 1, 0);
-    date.setHours(23);
-    date.setMinutes(59);
-    date.setSeconds(59);
-    return date;
-  };
-
-  const lastDayOfMonth = getLastDayOfMonth(currentYear, Number(month));
-  const firstDayOfMonth = new Date(`${currentYear}, ${Number(month) + 1}, 1`);
-
-  const phaseFullList = lune.phase_range(
-    firstDayOfMonth,
-    lastDayOfMonth,
-    lune.PHASE_FULL
-  );
-
-  const phaseNewList = lune.phase_range(
-    firstDayOfMonth,
-    lastDayOfMonth,
-    lune.PHASE_NEW
-  );
-
-  const fullMoonArray = phaseFullList.map(fullMoonDate => fullMoonDate);
-  const newMoonArray = phaseNewList.map(newMoonDate => newMoonDate);
-  const moonDayDateArray = fullMoonArray.concat(newMoonArray);
-  moonDayDateArray.sort((a, b) => a - b);
+  const firstDate = getFirstDateOfMonth(currentYear, month);
+  const lastDate = getLastDateOfMonth(currentYear, month);
+  const moonDays = getMoonDays(firstDate, lastDate);
 
   return (
     <Container>
-      <div className="left-box">
-        <h2 className="month-name">{monthList[month]}</h2>
+      <div className='left-box'>
+        <h2 className='month-name'>{monthList[month]}</h2>
       </div>
-      <div className="right-box">
-        {moonDayDateArray.map((moonDay, inx) => {
+      <div className='right-box'>
+        {moonDays.map((moonDay, inx) => {
           return (
-            <div className="date-info" key={inx}>
-              <p className="date">
-                {Array.from(String(moonDay.getDate())).length === 1
-                  ? `0${moonDay.getDate()}`
-                  : moonDay.getDate()}
+            <div className='date-info' key={inx}>
+              <p className='date'>
+                {moonDay.getDate().toLocaleString('en-US', {
+                  minimumIntegerDigits: 2,
+                })}
               </p>
-              <p className="day">{dayList[moonDay.getDay()]}</p>
+              <p className='day'>{dayList[moonDay.getDay()]}</p>
             </div>
           );
         })}
