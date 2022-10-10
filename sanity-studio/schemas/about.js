@@ -12,15 +12,23 @@ export default {
       },
     },
     {
-      title: 'Introduction Title',
+      title: 'About Title',
       name: 'intro_title',
       type: 'string',
       validation: Rule => Rule.required().max(100),
     },
     {
-      title: 'Introduction',
-      name: 'introduction',
+      title: 'About Introduction (KR)',
+      name: 'about_intro_kr',
       type: 'text',
+      description: 'Please type the about Introduction in Korean.',
+      validation: Rule => Rule.required().max(400),
+    },
+    {
+      title: 'About Introduction (EN)',
+      name: 'about_intro_en',
+      type: 'text',
+      description: 'Please type the about Introduction in English.',
       validation: Rule => Rule.required().max(400),
     },
     {

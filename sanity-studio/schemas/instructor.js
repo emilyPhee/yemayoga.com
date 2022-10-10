@@ -15,15 +15,26 @@ export default {
       validation: Rule => Rule.optional().max(20),
     },
     {
-      title: 'Introduction',
-      name: 'introduction',
+      title: 'Introduction (KR)',
+      name: 'introduction_kr',
       type: 'text',
+      description: 'Please type the introduction in Korean.',
+      validation: Rule => Rule.required().max(1300),
+    },
+    {
+      title: 'Introduction (EN)',
+      name: 'introduction_en',
+      type: 'text',
+      description: 'Please type the introduction in English.',
       validation: Rule => Rule.required().max(1300),
     },
     {
       title: 'Instructor Image',
       name: 'instructor_img',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
   ],
 };
