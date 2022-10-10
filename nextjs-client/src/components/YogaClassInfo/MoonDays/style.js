@@ -5,6 +5,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 10rem 0 10rem 0;
   color: ${theme.colors.blackText};
 
@@ -12,7 +13,7 @@ export const Container = styled.section`
     font-size: ${theme.sizes.fontsTitleSize};
     margin-bottom: 3rem;
     font-family: ${theme.fonts.nanumGothic};
-    text-align: center;
+    /* text-align: center; */
   }
 
   .moonday-list-wrapper {
@@ -47,7 +48,7 @@ export const Container = styled.section`
   ${theme.mediaQuery.smallScreen} {
     .moonday-list-wrapper {
       grid-template-columns: 1fr 1fr;
-      width: 85%;
+      width: 95%;
     }
 
     .tooltip-wrapper {

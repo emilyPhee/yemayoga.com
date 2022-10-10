@@ -29,7 +29,9 @@ const Footer = () => {
         />
       </div>
 
-      <p className="copyright"> © 2022 yemayoga. All right reserved</p>
+      <p className="copyright">
+        © {new Date().getFullYear()} Yemayoga. All right reserved
+      </p>
     </Container>
   );
 };
