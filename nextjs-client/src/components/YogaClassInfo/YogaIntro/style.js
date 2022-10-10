@@ -14,7 +14,7 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
 
-    padding: 0 4rem;
+    padding: 2rem 4rem;
   }
 
   .yoga-img-wrapper {
@@ -66,6 +66,7 @@ export const Container = styled.section`
     .yoga-img-wrapper {
       display: flex;
       justify-content: center;
+      width: 30rem;
     }
     .yoga-img {
       padding: 10rem;
