@@ -47,6 +47,7 @@ export const Container = styled.div`
 
     .left-box {
       justify-content: center;
+      width: 30rem;
     }
   }
 `;
