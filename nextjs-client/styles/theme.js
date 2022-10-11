@@ -27,6 +27,8 @@ export const theme = {
     fontsTitleSize: '2.2rem',
     fontsDescriptionTitle: '2.2rem',
     fontsDescriptionTitleSub: '1.3rem',
+    fontsMediumDescriptionSize: '1.7rem',
+    fontsMediumDescriptionSubSize: '1.2rem',
     fontsSystemTitle: '2rem',
     fontsMoondayTitle: '1.7rem',
     fontsMoondayDate: '1.5rem',

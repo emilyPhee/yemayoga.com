@@ -3,6 +3,10 @@ import Image from 'next/image';
 import { urlFor } from 'src/sanity/image-url';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
+function blocksToText(blocks) {
+  return blocks.map(block => block.children.map(child => child.text).join(''));
+}
+
 const AboutInstructor = ({ data }) => {
   const {
     instructor_name,
@@ -11,6 +15,7 @@ const AboutInstructor = ({ data }) => {
     introduction_en,
     instructor_img,
   } = data[0];
+
   const { preferredLanguage } = useLanguages();
 
   return (
@@ -23,9 +28,9 @@ const AboutInstructor = ({ data }) => {
 
         <div>
           {preferredLanguage === supportLanguages.English ? (
-            <p className="introduction">{introduction_en}</p>
+            <p className="introduction-en">{introduction_en}</p>
           ) : (
-            <p className="introduction">{introduction_kr}</p>
+            <p className="introduction-kr">{blocksToText(introduction_kr)}</p>
           )}
         </div>
       </div>

@@ -2,16 +2,14 @@ import styled from '@emotion/styled';
 import { theme } from '@styles/theme';
 
 export const Container = styled.section`
-  background-color: blanchedalmond;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 7rem 1rem;
+  padding: 15rem 1rem;
   color: ${theme.colors.blackText};
 
   .left-box {
-    background-color: lightblue;
-    width: 70rem;
+    width: 65rem;
 
     .name-wrapper {
       font-family: ${theme.fonts.nanumGothic};
@@ -28,13 +26,22 @@ export const Container = styled.section`
     }
   }
 
-  .introduction {
+  .introduction-en,
+  .introduction-kr {
     font-size: ${theme.sizes.bodyFontsSize};
-    line-height: 220%;
+    line-height: 210%;
+    font-family: ${theme.fonts.nanumGothic};
+  }
+
+  .introduction-en {
+    font-family: ${theme.fonts.nanumGothic};
+  }
+
+  .introduction-kr {
+    font-family: ${theme.fonts.nanumGothic};
   }
 
   .right-box {
-    background-color: darkseagreen;
     display: flex;
     justify-content: center;
     width: 40rem;
@@ -44,5 +51,17 @@ export const Container = styled.section`
     position: relative;
     width: 30rem;
     height: 40rem;
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    flex-direction: column;
+
+    .left-box {
+      width: 90%;
+    }
+    .right-box {
+      width: 90%;
+      margin: 4rem 0;
+    }
   }
 `;

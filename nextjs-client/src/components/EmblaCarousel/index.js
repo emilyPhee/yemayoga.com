@@ -76,9 +76,9 @@ export const EmblaCarousel = ({ reviewData }) => {
                   />
                 </div>
                 {preferredLanguage === supportLanguages.English ? (
-                  <div className="review">{review.content_en}</div>
+                  <div className="review-en">{review.content_en}</div>
                 ) : (
-                  <div className="review">{review.content_kr}</div>
+                  <div className="review-kr">{review.content_kr}</div>
                 )}
                 <p className="reviewer-name">{review.name}</p>
               </div>

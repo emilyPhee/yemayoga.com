@@ -19,7 +19,7 @@ About.getLayout = function getLayout(page) {
 
 export async function getStaticProps() {
   const aboutData = await client.fetch(aboutQuery);
-  console.log(aboutData);
+
   const data = { aboutData };
 
   return {

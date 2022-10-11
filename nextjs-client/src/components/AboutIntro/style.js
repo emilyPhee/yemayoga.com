@@ -26,13 +26,13 @@ export const Container = styled.section`
   }
 
   .sub-title {
-    font-size: ${theme.sizes.fontsDescriptionTitleSub};
+    font-size: ${theme.sizes.fontsMediumDescriptionSubSize};
     color: ${theme.colors.lightGreyText};
     letter-spacing: 0.1rem;
   }
 
   .title {
-    font-size: ${theme.sizes.fontsDescriptionTitle};
+    font-size: ${theme.sizes.fontsMediumDescriptionSize};
   }
 
   .intro-wrapper {

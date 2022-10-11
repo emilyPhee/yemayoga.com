@@ -46,9 +46,10 @@ export default {
     {
       title: 'Instructor Introduction (KR)',
       name: 'introduction_kr',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
       description: 'Please type the introduction in Korean.',
-      validation: Rule => Rule.required().max(1300),
+      //   validation: Rule => Rule.required().max(1300),
     },
     {
       title: 'Instructor Introduction (EN)',
