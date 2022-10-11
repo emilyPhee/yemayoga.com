@@ -7,6 +7,8 @@ const AboutIntro = ({ data }) => {
   const { about_img, about_title, about_intro_kr, about_intro_en } = data[0];
   const { preferredLanguage } = useLanguages();
 
+  console.log(about_title);
+
   return (
     <Container>
       <div className="left-box">
@@ -22,15 +24,15 @@ const AboutIntro = ({ data }) => {
       </div>
       <div className="right-box">
         <div className="title-wrapper">
-          <h4>Why Yemayoga</h4>
+          <h4 className="sub-title">Why Yemayoga</h4>
           <h1 className="title">{about_title}</h1>
         </div>
 
-        <div>
+        <div className="intro-wrapper">
           {preferredLanguage === supportLanguages.English ? (
-            <p>{about_intro_en}</p>
+            <p className="about-intro">{about_intro_en}</p>
           ) : (
-            <p>{about_intro_kr}</p>
+            <p className="about-intro">{about_intro_kr}</p>
           )}
         </div>
       </div>

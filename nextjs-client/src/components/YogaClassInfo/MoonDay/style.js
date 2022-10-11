@@ -11,7 +11,7 @@ export const Container = styled.li`
 
   .month-name {
     font-family: ${theme.fonts.nunito};
-    font-size: ${theme.sizes.fontsMoondayTitle};
+    font-size: ${theme.sizes.fontsMediumTitle};
     margin-right: 2rem;
     letter-spacing: 0.1rem;
     font-weight: bold;
