@@ -28,7 +28,7 @@ export const theme = {
     fontsDescriptionTitle: '2.2rem',
     fontsDescriptionTitleSub: '1.3rem',
     fontsSystemTitle: '2rem',
-    fontsMediumTitle: '1.7rem',
+    fontsMoondayTitle: '1.7rem',
     fontsMoondayDate: '1.5rem',
   },
   mediaQuery: {

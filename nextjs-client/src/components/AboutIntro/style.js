@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { theme } from '@styles/theme';
 
 export const Container = styled.section`
-  background-color: aliceblue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,12 +11,12 @@ export const Container = styled.section`
 
   .left-box {
     width: 40rem;
-    background-color: aqua;
   }
 
   .right-box {
     width: 60rem;
-    background-color: purple;
+    margin-right: 1rem;
+    margin: 0 2rem;
   }
 
   .about-img {
@@ -29,6 +28,7 @@ export const Container = styled.section`
   .sub-title {
     font-size: ${theme.sizes.fontsDescriptionTitleSub};
     color: ${theme.colors.lightGreyText};
+    letter-spacing: 0.1rem;
   }
 
   .title {
@@ -36,7 +36,6 @@ export const Container = styled.section`
   }
 
   .intro-wrapper {
-    background-color: bisque;
     height: 17rem;
     display: flex;
     align-items: center;
@@ -45,21 +44,20 @@ export const Container = styled.section`
   .about-intro {
     font-size: ${theme.sizes.bodyFontsSize};
     line-height: 180%;
-    padding: 1rem 0;
   }
 
   ${theme.mediaQuery.smallScreen} {
     flex-direction: column;
 
     .left-box {
-      width: 95%;
+      width: 90%;
       display: flex;
       justify-content: center;
       margin-bottom: 3rem;
     }
 
     .right-box {
-      width: 95%;
+      width: 90%;
     }
 
     .intro-wrapper {
