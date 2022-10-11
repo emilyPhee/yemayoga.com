@@ -1,11 +1,12 @@
 import AboutIntro from '@components/AboutIntro';
 import Layout from '@components/Layout';
-import client from 'src/sanity/client';
+import client from '../src/sanity/client';
+import { aboutQuery } from 'src/sanity/queries/about';
 
-export default function About() {
+export default function About({ data }) {
   return (
     <>
-      <AboutIntro />
+      <AboutIntro data={data.aboutData} />
     </>
   );
 }
@@ -15,5 +16,13 @@ About.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
-  const aboutData = await client.fetch();
+  const aboutData = await client.fetch(aboutQuery);
+  console.log(aboutData);
+  const data = { aboutData };
+
+  return {
+    props: {
+      data,
+    },
+  };
 }

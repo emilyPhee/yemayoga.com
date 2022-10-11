@@ -13,7 +13,7 @@ export default {
     },
     {
       title: 'About Title',
-      name: 'intro_title',
+      name: 'about_title',
       type: 'string',
       validation: Rule => Rule.required().max(100),
     },
