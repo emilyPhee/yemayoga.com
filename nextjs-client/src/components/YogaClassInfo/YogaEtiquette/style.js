@@ -42,7 +42,11 @@ export const Container = styled.section`
     }
 
     .right-box {
-      padding: 0 2rem;
+      padding: 0 1rem;
+      width: 90%;
+    }
+
+    .left-box {
       width: 90%;
     }
   }
