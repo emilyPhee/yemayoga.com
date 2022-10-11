@@ -7,8 +7,6 @@ const AboutIntro = ({ data }) => {
   const { about_img, about_title, about_intro_kr, about_intro_en } = data[0];
   const { preferredLanguage } = useLanguages();
 
-  console.log(about_title);
-
   return (
     <Container>
       <div className="left-box">

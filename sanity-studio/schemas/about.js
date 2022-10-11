@@ -37,9 +37,10 @@ export default {
       type: 'string',
     },
     {
-      title: 'Sub Name',
-      name: 'sub',
+      title: 'Instructor Sub Name',
+      name: 'instructor_sub_name',
       type: 'string',
+      description: 'Please type the secondary name (Optional).',
       validation: Rule => Rule.optional().max(20),
     },
     {

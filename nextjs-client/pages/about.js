@@ -2,11 +2,13 @@ import AboutIntro from '@components/AboutIntro';
 import Layout from '@components/Layout';
 import client from '../src/sanity/client';
 import { aboutQuery } from 'src/sanity/queries/about';
+import AboutInstructor from '@components/AboutInstructor';
 
 export default function About({ data }) {
   return (
     <>
       <AboutIntro data={data.aboutData} />
+      <AboutInstructor data={data.aboutData} />
     </>
   );
 }
