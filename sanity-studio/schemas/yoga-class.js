@@ -71,5 +71,11 @@ export default {
       type: 'array',
       of: [{ type: 'string' }],
     },
+    {
+      title: 'List of Schedule',
+      name: 'list_schedule',
+      type: 'array',
+      of: [{ type: 'daySchedule' }],
+    },
   ],
 };
