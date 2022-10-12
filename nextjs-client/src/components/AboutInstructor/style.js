@@ -9,7 +9,7 @@ export const Container = styled.section`
   color: ${theme.colors.blackText};
 
   .left-box {
-    width: 65rem;
+    width: 60rem;
 
     .name-wrapper {
       font-family: ${theme.fonts.nanumGothic};
@@ -26,25 +26,17 @@ export const Container = styled.section`
     }
   }
 
-  .introduction-en,
-  .introduction-kr {
+  .instructor-intro {
     font-size: ${theme.sizes.bodyFontsSize};
     line-height: 210%;
-    font-family: ${theme.fonts.nanumGothic};
-  }
-
-  .introduction-en {
-    font-family: ${theme.fonts.nanumGothic};
-  }
-
-  .introduction-kr {
     font-family: ${theme.fonts.nanumGothic};
   }
 
   .right-box {
     display: flex;
     justify-content: center;
-    width: 40rem;
+    width: 45rem;
+    padding: 2rem;
   }
 
   .instructor-img {
@@ -55,13 +47,15 @@ export const Container = styled.section`
 
   ${theme.mediaQuery.smallScreen} {
     flex-direction: column;
+    padding: 4rem 0;
+    padding-bottom: 7rem;
 
     .left-box {
       width: 90%;
     }
     .right-box {
       width: 90%;
-      margin: 4rem 0;
+      margin-top: 7rem;
     }
   }
 `;

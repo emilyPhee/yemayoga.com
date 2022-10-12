@@ -3,11 +3,11 @@ import Image from 'next/image';
 import { urlFor } from 'src/sanity/image-url';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
-function blocksToText(blocks) {
-  return blocks.map(block => block.children.map(child => child.text).join(''));
-}
+import { PortableText } from '@portabletext/react';
 
 const AboutInstructor = ({ data }) => {
+  const { preferredLanguage } = useLanguages();
+
   const {
     instructor_name,
     instructor_sub_name,
@@ -15,8 +15,6 @@ const AboutInstructor = ({ data }) => {
     introduction_en,
     instructor_img,
   } = data[0];
-
-  const { preferredLanguage } = useLanguages();
 
   return (
     <Container>
@@ -26,12 +24,14 @@ const AboutInstructor = ({ data }) => {
           <h4 className="sub-name">{instructor_sub_name}</h4>
         </div>
 
-        <div>
-          {preferredLanguage === supportLanguages.English ? (
-            <p className="introduction-en">{introduction_en}</p>
-          ) : (
-            <p className="introduction-kr">{blocksToText(introduction_kr)}</p>
-          )}
+        <div className="instructor-intro">
+          <PortableText
+            value={
+              preferredLanguage === supportLanguages.English
+                ? introduction_en
+                : introduction_kr
+            }
+          />
         </div>
       </div>
 
