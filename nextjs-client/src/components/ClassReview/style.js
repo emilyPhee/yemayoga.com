@@ -10,7 +10,6 @@ export const Container = styled.section`
     font-size: ${theme.sizes.fontsTitleSize};
     margin-bottom: 4rem;
     font-family: ${theme.fonts.nanumGothic};
-    /* color: ${theme.colors.greyText}; */
     text-align: center;
   }
 `;
