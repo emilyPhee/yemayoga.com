@@ -1,8 +1,13 @@
 export default {
-  title: 'Day Schedule',
-  name: 'daySchedule',
+  title: 'Week Schedule',
+  name: 'weekSchedule',
   type: 'object',
   fields: [
+    {
+      title: 'Yoga Name',
+      name: 'yoga_name',
+      type: 'string',
+    },
     {
       title: 'Day of the Week',
       name: 'day',
