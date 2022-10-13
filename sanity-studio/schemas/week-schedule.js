@@ -47,5 +47,11 @@ export default {
       },
       layout: 'dropdown',
     },
+    {
+      title: 'Announcement (Optional)',
+      name: 'announcement',
+      type: 'string',
+      description: 'Please type the announcement/notes for schedule.',
+    },
   ],
 };
