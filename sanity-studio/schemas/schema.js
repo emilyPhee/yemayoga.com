@@ -7,7 +7,6 @@ import yogaClass from './yoga-class';
 import review from './review';
 import system from './system';
 import about from './about';
-import instructor from './instructor';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -21,6 +20,5 @@ export default createSchema({
     review,
     system,
     about,
-    instructor,
   ]),
 });

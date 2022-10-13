@@ -51,13 +51,22 @@ export const Container = styled.div`
     height: 7rem;
   }
 
-  .review {
+  .review-kr,
+  .review-en {
     font-size: 1.4rem;
     line-height: 3rem;
     margin-bottom: 2rem;
     height: 18rem;
     overflow: scroll;
     color: ${theme.colors.blackText};
+  }
+
+  .review-en {
+    font-family: ${theme.fonts.nunito};
+  }
+
+  .review-kr {
+    font-family: ${theme.fonts.nanumGothic};
   }
 
   .reviewer-name {
