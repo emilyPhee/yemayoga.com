@@ -72,8 +72,8 @@ export default {
       of: [{ type: 'string' }],
     },
     {
-      title: 'List of Schedule',
-      name: 'list_schedule',
+      title: 'Schedule',
+      name: 'schedule',
       type: 'array',
       of: [{ type: 'daySchedule' }],
     },

@@ -6,7 +6,19 @@ export default {
     {
       title: 'Day of the Week',
       name: 'day',
-      type: 'string',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'Monday', value: 'Mon' },
+          { title: 'Tuesday', value: 'Tue' },
+          { title: 'Wednesday', value: 'Wed' },
+          { title: 'Thursday', value: 'Thu' },
+          { title: 'Friday', value: 'Fri' },
+          { title: 'Saturday', value: 'Sat' },
+          { title: 'Sunday', value: 'Sun' },
+        ],
+      },
     },
     {
       title: 'Start Time',
@@ -22,6 +34,13 @@ export default {
       title: 'Period (am/pm)',
       name: 'period',
       type: 'string',
+      options: {
+        list: [
+          { title: 'am', value: 'am' },
+          { title: 'pm', value: 'pm' },
+        ],
+      },
+      layout: 'dropdown',
     },
   ],
 };
