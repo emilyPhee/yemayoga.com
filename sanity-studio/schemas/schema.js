@@ -8,6 +8,7 @@ import review from './review';
 import system from './system';
 import about from './about';
 import weekSchedule from './week-schedule';
+import timeRange from './time-range';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -22,5 +23,6 @@ export default createSchema({
     system,
     about,
     weekSchedule,
+    timeRange,
   ]),
 });

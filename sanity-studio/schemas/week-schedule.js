@@ -28,12 +28,12 @@ export default {
     {
       title: 'Start Time',
       name: 'start_time',
-      type: 'string',
+      type: 'timeRange',
     },
     {
       title: 'End Time',
       name: 'end_time',
-      type: 'string',
+      type: 'timeRange',
     },
     {
       title: 'Period (am/pm)',
