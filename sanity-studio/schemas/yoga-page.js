@@ -9,14 +9,30 @@ export default {
       type: 'string',
     },
     {
+      title: 'Yoga Quote',
+      name: 'yoga_quote',
+      type: 'string',
+    },
+
+    {
       title: 'Short Description',
       name: 'short_description',
       type: 'string',
+      description: 'Please type the yoga short description.',
     },
     {
-      title: 'Yoga Description',
-      name: 'yoga_description',
-      type: 'text',
+      title: 'Yoga Description (KR)',
+      name: 'yoga_description_kr',
+      type: 'array',
+      of: [{ type: 'block' }],
+      description: 'Please type the yoga description in Korean.',
+    },
+    {
+      title: 'Yoga Description (EN)',
+      name: 'yoga_description_en',
+      type: 'array',
+      of: [{ type: 'block' }],
+      description: 'Please type the yoga description in English.',
     },
     {
       title: 'Yoga Systems',
@@ -25,10 +41,18 @@ export default {
       of: [{ type: 'system' }],
     },
     {
-      title: 'Etiquette',
-      name: 'etiquette',
+      title: 'Etiquette (KR)',
+      name: 'etiquette_kr',
       type: 'array',
       of: [{ type: 'string' }],
+      description: 'Please type the etiquette in Korean.',
+    },
+    {
+      title: 'Etiquette (EN)',
+      name: 'etiquette_en',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: 'Please type the etiquette in English.',
     },
   ],
 };

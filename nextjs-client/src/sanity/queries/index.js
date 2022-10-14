@@ -6,7 +6,7 @@ export const yogaClassesQuery = `
 `;
 
 export const ashtangaQuery = `
-	*[_type == 'yogaClass' && name == 'Ashtanga'] 
+	*[_type == 'yogaPage' && name == 'Ashtanga'] 
 	{
 		name, image, short_description, yoga_description, yoga_systems, etiquette
 	}[0]
