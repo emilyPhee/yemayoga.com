@@ -3,11 +3,11 @@ export default {
   name: 'weeklySchedule',
   type: 'object',
   fields: [
-    {
-      title: 'Yoga Name',
-      name: 'yoga_name',
-      type: 'string',
-    },
+    // {
+    //   title: 'Yoga Name',
+    //   name: 'yoga_name',
+    //   type: 'string',
+    // },
     {
       title: 'Day of the Week',
       name: 'day',

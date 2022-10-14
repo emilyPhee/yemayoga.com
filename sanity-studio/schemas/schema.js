@@ -9,6 +9,7 @@ import system from './system';
 import about from './about';
 import weeklySchedule from './weekly-schedule';
 import yogaTime from './yoga-time';
+import yogaPage from './yoga-page';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,5 +25,6 @@ export default createSchema({
     about,
     weeklySchedule,
     yogaTime,
+    yogaPage,
   ]),
 });
