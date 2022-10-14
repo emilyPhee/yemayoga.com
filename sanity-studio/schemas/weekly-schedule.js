@@ -1,6 +1,6 @@
 export default {
-  title: 'Week Schedule',
-  name: 'weekSchedule',
+  title: 'Weekly Schedule',
+  name: 'weeklySchedule',
   type: 'object',
   fields: [
     {
@@ -28,24 +28,12 @@ export default {
     {
       title: 'Start Time',
       name: 'start_time',
-      type: 'timeRange',
+      type: 'yogaTime',
     },
     {
       title: 'End Time',
       name: 'end_time',
-      type: 'timeRange',
-    },
-    {
-      title: 'Period (am/pm)',
-      name: 'period',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'am', value: 'am' },
-          { title: 'pm', value: 'pm' },
-        ],
-      },
-      layout: 'dropdown',
+      type: 'yogaTime',
     },
     {
       title: 'Announcement (Optional)',

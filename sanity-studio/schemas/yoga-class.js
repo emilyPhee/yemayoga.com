@@ -75,7 +75,7 @@ export default {
       title: 'Schedule',
       name: 'schedule',
       type: 'array',
-      of: [{ type: 'weekSchedule' }],
+      of: [{ type: 'weeklySchedule' }],
     },
   ],
 };
