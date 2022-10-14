@@ -37,45 +37,24 @@ export default {
         ],
       },
     },
-    {
-      title: 'Monthly Price',
-      name: 'monthlyPrice',
-      type: 'number',
-      validation: Rule => Rule.min(0),
-    },
+    // {
+    //   title: 'Monthly Price',
+    //   name: 'monthlyPrice',
+    //   type: 'number',
+    //   validation: Rule => Rule.min(0),
+    // },
     {
       name: 'order',
       title: 'Order',
       type: 'number',
       hidden: true,
     },
+
     // {
-    //   title: 'Short Description',
-    //   name: 'short_description',
-    //   type: 'string',
-    // },
-    // {
-    //   title: 'Yoga Description',
-    //   name: 'yoga_description',
-    //   type: 'text',
-    // },
-    // {
-    //   title: 'Yoga Systems',
-    //   name: 'yoga_systems',
+    //   title: 'Schedule',
+    //   name: 'schedule',
     //   type: 'array',
-    //   of: [{ type: 'system' }],
+    //   of: [{ type: 'weeklySchedule' }],
     // },
-    // {
-    //   title: 'Etiquette',
-    //   name: 'etiquette',
-    //   type: 'array',
-    //   of: [{ type: 'string' }],
-    // },
-    {
-      title: 'Schedule',
-      name: 'schedule',
-      type: 'array',
-      of: [{ type: 'weeklySchedule' }],
-    },
   ],
 };
