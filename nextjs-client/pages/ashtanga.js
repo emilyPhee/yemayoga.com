@@ -7,6 +7,7 @@ import YogaSystemList from '@components/YogaClassInfo/YogaSystemList';
 import styled from '@emotion/styled';
 import client from 'src/sanity/client';
 import { ashtangaImageQuery, ashtangaPageQuery } from 'src/sanity/queries';
+import { useLanguages } from '@contexts/languageContext';
 
 const Container = styled.div`
   .line {
@@ -22,12 +23,16 @@ const Container = styled.div`
 `;
 
 export default function Ashtanga({ data }) {
-  console.log(data.ashtangaImageData);
+  const { preferredLanguage } = useLanguages();
+
   return (
     <Container>
       <YogaIntro data={data.ashtangaImageData} />
-      <YogaDescription data={data.ashtangaPageData} />
-      {/* <YogaSystemList data={data} /> */}
+      <YogaDescription
+        language={preferredLanguage}
+        data={data.ashtangaPageData}
+      />
+      {/* <YogaSystemList data={data.ashtangaPageData} /> */}
       {/* <YogaEtiquette data={data} /> */}
       <div className="line-wrapper">
         <div className="line"></div>

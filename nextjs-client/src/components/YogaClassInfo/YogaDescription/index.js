@@ -1,16 +1,16 @@
 import { Container } from './style';
 import { PortableText } from '@portabletext/react';
-import { supportLanguages, useLanguages } from '@contexts/languageContext';
+import { supportLanguages } from '@contexts/languageContext';
 
-const YogaDescription = ({ data }) => {
-  const { preferredLanguage } = useLanguages();
-
+const YogaDescription = ({ data, language }) => {
   const {
     yoga_name,
     short_description,
     yoga_description_kr,
     yoga_description_en,
   } = data;
+
+  console.log(language);
 
   return (
     <Container>
@@ -19,15 +19,15 @@ const YogaDescription = ({ data }) => {
         <p className="sub-title">{short_description}</p>
       </div>
       <div className="right-box">
-        <p className="description">
+        <div className="description">
           <PortableText
             value={
-              preferredLanguage === supportLanguages.English
+              language === supportLanguages.English
                 ? yoga_description_en
                 : yoga_description_kr
             }
           />
-        </p>
+        </div>
       </div>
     </Container>
   );
