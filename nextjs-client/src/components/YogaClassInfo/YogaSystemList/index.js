@@ -1,7 +1,7 @@
 import YogaSystem from '../YogaSystem';
 import { Container } from './style';
 
-const YogaSystemList = ({ data }) => {
+const YogaSystemList = ({ data, language }) => {
   const { yoga_systems } = data;
   // console.log(yoga_systems[0].title);
 

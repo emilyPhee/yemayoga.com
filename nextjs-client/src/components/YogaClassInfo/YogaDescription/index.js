@@ -1,6 +1,6 @@
 import { Container } from './style';
 import { PortableText } from '@portabletext/react';
-import { supportLanguages } from '@contexts/languageContext';
+import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
 const YogaDescription = ({ data, language }) => {
   const {
@@ -9,8 +9,6 @@ const YogaDescription = ({ data, language }) => {
     yoga_description_kr,
     yoga_description_en,
   } = data;
-
-  console.log(language);
 
   return (
     <Container>
