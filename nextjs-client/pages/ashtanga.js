@@ -33,7 +33,7 @@ export default function Ashtanga({ data }) {
         data={data.ashtangaPageData}
       />
       <YogaSystemList data={data.ashtangaPageData} />
-      {/* <YogaEtiquette data={data} /> */}
+      <YogaEtiquette data={data.ashtangaPageData} />
       <div className="line-wrapper">
         <div className="line"></div>
       </div>
