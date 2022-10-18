@@ -5,19 +5,17 @@ import YogaIntro from '@components/YogaClassInfo/YogaIntro';
 import YogaSystemList from '@components/YogaClassInfo/YogaSystemList';
 import styled from '@emotion/styled';
 import client from 'src/sanity/client';
-import { privateQuery } from 'src/sanity/queries';
+import { privateImageQuery, privatePageQuery } from 'src/sanity/queries';
 
 const Container = styled.div``;
 
 export default function Private({ data }) {
-  const privateData = data.privateData;
-
   return (
     <Container>
-      <YogaIntro data={privateData} />
-      <YogaDescription data={privateData} />
-      <YogaSystemList data={privateData} />
-      <YogaEtiquette data={privateData} />
+      <YogaIntro data={data.privateImageData} />
+      <YogaDescription data={data.privatePageData} />
+      <YogaSystemList data={data.privatePageData} />
+      <YogaEtiquette data={data.privatePageData} />
     </Container>
   );
 }
@@ -27,9 +25,10 @@ Private.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
-  const privateData = await client.fetch(privateQuery);
+  const privatePageData = await client.fetch(privatePageQuery);
+  const privateImageData = await client.fetch(privateImageQuery);
 
-  const data = { privateData };
+  const data = { privatePageData, privateImageData };
 
   return {
     props: {

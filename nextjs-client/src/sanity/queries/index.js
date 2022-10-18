@@ -36,14 +36,14 @@ export const ashtangaPageQuery = `
 `;
 
 export const vinyasaPageQuery = `
-	*[_type == 'yogaPage' && name == 'Vinyasa'] 
+	*[_type == 'yogaPage' && yoga_name == 'Vinyasa'] 
 	{
 		yoga_name, yoga_quote, short_description, yoga_description_kr, yoga_description_en, yoga_systems, etiquette_kr, etiquette_en
 	}[0]
 `;
 
 export const privatePageQuery = `
-	*[_type == 'yogaPage' && name == 'Private']
+	*[_type == 'yogaPage' && yoga_name == 'Private']
 
 	{
 		yoga_name, yoga_quote, short_description, yoga_description_kr, yoga_description_en, yoga_systems, etiquette_kr, etiquette_en

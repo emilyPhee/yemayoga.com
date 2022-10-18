@@ -3,6 +3,8 @@ import { PortableText } from '@portabletext/react';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
 const YogaDescription = ({ data, language }) => {
+  const { preferredLanguage } = useLanguages();
+
   const {
     yoga_name,
     short_description,
@@ -20,7 +22,7 @@ const YogaDescription = ({ data, language }) => {
         <div className="description">
           <PortableText
             value={
-              language === supportLanguages.English
+              preferredLanguage === supportLanguages.English
                 ? yoga_description_en
                 : yoga_description_kr
             }
