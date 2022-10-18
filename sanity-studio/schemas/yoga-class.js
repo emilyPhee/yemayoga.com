@@ -37,24 +37,11 @@ export default {
         ],
       },
     },
-    // {
-    //   title: 'Monthly Price',
-    //   name: 'monthlyPrice',
-    //   type: 'number',
-    //   validation: Rule => Rule.min(0),
-    // },
     {
       name: 'order',
       title: 'Order',
       type: 'number',
       hidden: true,
     },
-
-    // {
-    //   title: 'Schedule',
-    //   name: 'schedule',
-    //   type: 'array',
-    //   of: [{ type: 'weeklySchedule' }],
-    // },
   ],
 };
