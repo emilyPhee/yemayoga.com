@@ -7,7 +7,6 @@ import { PortableText } from '@portabletext/react';
 const YogaSystem = ({ yogaSystem }) => {
   const { title, image, description_en, description_kr } = yogaSystem;
   const { preferredLanguage } = useLanguages();
-  console.log(description_en);
 
   return (
     <Container>
