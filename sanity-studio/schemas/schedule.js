@@ -8,6 +8,7 @@ export default {
       name: 'yoga_name',
       type: 'string',
     },
+
     {
       title: 'Schedule',
       name: 'schedule',

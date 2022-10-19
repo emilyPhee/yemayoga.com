@@ -4,6 +4,16 @@ export default {
   type: 'object',
   fields: [
     {
+      title: 'Title',
+      name: 'title',
+      type: 'string',
+    },
+    {
+      title: 'Level',
+      name: 'level',
+      type: 'string',
+    },
+    {
       title: 'Day of the Week',
       name: 'day',
       type: 'array',
@@ -19,6 +29,11 @@ export default {
           { title: 'Sunday', value: 'Sun' },
         ],
       },
+    },
+    {
+      title: 'Time Zone',
+      name: 'time_zone',
+      type: 'string',
     },
     {
       title: 'Start Time',
