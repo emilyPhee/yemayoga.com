@@ -6,14 +6,13 @@ export const Container = styled.div`
   .top-box {
     background-color: #fff;
     min-height: 5rem;
-    padding: 0 ${theme.sizes.paddingMediumScreen};
+    padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 100%;
     min-height: 7vh;
-
     top: 0;
     z-index: 10;
 
@@ -42,9 +41,9 @@ export const Container = styled.div`
 
     .bar {
       display: block;
-      width: 25px;
-      height: 2px;
-      margin: 6px auto;
+      width: 2.5rem;
+      height: 0.2rem;
+      margin: 0.6rem auto;
       transition: all 0.3s ease-in-out;
       background-color: ${theme.colors.greyText};
     }
@@ -84,6 +83,9 @@ export const Container = styled.div`
 
   .bottom-box.open {
     left: 0;
+  }
+
+  ${theme.mediaQuery.smallScreen} {
   }
 `;
 

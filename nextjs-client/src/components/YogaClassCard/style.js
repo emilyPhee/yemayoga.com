@@ -5,18 +5,18 @@ export const Container = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 6rem;
+  margin: 2rem 2.5%;
 
   .card-wrapper {
     position: relative;
-    width: 25rem;
-    height: 30rem;
     margin-bottom: 1.5rem;
     background-color: black;
   }
 
   .class-img {
     transition: all 200ms ease-in-out;
+    width: 24rem;
+    height: 29rem;
   }
 
   .class-img:hover {
@@ -44,5 +44,12 @@ export const Container = styled.li`
 
   .level {
     padding-bottom: 0.3rem;
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    margin: 3rem;
+
+    .card-wrapper {
+    }
   }
 `;
