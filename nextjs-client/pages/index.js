@@ -9,12 +9,17 @@ import { reviewQuery } from 'src/sanity/queries/review';
 
 const Container = styled.section`
   .home-intro {
-    background: url('/images/home-intro.jpg') center/cover no-repeat;
-    height: 93vh;
+    background: url('/images/home-intro2.jpg') center/cover no-repeat;
+    height: 100vh;
     color: ${theme.colors.whiteText};
     font-family: ${theme.fonts.cantarell};
-    padding-left: ${theme.sizes.paddingFullScreen};
-    padding-top: 18rem;
+    position: relative;
+  }
+
+  .intro-wrapper {
+    position: absolute;
+    top: 30%;
+    left: 20%;
   }
 
   .title {
@@ -57,10 +62,12 @@ export default function Home({ data }) {
   return (
     <Container>
       <div className="home-intro">
-        <h1 className="title">Breathe and move with Yemayoga </h1>
-        <p className="introduction">
-          See yourself grow through yoga and learn how you feel you can do it.
-        </p>
+        <div className="intro-wrapper">
+          <h1 className="title">Breathe and move with Yemayoga </h1>
+          <p className="introduction">
+            See yourself grow through yoga and learn how you feel you can do it.
+          </p>
+        </div>
       </div>
 
       <YogaClassesList data={data.yogaClassData} />

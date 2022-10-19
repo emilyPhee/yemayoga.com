@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: space-between;
   min-height: 7vh;
   background-color: white;
-  padding: 0 9.4rem;
+  padding: 0.1rem 9.4rem;
   border-bottom: 2px solid #fff;
   transition: all 200ms ease-in-out;
 
@@ -23,11 +23,11 @@ export const Container = styled.div`
     align-items: center;
 
     .logo-wrapper {
-      width: 10rem;
-      height: 4.4rem;
+      width: 12rem;
+      height: 5.4rem;
 
       position: relative;
-      margin: 1rem;
+      margin: 0.7rem;
       cursor: pointer;
     }
 
@@ -58,7 +58,7 @@ export const Container = styled.div`
 export const MenuItem = styled.div`
   color: ${theme.colors.navbarInactive};
   padding: 1.5rem 2.6rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   transition: color 200ms ease-in-out;
 
   &:hover {
