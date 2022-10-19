@@ -1,9 +1,13 @@
 import { Container } from './style';
 import Image from 'next/image';
 import { urlFor } from 'src/sanity/image-url';
+import { supportLanguages, useLanguages } from '@contexts/languageContext';
+import { PortableText } from '@portabletext/react';
 
 const YogaSystem = ({ yogaSystem }) => {
-  const { title, image, description } = yogaSystem;
+  const { title, image, description_en, description_kr } = yogaSystem;
+  const { preferredLanguage } = useLanguages();
+
   return (
     <Container>
       <div className="left-box">
@@ -19,7 +23,15 @@ const YogaSystem = ({ yogaSystem }) => {
       </div>
       <div className="right-box">
         <h2 className="title">{title}</h2>
-        <p className="description">{description}</p>
+        <div className="description">
+          <PortableText
+            value={
+              preferredLanguage === supportLanguages.English
+                ? description_en
+                : description_kr
+            }
+          />
+        </div>
       </div>
     </Container>
   );

@@ -14,12 +14,12 @@ export const Container = styled.section`
   }
 
   .left-box {
-    width: 40rem;
+    width: 50rem;
   }
 
   .right-box {
     width: 60rem;
-    padding-left: 10%;
+    padding-left: 2%;
   }
 
   .title {
@@ -30,7 +30,7 @@ export const Container = styled.section`
 
   .etiquette-list {
     font-size: ${theme.sizes.bodyFontsSize};
-    line-height: 5rem;
+    line-height: 4rem;
   }
 
   ${theme.mediaQuery.smallScreen} {

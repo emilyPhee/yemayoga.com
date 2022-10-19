@@ -4,16 +4,15 @@ import YogaEtiquette from '@components/YogaClassInfo/YogaEtiquette';
 import YogaIntro from '@components/YogaClassInfo/YogaIntro';
 import YogaSystemList from '@components/YogaClassInfo/YogaSystemList';
 import client from 'src/sanity/client';
-import { vinyasaQuery } from 'src/sanity/queries';
+import { vinyasaImageQuery, vinyasaPageQuery } from 'src/sanity/queries';
 
 export default function Vinyasa({ data }) {
-  const vinyasaData = data.vinyasaData;
   return (
     <>
-      <YogaIntro data={vinyasaData} />
-      <YogaDescription data={vinyasaData} />
-      <YogaSystemList data={vinyasaData} />
-      <YogaEtiquette data={vinyasaData} />
+      <YogaIntro data={data.vinyasaImageData} />
+      <YogaDescription data={data.vinyasaPageData} />
+      <YogaSystemList data={data.vinyasaPageData} />
+      <YogaEtiquette data={data.vinyasaPageData} />
     </>
   );
 }
@@ -23,9 +22,10 @@ Vinyasa.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
-  const vinyasaData = await client.fetch(vinyasaQuery);
+  const vinyasaPageData = await client.fetch(vinyasaPageQuery);
+  const vinyasaImageData = await client.fetch(vinyasaImageQuery);
 
-  const data = { vinyasaData };
+  const data = { vinyasaPageData, vinyasaImageData };
   return {
     props: {
       data,

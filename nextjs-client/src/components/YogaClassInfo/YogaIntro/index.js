@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { urlFor } from 'src/sanity/image-url';
 
 const YogaIntro = ({ data }) => {
-  const { name, image } = data;
+  const { name, image } = data[0];
 
   return (
     <Container>

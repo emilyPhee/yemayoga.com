@@ -6,7 +6,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10rem 0 12rem 0;
+  padding: 12rem 0;
   text-align: center;
   color: ${theme.colors.blackText};
 

@@ -6,7 +6,7 @@ import YogaIntro from '@components/YogaClassInfo/YogaIntro';
 import YogaSystemList from '@components/YogaClassInfo/YogaSystemList';
 import styled from '@emotion/styled';
 import client from 'src/sanity/client';
-import { ashtangaQuery } from 'src/sanity/queries';
+import { ashtangaImageQuery, ashtangaPageQuery } from 'src/sanity/queries';
 
 const Container = styled.div`
   .line {
@@ -22,14 +22,12 @@ const Container = styled.div`
 `;
 
 export default function Ashtanga({ data }) {
-  const ashtangaData = data.ashtangaData;
-
   return (
     <Container>
-      <YogaIntro data={ashtangaData} />
-      <YogaDescription data={ashtangaData} />
-      <YogaSystemList data={ashtangaData} />
-      <YogaEtiquette data={ashtangaData} />
+      <YogaIntro data={data.ashtangaImageData} />
+      <YogaDescription data={data.ashtangaPageData} />
+      <YogaSystemList data={data.ashtangaPageData} />
+      <YogaEtiquette data={data.ashtangaPageData} />
       <div className="line-wrapper">
         <div className="line"></div>
       </div>
@@ -43,9 +41,10 @@ Ashtanga.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
-  const ashtangaData = await client.fetch(ashtangaQuery);
+  const ashtangaPageData = await client.fetch(ashtangaPageQuery);
+  const ashtangaImageData = await client.fetch(ashtangaImageQuery);
 
-  const data = { ashtangaData };
+  const data = { ashtangaPageData, ashtangaImageData };
 
   return {
     props: {

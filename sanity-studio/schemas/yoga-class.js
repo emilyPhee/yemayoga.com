@@ -1,5 +1,5 @@
 export default {
-  title: 'Yoga Class',
+  title: 'Yoga Class (home/main)',
   name: 'yogaClass',
   type: 'document',
   fields: [
@@ -38,44 +38,10 @@ export default {
       },
     },
     {
-      title: 'Monthly Price',
-      name: 'monthlyPrice',
-      type: 'number',
-      validation: Rule => Rule.min(0),
-    },
-    {
       name: 'order',
       title: 'Order',
       type: 'number',
       hidden: true,
-    },
-    {
-      title: 'Short Description',
-      name: 'short_description',
-      type: 'string',
-    },
-    {
-      title: 'Yoga Description',
-      name: 'yoga_description',
-      type: 'text',
-    },
-    {
-      title: 'Yoga Systems',
-      name: 'yoga_systems',
-      type: 'array',
-      of: [{ type: 'system' }],
-    },
-    {
-      title: 'Etiquette',
-      name: 'etiquette',
-      type: 'array',
-      of: [{ type: 'string' }],
-    },
-    {
-      title: 'Schedule',
-      name: 'schedule',
-      type: 'array',
-      of: [{ type: 'weeklySchedule' }],
     },
   ],
 };

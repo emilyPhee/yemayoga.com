@@ -93,7 +93,7 @@ export const MenuItem = styled.div`
 
   color: ${theme.colors.navbarInactive};
   padding: 2rem 2.6rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   transition: color 200ms ease-in-out;
 
   &:hover {

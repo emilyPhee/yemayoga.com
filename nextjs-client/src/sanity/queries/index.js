@@ -5,24 +5,47 @@ export const yogaClassesQuery = `
 	}
 `;
 
-export const ashtangaQuery = `
-	*[_type == 'yogaClass' && name == 'Ashtanga'] 
+// get yoga class image
+export const ashtangaImageQuery = `
+*[_type == 'yogaClass' && name == 'Ashtanga'] 
 	{
-		name, image, short_description, yoga_description, yoga_systems, etiquette
+  		name, image
+	}
+`;
+
+export const vinyasaImageQuery = `
+*[_type == 'yogaClass' && name == 'Vinyasa'] 
+	{
+  		name, image
+	}
+`;
+
+export const privateImageQuery = `
+*[_type == 'yogaClass' && name == 'Private'] 
+	{
+  		name, image
+	}
+`;
+
+// get yoga page data
+export const ashtangaPageQuery = `
+	*[_type == 'yogaPage' && yoga_name == 'Ashtanga'] 
+	{
+		 yoga_name, yoga_quote, short_description, yoga_description_kr, yoga_description_en, yoga_systems, etiquette_kr, etiquette_en
 	}[0]
 `;
 
-export const vinyasaQuery = `
-	*[_type == 'yogaClass' && name == 'Vinyasa'] 
+export const vinyasaPageQuery = `
+	*[_type == 'yogaPage' && yoga_name == 'Vinyasa'] 
 	{
-		name, image, short_description, yoga_description, yoga_systems, etiquette
+		yoga_name, yoga_quote, short_description, yoga_description_kr, yoga_description_en, yoga_systems, etiquette_kr, etiquette_en
 	}[0]
 `;
 
-export const privateQuery = `
-	*[_type == 'yogaClass' && name == 'Private']
+export const privatePageQuery = `
+	*[_type == 'yogaPage' && yoga_name == 'Private']
 
 	{
-		name, image, short_description, yoga_description, yoga_systems, etiquette
+		yoga_name, yoga_quote, short_description, yoga_description_kr, yoga_description_en, yoga_systems, etiquette_kr, etiquette_en
 	}[0]
 `;

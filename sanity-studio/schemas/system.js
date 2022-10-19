@@ -14,9 +14,18 @@ export default {
       type: 'image',
     },
     {
-      title: 'Description',
-      name: 'description',
-      type: 'text',
+      title: 'Description (EN)',
+      name: 'description_en',
+      type: 'array',
+      of: [{ type: 'block' }],
+      description: 'Please type the system description in English.',
+    },
+    {
+      title: 'Description (KR)',
+      name: 'description_kr',
+      type: 'array',
+      of: [{ type: 'block' }],
+      description: 'Please type the system description in Korean.',
     },
   ],
 };
