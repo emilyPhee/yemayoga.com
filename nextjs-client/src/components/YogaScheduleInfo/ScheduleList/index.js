@@ -2,13 +2,14 @@ import Schedule from '../Schedule';
 import { Container } from './style';
 
 const ScheduleList = ({ data }) => {
-  console.log(data);
   return (
-    <div>
+    <Container>
       {data.map((schedule, inx) => (
-        <Schedule schedule={schedule} key={inx} />
+        <>
+          <Schedule schedule={schedule} key={inx} />
+        </>
       ))}
-    </div>
+    </Container>
   );
 };
 

@@ -3,4 +3,5 @@ import { theme } from '@styles/theme';
 
 export const Container = styled.li`
   background-color: aliceblue;
+  margin: 2rem;
 `;

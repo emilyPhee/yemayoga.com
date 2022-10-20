@@ -1,7 +1,7 @@
 export const scheduleQuery = `
     *[_type == 'schedule'] 
     {
-        schedule, yoga_name
+        yoga_schedule, yoga_name
     }
 `;
 

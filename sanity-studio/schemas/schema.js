@@ -13,6 +13,7 @@ import yogaPage from './yoga-page';
 import schedule from './schedule';
 import price from './price';
 import otherPrice from './other-price';
+import zoomClass from './zoom-class';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,5 +33,6 @@ export default createSchema({
     yogaPage,
     price,
     otherPrice,
+    zoomClass,
   ]),
 });

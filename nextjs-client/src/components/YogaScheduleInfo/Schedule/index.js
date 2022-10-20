@@ -1,8 +1,8 @@
 import { Container } from './style';
 
 const Schedule = ({ schedule }) => {
-  console.log(schedule);
-  const { schedule, yoga_name } = schedule;
+  const { yoga_schedule, yoga_name } = schedule;
+  console.log(yoga_schedule, yoga_name);
 
   //   const yoga_schedule = schedule.schedule;
   //   const yoga_name = schedule.yoga_name;
@@ -13,9 +13,14 @@ const Schedule = ({ schedule }) => {
 
   return (
     <Container>
-      <h2>Ashtanga Yoga</h2>
-      <p>All Level</p>
-      <div className="schedule-wrapper">
+      {yoga_schedule.map((s, inx) => (
+        <>
+          <h2>{yoga_name}</h2>
+          <div key={inx}>{s.day}</div>
+        </>
+      ))}
+      {/* <p>All Level</p> */}
+      {/* <div className="schedule-wrapper">
         <ul>
           <li>Mon 7:30 - 8:45 am</li>
           <li>Mon 7:30 - 8:45 am</li>
@@ -24,7 +29,7 @@ const Schedule = ({ schedule }) => {
           <li>Mon 7:30 - 8:45 am</li>
         </ul>
         <p>*Announcement*</p>
-      </div>
+      </div> */}
     </Container>
   );
 };
