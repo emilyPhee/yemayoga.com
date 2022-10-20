@@ -1,6 +1,16 @@
 import { Container } from './style';
 
-const Schedule = () => {
+const Schedule = ({ schedule }) => {
+  console.log(schedule);
+  const { schedule, yoga_name } = schedule;
+
+  //   const yoga_schedule = schedule.schedule;
+  //   const yoga_name = schedule.yoga_name;
+
+  //   const { announcement, day, level, start_time, end_time, title } =
+  //     yoga_schedule;
+  //   console.log(title);
+
   return (
     <Container>
       <h2>Ashtanga Yoga</h2>

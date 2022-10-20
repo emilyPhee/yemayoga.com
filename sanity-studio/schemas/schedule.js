@@ -10,8 +10,8 @@ export default {
     },
 
     {
-      title: 'Schedule',
-      name: 'schedule',
+      title: 'Yoga Schedule',
+      name: 'yoga_schedule',
       type: 'array',
       of: [{ type: 'weeklySchedule' }],
     },
