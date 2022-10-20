@@ -31,11 +31,6 @@ export default {
       },
     },
     {
-      title: 'Time Zone',
-      name: 'time_zone',
-      type: 'string',
-    },
-    {
       title: 'Start Time',
       name: 'start_time',
       type: 'yogaTime',

@@ -5,7 +5,7 @@ export const Container = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 2.5%;
+  margin: 2rem 2%;
 
   .card-wrapper {
     position: relative;
@@ -13,14 +13,17 @@ export const Container = styled.li`
     background-color: black;
   }
 
+  .card-wrapper:hover {
+  }
+
   .class-img {
     transition: all 200ms ease-in-out;
-    width: 24rem;
-    height: 29rem;
+    width: 25rem;
+    height: 30rem;
   }
 
   .class-img:hover {
-    opacity: 0.7;
+    opacity: 0.6;
     cursor: pointer;
   }
 
@@ -29,7 +32,7 @@ export const Container = styled.li`
     bottom: 1.5rem;
     left: 2rem;
     color: ${theme.colors.whiteText};
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     letter-spacing: 0.1rem;
   }
 

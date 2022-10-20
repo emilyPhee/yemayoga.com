@@ -18,7 +18,7 @@ const Container = styled.section`
 
   .intro-wrapper {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 20%;
   }
 
@@ -49,7 +49,7 @@ const Container = styled.section`
     }
     .title {
       font-size: 3rem;
-      width: 90%;
+      /* width: 90%; */
     }
     .introduction {
       font-size: 1.7rem;
