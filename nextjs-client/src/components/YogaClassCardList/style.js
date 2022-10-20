@@ -3,11 +3,7 @@ import { theme } from '@styles/theme';
 
 export const Container = styled.section`
   background-color: ${theme.colors.whiteText};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 12rem 0;
-  text-align: center;
   color: ${theme.colors.blackText};
 
   .class-list {
@@ -17,8 +13,18 @@ export const Container = styled.section`
   }
 
   .title {
+    letter-spacing: 0.2rem;
     font-size: ${theme.sizes.fontsTitleSize};
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
     font-family: ${theme.fonts.nanumGothic};
+    text-align: center;
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    padding: 7rem 0;
+
+    .title {
+      text-align: center;
+    }
   }
 `;
