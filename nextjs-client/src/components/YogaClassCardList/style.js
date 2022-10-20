@@ -3,7 +3,7 @@ import { theme } from '@styles/theme';
 
 export const Container = styled.section`
   background-color: ${theme.colors.whiteText};
-  padding: 15rem 0 15rem 0;
+  padding: 12rem 0;
   color: ${theme.colors.blackText};
 
   .class-list {
@@ -13,8 +13,9 @@ export const Container = styled.section`
   }
 
   .title {
+    letter-spacing: 0.2rem;
     font-size: ${theme.sizes.fontsTitleSize};
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
     font-family: ${theme.fonts.nanumGothic};
     text-align: center;
   }

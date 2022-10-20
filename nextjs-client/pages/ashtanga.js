@@ -28,6 +28,7 @@ export default function Ashtanga({ data }) {
       <YogaDescription data={data.ashtangaPageData} />
       <YogaSystemList data={data.ashtangaPageData} />
       <YogaEtiquette data={data.ashtangaPageData} />
+
       <div className="line-wrapper">
         <div className="line"></div>
       </div>
