@@ -6,7 +6,7 @@ import client from 'src/sanity/client';
 export default function Schedule({ data }) {
   return (
     <div>
-      <h1>Schedule Page</h1>
+      <h1>Schedule</h1>
       <ScheduleList data={data.scheduleData} />
     </div>
   );

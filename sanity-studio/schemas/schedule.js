@@ -15,11 +15,5 @@ export default {
       type: 'array',
       of: [{ type: 'weeklySchedule' }],
     },
-    {
-      title: 'Class Price',
-      name: 'class_price',
-      type: 'array',
-      of: [{ type: 'price' }],
-    },
   ],
 };

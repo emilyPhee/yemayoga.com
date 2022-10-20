@@ -1,6 +1,6 @@
 export default {
-  title: 'Other Price',
-  name: 'otherPrice',
+  title: 'Class Price',
+  name: 'classPrice',
   type: 'document',
   fields: [
     {

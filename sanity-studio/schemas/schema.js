@@ -12,7 +12,7 @@ import yogaTime from './yoga-time';
 import yogaPage from './yoga-page';
 import schedule from './schedule';
 import price from './price';
-import otherPrice from './other-price';
+import classPrice from './class-price';
 import zoomClass from './zoom-class';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -32,7 +32,7 @@ export default createSchema({
     yogaTime,
     yogaPage,
     price,
-    otherPrice,
+    classPrice,
     zoomClass,
   ]),
 });
