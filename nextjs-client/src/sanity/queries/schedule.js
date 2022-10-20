@@ -5,4 +5,6 @@ export const scheduleQuery = `
     }
 `;
 
+export const zoomClassQuery = ``;
+
 export const priceQuery = ``;

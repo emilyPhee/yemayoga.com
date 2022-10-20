@@ -4,32 +4,23 @@ const Schedule = ({ schedule }) => {
   const { yoga_schedule, yoga_name } = schedule;
   console.log(yoga_schedule, yoga_name);
 
-  //   const yoga_schedule = schedule.schedule;
-  //   const yoga_name = schedule.yoga_name;
-
-  //   const { announcement, day, level, start_time, end_time, title } =
-  //     yoga_schedule;
-  //   console.log(title);
-
   return (
     <Container>
-      {yoga_schedule.map((s, inx) => (
-        <>
-          <h2>{yoga_name}</h2>
-          <div key={inx}>{s.day}</div>
-        </>
+      {yoga_schedule.map(schedule => (
+        <div key={schedule._key} className="schedule-wrapper">
+          <h2>{`${yoga_name} ${schedule.title}`}</h2>
+          <p>{schedule.level}</p>
+          <ul>
+            {schedule.day.map((day, inx) => (
+              <li className="date-time-wrapper" key={inx}>
+                <p>{day}</p>
+                <p>10:30 - 11:40 am</p>
+              </li>
+            ))}
+          </ul>
+          <p>{schedule.announcement}</p>
+        </div>
       ))}
-      {/* <p>All Level</p> */}
-      {/* <div className="schedule-wrapper">
-        <ul>
-          <li>Mon 7:30 - 8:45 am</li>
-          <li>Mon 7:30 - 8:45 am</li>
-          <li>Mon 7:30 - 8:45 am</li>
-          <li>Mon 7:30 - 8:45 am</li>
-          <li>Mon 7:30 - 8:45 am</li>
-        </ul>
-        <p>*Announcement*</p>
-      </div> */}
     </Container>
   );
 };

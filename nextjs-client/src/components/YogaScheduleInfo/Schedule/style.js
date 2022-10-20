@@ -3,5 +3,13 @@ import { theme } from '@styles/theme';
 
 export const Container = styled.li`
   background-color: aliceblue;
-  margin: 2rem;
+
+  .schedule-wrapper {
+    background-color: pink;
+    margin: 1rem;
+  }
+
+  .date-time-wrapper {
+    display: flex;
+  }
 `;
