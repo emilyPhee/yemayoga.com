@@ -15,5 +15,11 @@ export default {
       type: 'array',
       of: [{ type: 'weeklySchedule' }],
     },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+      hidden: true,
+    },
   ],
 };
