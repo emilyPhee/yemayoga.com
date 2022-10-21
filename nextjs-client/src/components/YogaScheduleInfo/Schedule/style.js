@@ -75,7 +75,7 @@ export const Container = styled.div`
     .yoga-schedule-wrapper {
       background-color: ${theme.colors.brandColor2};
       padding: 2rem;
-      height: 80%;
+      height: 85%;
     }
   }
 `;
