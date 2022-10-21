@@ -5,6 +5,12 @@ export const scheduleQuery = `
     }
 `;
 
-export const zoomClassQuery = ``;
+export const zoomClassQuery = `
+    *[_type == 'zoom_class'] 
+    {
+        yoga_name, zoom_class_schedule, zoom_class_price
+
+    }
+`;
 
 export const priceQuery = ``;

@@ -4,8 +4,8 @@ export default {
   type: 'document',
   fields: [
     {
-      title: 'Level',
-      name: 'level',
+      title: 'Yoga Name',
+      name: 'yoga_name',
       type: 'string',
     },
     {

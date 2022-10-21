@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic';
 import { Container } from './style';
 
 const Schedule = ({ schedule }) => {
@@ -11,7 +10,7 @@ const Schedule = ({ schedule }) => {
       </div>
       <div className="yoga-schedule-wrapper">
         {yoga_schedule.map((schedule_info, inx) => (
-          <>
+          <div key={inx.toString()}>
             <p className="level">{schedule_info.level.toUpperCase()}</p>
             <ul className="time-list">
               {schedule_info.day.map((day, inx) => (
@@ -22,7 +21,7 @@ const Schedule = ({ schedule }) => {
               ))}
             </ul>
             <p className="announcement">{schedule_info.announcement}</p>
-          </>
+          </div>
         ))}
       </div>
     </Container>
