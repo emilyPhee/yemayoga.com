@@ -10,7 +10,7 @@ export const zoomClassQuery = `
     {
         yoga_name, zoom_class_schedule, zoom_class_price
 
-    }
+    }[0]
 `;
 
 export const priceQuery = ``;

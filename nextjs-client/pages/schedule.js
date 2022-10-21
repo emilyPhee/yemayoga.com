@@ -24,7 +24,7 @@ export default function Schedule({ data }) {
       <ScheduleList data={data.scheduleData} />
 
       <h1 className="title">Zoom Class</h1>
-      <ZoomClass />
+      <ZoomClass data={data.zoomClassData} />
     </Container>
   );
 }
