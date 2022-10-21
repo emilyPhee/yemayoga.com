@@ -2,13 +2,26 @@ import Layout from '@components/Layout';
 import ScheduleList from '@components/YogaScheduleInfo/ScheduleList';
 import { scheduleQuery } from 'src/sanity/queries/schedule';
 import client from 'src/sanity/client';
+import styled from '@emotion/styled';
+import { theme } from '@styles/theme';
+
+export const Container = styled.div`
+  background-color: ${theme.colors.brandColor3};
+  .title {
+    letter-spacing: 0.1rem;
+    font-size: ${theme.sizes.fontsTitleSize};
+    font-family: ${theme.fonts.nanumGothic};
+    text-align: center;
+    margin-top: 7rem;
+  }
+`;
 
 export default function Schedule({ data }) {
   return (
-    <div>
-      <h1>Schedule</h1>
+    <Container>
+      <h1 className="title">Schedule</h1>
       <ScheduleList data={data.scheduleData} />
-    </div>
+    </Container>
   );
 }
 

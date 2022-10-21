@@ -4,18 +4,26 @@ import { theme } from '@styles/theme';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+
   .grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 80%;
+    width: 75%;
     display: inline-grid;
     margin: 7rem 0;
   }
 
-  ${theme.mediaQuery.smallScreen} {
+  ${theme.mediaQuery.tablet} {
     .grid-wrapper {
       grid-template-columns: 1fr 1fr;
-      width: 95%;
+      width: 90%;
+    }
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    .grid-wrapper {
+      grid-template-columns: 1fr;
+      width: 90%;
     }
   }
 `;

@@ -2,25 +2,27 @@ import styled from '@emotion/styled';
 import { theme } from '@styles/theme';
 
 export const Container = styled.div`
-  background-color: aliceblue;
-  /* margin: 10rem; */
-  margin: 0.5rem;
+  margin: 0.3rem;
   font-family: ${theme.fonts.nanumGothic};
-  height: 27rem;
+  /* height: 27rem; */
+  color: ${theme.colors.blackText};
+
+  .title-wrapper {
+    background-color: ${theme.colors.brandColor1};
+    margin-bottom: 0.6rem;
+  }
 
   .schedule-title {
     font-size: 1.6rem;
     text-align: center;
 
-    background-color: blueviolet;
     padding: 1rem 3rem;
-    margin-bottom: 1rem;
   }
 
   .yoga-schedule-wrapper {
-    background-color: bisque;
+    background-color: ${theme.colors.brandColor2};
     padding: 2rem;
-    height: 100%;
+    height: 90%;
   }
 
   .level {
@@ -28,26 +30,52 @@ export const Container = styled.div`
     font-weight: bold;
     letter-spacing: 0.3rem;
     color: ${theme.colors.lightGreyText};
+    margin-bottom: 1rem;
   }
 
   .time-list {
-    line-height: 3rem;
+    line-height: 3.1rem;
   }
 
   .date-time-wrapper {
     font-size: ${theme.sizes.bodyFontsSize};
     display: flex;
     justify-content: space-between;
+
+    .class-time {
+      letter-spacing: 0.5px;
+    }
   }
 
   .announcement {
-    margin: 1rem 0;
+    margin-top: 3rem;
     font-size: 1.2rem;
   }
 
+  ${theme.mediaQuery.tablet} {
+    margin-bottom: 2rem;
+
+    .schedule-title {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+
+    .class-time {
+      letter-spacing: 0px;
+    }
+  }
+
   ${theme.mediaQuery.smallScreen} {
+    /* margin-bottom: 2rem; */
+
     .schedule-title {
       font-size: 1.4rem;
+    }
+
+    .yoga-schedule-wrapper {
+      background-color: ${theme.colors.brandColor2};
+      padding: 2rem;
+      height: 80%;
     }
   }
 `;
