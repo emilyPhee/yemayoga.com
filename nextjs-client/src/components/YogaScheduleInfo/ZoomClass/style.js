@@ -2,21 +2,19 @@ import styled from '@emotion/styled';
 import { theme } from '@styles/theme';
 
 export const Container = styled.div`
-  /* background-color: purple; */
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: ${theme.sizes.bodyFontsSize};
   font-family: ${theme.fonts.nanumGothic};
+  color: ${theme.colors.blackText};
+  padding-top: 7rem;
 
   .title-wrapper {
-    background-color: aqua;
     width: 75%;
-    padding: 1rem;
     display: flex;
     justify-content: center;
     background-color: ${theme.colors.brandColor1};
-    margin-bottom: 0.6rem;
   }
 
   .zoom-class-title {
@@ -25,10 +23,10 @@ export const Container = styled.div`
   }
 
   .grid-wrapper {
-    background-color: beige;
-    gap: 10px;
+    background-color: ${theme.colors.brandColor2};
+    gap: 3rem;
     width: 75%;
-    margin: 1rem;
+    margin: 0.7rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 20rem;
@@ -39,13 +37,13 @@ export const Container = styled.div`
     font-weight: bold;
     letter-spacing: 0.3rem;
     color: ${theme.colors.lightGreyText};
-    /* margin-bottom: 1rem; */
+    transform: translateY(-1.7rem);
   }
 
   .USA-schedule,
   .Korea-schedule,
   .price {
-    padding: 3rem;
+    padding: 15% 10%;
   }
 
   .date-time-wrapper {
@@ -58,12 +56,55 @@ export const Container = styled.div`
   }
 
   .list-wrapper {
-    background-color: aliceblue;
     margin-top: 2rem;
     line-height: 3.1rem;
   }
 
+  .price-title,
+  .korea-schedule-title {
+    color: ${theme.colors.greyText};
+  }
+
   li {
     list-style: none;
+  }
+
+  ${theme.mediaQuery.tablet} {
+    .title-wrapper {
+      width: 90%;
+    }
+
+    .grid-wrapper {
+      gap: 1px;
+      width: 90%;
+    }
+
+    .USA-schedule,
+    .Korea-schedule,
+    .price {
+      padding: 2rem;
+    }
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    .title-wrapper {
+      width: 90%;
+    }
+
+    .zoom-class-title {
+      font-size: 1.5rem;
+    }
+
+    .grid-wrapper {
+      grid-template-columns: 1fr;
+      width: 90%;
+      grid-auto-rows: 17rem;
+    }
+
+    .USA-schedule,
+    .Korea-schedule,
+    .price {
+      padding: 2rem;
+    }
   }
 `;

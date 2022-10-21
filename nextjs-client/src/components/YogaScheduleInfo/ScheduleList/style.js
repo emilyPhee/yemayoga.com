@@ -25,7 +25,7 @@ export const Container = styled.div`
 
   ${theme.mediaQuery.smallScreen} {
     .grid-wrapper {
-      grid-auto-rows: 35rem;
+      grid-auto-rows: 32rem;
       grid-template-columns: 1fr;
       width: 90%;
       gap: 1px;

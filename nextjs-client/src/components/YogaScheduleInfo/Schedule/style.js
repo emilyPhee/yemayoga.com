@@ -4,7 +4,6 @@ import { theme } from '@styles/theme';
 export const Container = styled.div`
   margin: 0.3rem;
   font-family: ${theme.fonts.nanumGothic};
-  /* height: 27rem; */
   color: ${theme.colors.blackText};
 
   .title-wrapper {
@@ -69,7 +68,7 @@ export const Container = styled.div`
     /* margin-bottom: 2rem; */
 
     .schedule-title {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
 
     .yoga-schedule-wrapper {
