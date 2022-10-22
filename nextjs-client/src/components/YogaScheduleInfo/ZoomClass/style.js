@@ -15,11 +15,11 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     background-color: ${theme.colors.brandColor1};
-  }
 
-  .zoom-class-title {
-    font-size: 1.6rem;
-    padding: 1rem 3rem;
+    .zoom-class-title {
+      font-size: 1.6rem;
+      padding: 1rem 3rem;
+    }
   }
 
   .grid-wrapper {

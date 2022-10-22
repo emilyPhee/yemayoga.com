@@ -13,4 +13,9 @@ export const zoomClassQuery = `
     }[0]
 `;
 
-export const priceQuery = ``;
+export const priceQuery = `
+   *[_type == 'classPrice'] | order(order asc) 
+   {
+    title, price, _id
+   }
+`;
