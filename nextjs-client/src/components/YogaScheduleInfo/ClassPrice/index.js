@@ -5,12 +5,12 @@ const ClassPrice = ({ priceData }) => {
   return (
     <Container>
       <div className="title-wrapper">
-        <h2 className="class-price-wrapper">{title}</h2>
+        <h2 className="price-title">{title}</h2>
       </div>
       <div className="class-price-wrapper">
         <ul>
           {price.map(p => (
-            <li key={p._key}>
+            <li className="price-wrapper" key={p._key}>
               <div>{p.class_count}</div>
               <div>{p.amount}</div>
             </li>

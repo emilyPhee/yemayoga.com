@@ -32,10 +32,6 @@ export const Container = styled.div`
     grid-auto-rows: 20rem;
   }
 
-  .USA-schedule {
-    position: relative;
-  }
-
   .level {
     font-size: 1.1rem;
     font-weight: bold;
@@ -43,7 +39,10 @@ export const Container = styled.div`
     color: ${theme.colors.lightGreyText};
     position: absolute;
     top: 1.7rem;
-    /* transform: translateY(-1.7rem); */
+  }
+
+  .USA-schedule {
+    position: relative;
   }
 
   .USA-schedule,
