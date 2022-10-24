@@ -1,6 +1,6 @@
 import { Container } from './style';
 
-const ZoomClass = ({ data }) => {
+const ZoomClass = ({ data, formatTime }) => {
   const { yoga_name, zoom_class_price, zoom_class_schedule } = data;
   const USASchedule = zoom_class_schedule[0];
   const koreaSchedule = zoom_class_schedule[1];
@@ -18,7 +18,9 @@ const ZoomClass = ({ data }) => {
             {USASchedule.day.map((day, inx) => (
               <li className="date-time-wrapper" key={inx}>
                 <p>{day}</p>
-                <p className="class-time">6:00 - 7:10 am</p>
+                <p className="class-time">
+                  {formatTime(USASchedule.start_time, USASchedule.end_time)}
+                </p>
               </li>
             ))}
           </ul>
@@ -30,7 +32,12 @@ const ZoomClass = ({ data }) => {
               {koreaSchedule.day.map((day, inx) => (
                 <li className="date-time-wrapper" key={inx}>
                   <p>{day}</p>
-                  <p className="class-time">6:00 - 7:10 am</p>
+                  <p className="class-time">
+                    {formatTime(
+                      koreaSchedule.start_time,
+                      koreaSchedule.end_time
+                    )}
+                  </p>
                 </li>
               ))}
             </ul>

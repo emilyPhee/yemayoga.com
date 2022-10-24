@@ -2,6 +2,7 @@ import { Container } from './style';
 
 const ClassPrice = ({ priceData }) => {
   const { title, price } = priceData;
+
   return (
     <Container>
       <div className="title-wrapper">

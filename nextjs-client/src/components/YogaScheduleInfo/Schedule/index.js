@@ -1,6 +1,6 @@
 import { Container } from './style';
 
-const Schedule = ({ schedule }) => {
+const Schedule = ({ schedule, formatTime }) => {
   const { yoga_schedule, yoga_name } = schedule;
 
   return (
@@ -16,7 +16,12 @@ const Schedule = ({ schedule }) => {
               {schedule_info.day.map((day, inx) => (
                 <li className="date-time-wrapper" key={inx}>
                   <p className="day">{day}</p>
-                  <p className="class-time">7:30 - 8:45 am</p>
+                  <p className="class-time">
+                    {formatTime(
+                      yoga_schedule[0].start_time,
+                      yoga_schedule[0].end_time
+                    )}
+                  </p>
                 </li>
               ))}
             </ul>
