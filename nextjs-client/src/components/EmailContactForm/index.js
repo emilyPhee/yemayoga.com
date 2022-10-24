@@ -10,6 +10,8 @@ import {
   Textarea,
 } from '@chakra-ui/react';
 import { useEffect } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { useRef } from 'react';
 
 const Container = styled.div`
   .contact-form {
@@ -37,6 +39,7 @@ const EmailContactForm = () => {
     reset,
     formState: { errors },
   } = useForm();
+  const recaptchaRef = useRef();
 
   const [emailSending, setEmailSending] = useState(false);
   const [emailSuccess, setEmailSuccess] = useState(false);
@@ -48,6 +51,9 @@ const EmailContactForm = () => {
 
   const onFormSubmit = async (entered_values) => {
     setEmailSending(true);
+
+    await recaptchaRef.current.executeAsync();
+    recaptchaRef.current.reset();
 
     try {
       await fetch('/api/contact', {
@@ -96,6 +102,11 @@ const EmailContactForm = () => {
 
   return (
     <Container>
+      <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+        size="invisible"
+      />
       <form className="contact-form" onSubmit={handleSubmit(onFormSubmit)}>
         <FormControl>
           <FormLabel>Name</FormLabel>
