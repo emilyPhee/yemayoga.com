@@ -57,12 +57,13 @@ export const Container = styled.div`
   .price-title,
   .usa-schedule-title {
     text-align: end;
+    margin-right: 3.5rem;
     color: ${theme.colors.greyText};
   }
 
   .date-time-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     .class-time {
       letter-spacing: 0.5px;
@@ -74,8 +75,16 @@ export const Container = styled.div`
     line-height: 3.1rem;
   }
 
-  .price-list {
-    text-align: end;
+  .price {
+    margin-right: 2.5rem;
+
+    .price-title {
+      margin-right: 0;
+    }
+
+    .price-list {
+      text-align: end;
+    }
   }
 
   li {
@@ -90,12 +99,20 @@ export const Container = styled.div`
     .grid-wrapper {
       gap: 1px;
       width: 90%;
+      grid-auto-rows: 22rem;
     }
 
     .USA-schedule,
     .Korea-schedule,
     .price {
       padding: 4rem 3rem;
+    }
+
+    .korea-schedule-title,
+    .price-title,
+    .usa-schedule-title {
+      margin-top: 2rem;
+      margin-right: 1.5rem;
     }
   }
 
@@ -118,6 +135,16 @@ export const Container = styled.div`
     .Korea-schedule,
     .price {
       padding: 4rem;
+    }
+
+    .korea-schedule-title,
+    .price-title,
+    .usa-schedule-title {
+      margin-right: 0;
+    }
+
+    .date-time-wrapper {
+      justify-content: space-between;
     }
   }
 `;
