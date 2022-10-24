@@ -59,19 +59,19 @@ const MoonDay = ({ currentYear, month }) => {
 
   return (
     <Container>
-      <div className='left-box'>
-        <h2 className='month-name'>{monthList[month]}</h2>
+      <div className="left-box">
+        <h2 className="month-name">{monthList[month]}</h2>
       </div>
-      <div className='right-box'>
+      <div className="right-box">
         {moonDays.map((moonDay, inx) => {
           return (
-            <div className='date-info' key={inx}>
-              <p className='date'>
+            <div className="date-info" key={inx}>
+              <p className="date">
                 {moonDay.getDate().toLocaleString('en-US', {
                   minimumIntegerDigits: 2,
                 })}
               </p>
-              <p className='day'>{dayList[moonDay.getDay()]}</p>
+              <p className="day">{dayList[moonDay.getDay()]}</p>
             </div>
           );
         })}
