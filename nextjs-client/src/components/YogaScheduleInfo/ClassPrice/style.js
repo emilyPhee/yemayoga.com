@@ -3,6 +3,9 @@ import { theme } from '@styles/theme';
 
 export const Container = styled.div`
   font-family: ${theme.fonts.nanumGothic};
+  margin: 0.3rem;
+  margin-bottom: 2rem;
+  color: ${theme.colors.blackText};
 
   .title-wrapper {
     display: flex;
@@ -16,12 +19,13 @@ export const Container = styled.div`
   }
 
   .class-price-wrapper {
-    background-color: azure;
-    height: 100%;
+    background-color: ${theme.colors.brandColor2};
+    font-size: ${theme.sizes.bodyFontsSize};
+    height: 90%;
     .price-wrapper {
       display: flex;
       justify-content: space-between;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
   }
 `;

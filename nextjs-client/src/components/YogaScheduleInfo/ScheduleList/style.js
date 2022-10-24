@@ -9,6 +9,7 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 32rem;
+
     width: 75%;
     display: inline-grid;
     margin: 7rem 0;
@@ -24,7 +25,7 @@ export const Container = styled.div`
 
   ${theme.mediaQuery.smallScreen} {
     .grid-wrapper {
-      grid-auto-rows: 32rem;
+      grid-auto-rows: 35rem;
       grid-template-columns: 1fr;
       width: 90%;
       gap: 1px;
