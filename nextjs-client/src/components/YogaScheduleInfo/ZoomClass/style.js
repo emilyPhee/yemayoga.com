@@ -27,6 +27,7 @@ export const Container = styled.div`
     gap: 3rem;
     width: 75%;
     margin: 0.7rem;
+    margin-bottom: 7rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 20rem;

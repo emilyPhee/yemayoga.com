@@ -13,7 +13,6 @@ export const Container = styled.section`
     font-size: ${theme.sizes.fontsTitleSize};
     margin-bottom: 3rem;
     font-family: ${theme.fonts.nanumGothic};
-    /* text-align: center; */
   }
 
   .moonday-list-wrapper {
@@ -33,16 +32,16 @@ export const Container = styled.section`
     width: 100%;
     display: flex;
     justify-content: flex-end;
-  }
 
-  .tooltip {
-    font-size: ${theme.sizes.bodyFontsSize};
-    font-family: ${theme.fonts.nunito};
-    text-decoration: underline;
-    color: ${theme.colors.greyText};
-    cursor: pointer;
-    margin-right: 15%;
-    margin-top: 3rem;
+    .tooltip {
+      font-size: ${theme.sizes.bodyFontsSize};
+      font-family: ${theme.fonts.nunito};
+      text-decoration: underline;
+      color: ${theme.colors.greyText};
+      cursor: pointer;
+      margin-right: 15%;
+      margin-top: 3rem;
+    }
   }
 
   ${theme.mediaQuery.smallScreen} {

@@ -22,10 +22,25 @@ export const Container = styled.div`
     background-color: ${theme.colors.brandColor2};
     font-size: ${theme.sizes.bodyFontsSize};
     height: 90%;
+    padding: 2rem 3rem;
+    position: relative;
+
     .price-wrapper {
       display: flex;
       justify-content: space-between;
       margin-top: 0.5rem;
+      letter-spacing: 0.5px;
     }
+  }
+
+  .announcement {
+    position: absolute;
+    right: 3rem;
+    bottom: 50%;
+    color: ${theme.colors.greyText};
+  }
+
+  .list-wrapper {
+    line-height: 3.1;
   }
 `;
