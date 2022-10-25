@@ -7,7 +7,7 @@ export const Container = styled.section`
   color: ${theme.colors.blackText};
 
   .title {
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     font-size: ${theme.sizes.fontsTitleSize};
     margin-bottom: 4rem;
     font-family: ${theme.fonts.nanumGothic};

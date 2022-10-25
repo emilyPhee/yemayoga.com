@@ -25,6 +25,7 @@ export const Container = styled.div`
 
     .hamburger {
       cursor: pointer;
+      user-select: none;
     }
 
     .hamburger.active .bar:nth-of-type(2) {
@@ -39,11 +40,18 @@ export const Container = styled.div`
       transform: translateY(-8px) rotate(-45deg);
     }
 
+    .hamburger .bar:nth-of-type(2) {
+      height: 1.8px;
+    }
+
     .bar {
       display: block;
-      width: 2.5rem;
-      height: 0.2rem;
-      margin: 0.6rem auto;
+      width: 25px;
+      height: 2px;
+      margin: 6px auto;
+
+      border-radius: 20px;
+      -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
       background-color: ${theme.colors.greyText};
     }
@@ -95,7 +103,7 @@ export const MenuItem = styled.div`
 
   color: ${theme.colors.navbarInactive};
   padding: 2rem 2.6rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   transition: color 200ms ease-in-out;
 
   &:hover {

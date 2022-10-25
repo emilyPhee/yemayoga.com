@@ -10,16 +10,16 @@ export default {
     },
 
     {
-      title: 'Schedule',
-      name: 'schedule',
+      title: 'Yoga Schedule',
+      name: 'yoga_schedule',
       type: 'array',
       of: [{ type: 'weeklySchedule' }],
     },
     {
-      title: 'Class Price',
-      name: 'class_price',
-      type: 'array',
-      of: [{ type: 'price' }],
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+      hidden: true,
     },
   ],
 };

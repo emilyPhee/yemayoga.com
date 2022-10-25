@@ -1,6 +1,6 @@
 export default {
-  title: 'Other Price',
-  name: 'otherPrice',
+  title: 'Class Price',
+  name: 'classPrice',
   type: 'document',
   fields: [
     {
@@ -13,6 +13,12 @@ export default {
       name: 'price',
       type: 'array',
       of: [{ type: 'price' }],
+    },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+      hidden: true,
     },
   ],
 };
