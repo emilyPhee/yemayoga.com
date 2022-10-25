@@ -38,11 +38,11 @@ export default function Schedule({ data }) {
       <h1 className="title">Schedule</h1>
       <ScheduleList data={data.scheduleData} formatTime={formatTime} />
 
-      {/* <h1 className="title">Zoom Class</h1>
+      <h1 className="title">Zoom Class</h1>
       <ZoomClass data={data.zoomClassData} formatTime={formatTime} />
 
       <h1 className="title">Class Price</h1>
-      <ClassPriceList data={data.classPriceData} /> */}
+      <ClassPriceList data={data.classPriceData} />
     </Container>
   );
 }

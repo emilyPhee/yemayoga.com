@@ -13,21 +13,23 @@ const ZoomClass = ({ data, formatTime }) => {
       <div className="grid-wrapper">
         <div className="USA-schedule">
           <h4 className="level">{USASchedule.level.toUpperCase()}</h4>
-          <h4 className="usa-schedule-title">{USASchedule.title}</h4>
-          <ul className="list-wrapper">
-            {USASchedule.day.map((day, inx) => (
-              <li className="date-time-wrapper" key={inx}>
-                <p>{day}</p>
-                <p className="class-time">
-                  {formatTime(USASchedule.start_time, USASchedule.end_time)}
-                </p>
-              </li>
-            ))}
-          </ul>
+          <div className="schedule-container">
+            <h4 className="usa-schedule-title">{USASchedule.title}</h4>
+            <ul className="list-wrapper">
+              {USASchedule.day.map((day, inx) => (
+                <li className="date-time-wrapper" key={inx}>
+                  <div>{day}</div>
+                  <div className="class-time">
+                    {formatTime(USASchedule.start_time, USASchedule.end_time)}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="Korea-schedule">
-          <h4 className="korea-schedule-title">{koreaSchedule.title}</h4>
-          <div>
+          <div className="schedule-container">
+            <h4 className="korea-schedule-title">{koreaSchedule.title}</h4>
             <ul className="list-wrapper">
               {koreaSchedule.day.map((day, inx) => (
                 <li className="date-time-wrapper" key={inx}>
@@ -44,8 +46,8 @@ const ZoomClass = ({ data, formatTime }) => {
           </div>
         </div>
         <div className="price">
-          <h4 className="price-title">Price</h4>
-          <div>
+          <div className="schedule-container">
+            <h4 className="price-title">Price</h4>
             {zoom_class_price.map((price, inx) => (
               <ul className="list-wrapper price-list" key={inx}>
                 <li>around ${price.amount}</li>

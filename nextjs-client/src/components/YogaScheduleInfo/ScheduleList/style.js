@@ -8,7 +8,7 @@ export const Container = styled.div`
   .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 32rem;
+    /* grid-auto-rows: 32rem; */
 
     width: 75%;
     display: inline-grid;
@@ -19,7 +19,7 @@ export const Container = styled.div`
     .grid-wrapper {
       grid-template-columns: 1fr 1fr;
       gap: 3px;
-      width: 90%;
+      width: 80%;
     }
   }
 
@@ -27,7 +27,7 @@ export const Container = styled.div`
     .grid-wrapper {
       grid-auto-rows: 35rem;
       grid-template-columns: 1fr;
-      width: 90%;
+      width: 80%;
       gap: 1px;
     }
   }

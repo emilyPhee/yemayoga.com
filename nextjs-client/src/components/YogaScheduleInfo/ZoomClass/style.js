@@ -11,7 +11,7 @@ export const Container = styled.div`
   padding-top: 7rem;
 
   .title-wrapper {
-    width: 75%;
+    width: 55%;
     display: flex;
     justify-content: center;
     background-color: ${theme.colors.brandColor1};
@@ -25,12 +25,11 @@ export const Container = styled.div`
   .grid-wrapper {
     background-color: ${theme.colors.brandColor2};
     gap: 3rem;
-    width: 75%;
+    width: 55%;
     margin: 0.7rem;
     margin-bottom: 7rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 20rem;
   }
 
   .level {
@@ -42,6 +41,18 @@ export const Container = styled.div`
     top: 1.7rem;
   }
 
+  .schedule-container {
+    display: flex;
+    flex-direction: column;
+
+    .usa-schedule-title,
+    .korea-schedule-title,
+    .price-title {
+      align-self: flex-end;
+      color: ${theme.colors.greyText};
+    }
+  }
+
   .USA-schedule {
     position: relative;
   }
@@ -49,21 +60,14 @@ export const Container = styled.div`
   .USA-schedule,
   .Korea-schedule,
   .price {
-    padding: 15% 10%;
+    padding: 25% 15%;
     margin-top: 1rem;
-  }
-
-  .korea-schedule-title,
-  .price-title,
-  .usa-schedule-title {
-    text-align: end;
-    margin-right: 13%;
-    color: ${theme.colors.greyText};
   }
 
   .date-time-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     .class-time {
       letter-spacing: 0.5px;
@@ -76,8 +80,6 @@ export const Container = styled.div`
   }
 
   .price {
-    margin-right: 2.5rem;
-
     .price-title {
       margin-right: 0;
     }
@@ -93,19 +95,12 @@ export const Container = styled.div`
 
   ${theme.mediaQuery.tablet} {
     .title-wrapper {
-      width: 90%;
+      width: 70%;
     }
 
     .grid-wrapper {
       gap: 1px;
-      width: 90%;
-      grid-auto-rows: 22rem;
-    }
-
-    .USA-schedule,
-    .Korea-schedule,
-    .price {
-      padding: 4rem 3rem;
+      width: 70%;
     }
 
     .korea-schedule-title,
@@ -118,16 +113,16 @@ export const Container = styled.div`
 
   ${theme.mediaQuery.smallScreen} {
     .title-wrapper {
-      width: 90%;
+      width: 80%;
     }
 
     .zoom-class-title {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
 
     .grid-wrapper {
       grid-template-columns: 1fr;
-      width: 90%;
+      width: 80%;
       grid-auto-rows: 17rem;
       padding-bottom: 3rem;
     }
