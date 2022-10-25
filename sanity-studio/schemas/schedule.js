@@ -8,7 +8,11 @@ export default {
       name: 'yoga_name',
       type: 'string',
     },
-
+    {
+      title: 'Level',
+      name: 'level',
+      type: 'string',
+    },
     {
       title: 'Yoga Schedule',
       name: 'yoga_schedule',
@@ -20,6 +24,12 @@ export default {
       title: 'Order',
       type: 'number',
       hidden: true,
+    },
+    {
+      title: 'Announcement (Optional)',
+      name: 'announcement',
+      type: 'string',
+      description: 'Please type the announcement/notes for schedule.',
     },
   ],
 };

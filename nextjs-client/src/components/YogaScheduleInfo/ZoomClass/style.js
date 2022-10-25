@@ -57,7 +57,7 @@ export const Container = styled.div`
   .price-title,
   .usa-schedule-title {
     text-align: end;
-    margin-right: 3.5rem;
+    margin-right: 13%;
     color: ${theme.colors.greyText};
   }
 
@@ -129,6 +129,7 @@ export const Container = styled.div`
       grid-template-columns: 1fr;
       width: 90%;
       grid-auto-rows: 17rem;
+      padding-bottom: 3rem;
     }
 
     .USA-schedule,
@@ -145,6 +146,10 @@ export const Container = styled.div`
 
     .date-time-wrapper {
       justify-content: space-between;
+    }
+
+    .price {
+      margin: 0;
     }
   }
 `;

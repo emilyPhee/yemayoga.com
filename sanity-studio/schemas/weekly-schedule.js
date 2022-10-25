@@ -9,15 +9,10 @@ export default {
       type: 'string',
     },
     {
-      title: 'Level',
-      name: 'level',
-      type: 'string',
-    },
-    {
       title: 'Day of the Week',
       name: 'day',
-      type: 'array',
-      of: [{ type: 'string' }],
+      type: 'string',
+      // of: [{ type: 'string' }],
       options: {
         list: [
           { title: 'Monday', value: 'Mon' },
@@ -28,6 +23,7 @@ export default {
           { title: 'Saturday', value: 'Sat' },
           { title: 'Sunday', value: 'Sun' },
         ],
+        layout: 'radio',
       },
     },
     {
@@ -39,12 +35,6 @@ export default {
       title: 'End Time',
       name: 'end_time',
       type: 'yogaTime',
-    },
-    {
-      title: 'Announcement (Optional)',
-      name: 'announcement',
-      type: 'string',
-      description: 'Please type the announcement/notes for schedule.',
     },
   ],
 };

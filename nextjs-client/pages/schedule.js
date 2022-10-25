@@ -32,16 +32,17 @@ const formatTime = (start_time, end_time) => {
   return `${start_time.hour}:${startTimeMinute} - ${end_time.hour}:${endTimeMinute} ${end_time.period}`;
 };
 export default function Schedule({ data }) {
+  console.log(data.scheduleData);
   return (
     <Container>
       <h1 className="title">Schedule</h1>
       <ScheduleList data={data.scheduleData} formatTime={formatTime} />
 
-      <h1 className="title">Zoom Class</h1>
+      {/* <h1 className="title">Zoom Class</h1>
       <ZoomClass data={data.zoomClassData} formatTime={formatTime} />
 
       <h1 className="title">Class Price</h1>
-      <ClassPriceList data={data.classPriceData} />
+      <ClassPriceList data={data.classPriceData} /> */}
     </Container>
   );
 }
