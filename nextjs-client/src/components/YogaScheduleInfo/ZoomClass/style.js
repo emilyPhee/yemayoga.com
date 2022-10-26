@@ -130,7 +130,7 @@ export const Container = styled.div`
     .USA-schedule,
     .Korea-schedule,
     .price {
-      padding: 4rem;
+      padding: 3rem;
     }
 
     .korea-schedule-title,
