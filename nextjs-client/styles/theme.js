@@ -16,6 +16,7 @@ export const theme = {
     whiteText: '#FFFFFF',
     errorMessage: '#db6e6e',
     successMessage: '#58a16c',
+    kakaoTalkLink: '#DAC34D',
   },
   fonts: {
     cantarell: 'Cantarell, sans-serif',
