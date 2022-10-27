@@ -24,35 +24,38 @@ const Container = styled.div`
 
   .bottom-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 7rem;
 
-    .location-title {
-      font-size: 1.5rem;
-      padding: 2rem 0;
-    }
+    .location-wrapper {
+      font-family: ${theme.fonts.nunito};
+      .location-title {
+        font-size: 1.5rem;
+        padding: 2rem 0 1rem 0;
+      }
 
-    .location-content {
-      font-size: ${theme.sizes.bodyFontsSize};
+      .location-content {
+        font-size: ${theme.sizes.bodyFontsSize};
+      }
     }
   }
 
   .left-box {
     width: 60rem;
-    background-color: pink;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .right-box {
     width: 60rem;
-    background-color: violet;
+
+    padding: 1rem 6rem;
   }
 `;
 
 const MapContainer = styled.div`
   width: 40rem;
-  height: 40rem;
+  height: 30rem;
   background-color: grey;
 
   .map-container {
@@ -89,10 +92,7 @@ export default function Contact() {
         </div>
 
         <div className="right-box">
-          <div className="section-title"></div>
-          <div className="section-content">
-            <EmailContactForm />
-          </div>
+          <EmailContactForm />
         </div>
       </div>
     </Container>

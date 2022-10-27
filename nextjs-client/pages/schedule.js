@@ -32,7 +32,6 @@ const formatTime = (start_time, end_time) => {
   return `${start_time.hour}:${startTimeMinute} - ${end_time.hour}:${endTimeMinute} ${end_time.period}`;
 };
 export default function Schedule({ data }) {
-  console.log(data.scheduleData);
   return (
     <Container>
       <h1 className="title">Schedule</h1>

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { theme } from '@styles/theme';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import {
@@ -14,13 +15,16 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { useRef } from 'react';
 
 const Container = styled.div`
+  font-size: ${theme.sizes.bodyFontsSize};
   .contact-form {
+    line-height: 2.5rem;
     .error-message {
-      color: red;
+      color: #db6e6e;
     }
     .form-footer {
       display: flex;
       justify-content: end;
+      margin-top: 7rem;
 
       .email-success-message {
         color: green;
@@ -49,7 +53,7 @@ const EmailContactForm = () => {
     reset();
   }, [emailSuccess]);
 
-  const onFormSubmit = async (entered_values) => {
+  const onFormSubmit = async entered_values => {
     setEmailSending(true);
 
     await recaptchaRef.current.executeAsync();
@@ -108,9 +112,17 @@ const EmailContactForm = () => {
         size="invisible"
       />
       <form className="contact-form" onSubmit={handleSubmit(onFormSubmit)}>
-        <FormControl>
-          <FormLabel>Name</FormLabel>
+        <FormControl height="5rem">
+          <FormLabel fontSize="1.6rem" fontFamily={theme.fonts.nunito}>
+            Name
+          </FormLabel>
           <Input
+            size="lg"
+            variant="flushed"
+            fontSize={theme.sizes.bodyFontsSize}
+            fontFamily={theme.fonts.nunito}
+            focusBorderColor={theme.colors.brandColor1}
+            placeholder="Enter your name"
             {...register('name', registerOptions.name)}
             autoComplete="off"
           />
@@ -118,9 +130,17 @@ const EmailContactForm = () => {
             {errors?.name && errors.name.message}
           </div>
         </FormControl>
-        <FormControl>
-          <FormLabel>Email</FormLabel>
+        <FormControl marginTop={20} height="5rem">
+          <FormLabel fontSize="1.6rem" fontFamily={theme.fonts.nunito}>
+            Email
+          </FormLabel>
           <Input
+            size="lg"
+            variant="flushed"
+            fontSize={theme.sizes.bodyFontsSize}
+            fontFamily={theme.fonts.nunito}
+            focusBorderColor={theme.colors.brandColor1}
+            placeholder="Enter your email address"
             {...register('email', registerOptions.email)}
             autoComplete="off"
           />
@@ -128,11 +148,19 @@ const EmailContactForm = () => {
             {errors?.email && errors.email.message}
           </div>
         </FormControl>
-        <FormControl>
-          <FormLabel>Message</FormLabel>
+        <FormControl marginTop={20} height="5rem">
+          <FormLabel fontSize="1.6rem" fontFamily={theme.fonts.nunito}>
+            Message
+          </FormLabel>
           <Textarea
-            size="lg"
             {...register('message', registerOptions.message)}
+            variant="flushed"
+            size="lg"
+            placeholder="Enter your message"
+            fontSize={theme.sizes.bodyFontsSize}
+            fontFamily={theme.fonts.nunito}
+            focusBorderColor={theme.colors.brandColor1}
+            height={50}
           />
           <div className="error-message">
             {errors?.message && errors.message.message}
@@ -150,7 +178,15 @@ const EmailContactForm = () => {
               <Spinner />
             </div>
           ) : null}
-          <Button type="submit">Submit</Button>
+          <Button
+            fontSize="1.6rem"
+            fontFamily={theme.fonts.nunito}
+            type="submit"
+            size="md"
+            variant="link"
+          >
+            Submit
+          </Button>
         </div>
       </form>
     </Container>
