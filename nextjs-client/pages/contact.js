@@ -41,29 +41,33 @@ const Container = styled.div`
   }
 
   .left-box {
-    width: 60rem;
+    width: 38%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .map-wrapper {
+      width: 100%;
+    }
   }
   .right-box {
-    width: 60rem;
-
-    padding: 1rem 6rem;
+    width: 40%;
+    padding: 1% 10%;
   }
 
   ${theme.mediaQuery.tablet} {
-    align-items: center;
-
     .bottom-box {
       flex-direction: column;
+      align-items: center;
     }
 
     .left-box {
+      width: 80%;
     }
 
     .right-box {
       margin-top: 10rem;
+      width: 80%;
     }
   }
 
@@ -79,21 +83,21 @@ const Container = styled.div`
     }
 
     .left-box {
-      width: 80%;
+      width: 90%;
     }
 
     .right-box {
       padding: 1rem;
       margin-bottom: 5rem;
-      width: 80%;
-      margin-top: 10rem;
+      width: 90%;
+      margin-top: 7rem;
     }
   }
 `;
 
 const MapContainer = styled.div`
-  width: 40rem;
-  height: 30rem;
+  height: 35rem;
+
   background-color: grey;
 
   .map-container {
@@ -103,11 +107,11 @@ const MapContainer = styled.div`
 `;
 
 export default function Contact() {
-  // const { isLoaded } = useLoadScript({
-  //   googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-  // });
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  });
 
-  // if (!isLoaded) return <div>Loading...</div>;
+  if (!isLoaded) return <div>Loading...</div>;
 
   return (
     <Container>
@@ -142,16 +146,20 @@ Contact.getLayout = function getLayout(page) {
 };
 
 function Map() {
-  // const center = useMemo(() => ({ lat: 33.669445, lng: -117.823059 }), []);
+  const center = useMemo(() => ({ lat: 33.7144, lng: -117.761 }), []);
   return (
     <MapContainer>
-      {/* <GoogleMap
-        zoom={10}
+      <GoogleMap
+        zoom={15}
         center={center}
         mapContainerClassName="map-container"
+        options={{
+          streetViewControl: false,
+          mapTypeControl: false,
+        }}
       >
         <MarkerF position={{ lat: 33.7144, lng: -117.761 }} />
-      </GoogleMap> */}
+      </GoogleMap>
     </MapContainer>
   );
 }

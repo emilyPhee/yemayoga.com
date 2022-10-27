@@ -27,10 +27,18 @@ const Container = styled.div`
       margin-top: 7rem;
 
       .email-success-message {
-        color: green;
+        color: #58a16c;
+        font-size: 1.4rem;
+        padding: 0 2rem;
       }
       .email-error-message {
-        color: red;
+        color: #db6e6e;
+        font-size: 1.4rem;
+        padding: 0 2rem;
+      }
+
+      .loading {
+        padding: 0 2rem;
       }
     }
   }
@@ -120,7 +128,7 @@ const EmailContactForm = () => {
             size="lg"
             variant="flushed"
             fontSize={theme.sizes.bodyFontsSize}
-            fontFamily={theme.fonts.nunito}
+            fontFamily={theme.fonts.nanumGothic}
             focusBorderColor={theme.colors.brandColor1}
             placeholder="Enter your name"
             {...register('name', registerOptions.name)}
@@ -138,7 +146,7 @@ const EmailContactForm = () => {
             size="lg"
             variant="flushed"
             fontSize={theme.sizes.bodyFontsSize}
-            fontFamily={theme.fonts.nunito}
+            fontFamily={theme.fonts.nanumGothic}
             focusBorderColor={theme.colors.brandColor1}
             placeholder="Enter your email address"
             {...register('email', registerOptions.email)}
@@ -158,7 +166,7 @@ const EmailContactForm = () => {
             size="lg"
             placeholder="Enter your message"
             fontSize={theme.sizes.bodyFontsSize}
-            fontFamily={theme.fonts.nunito}
+            fontFamily={theme.fonts.nanumGothic}
             focusBorderColor={theme.colors.brandColor1}
             height={50}
           />
@@ -168,14 +176,14 @@ const EmailContactForm = () => {
         </FormControl>
         <div className="form-footer">
           {emailError ? (
-            <div className="email-error-message">failed</div>
+            <div className="email-error-message">Failed</div>
           ) : null}
           {emailSuccess ? (
-            <div className="email-success-message">success</div>
+            <div className="email-success-message">Sent</div>
           ) : null}
           {emailSending ? (
             <div className="loading">
-              <Spinner />
+              <Spinner color={theme.colors.brandColor1} />
             </div>
           ) : null}
           <Button
