@@ -2,8 +2,11 @@ import ClassPrice from '../ClassPrice';
 import { Tooltip } from '@chakra-ui/react';
 import { theme } from '@styles/theme';
 import { Container } from './style';
+import { useState } from 'react';
 
 const ClassPriceList = ({ data }) => {
+  const [isLabelOpen, setIsLabelOpen] = useState(false);
+
   return (
     <Container>
       <div className="price-grid-wrapper">
@@ -13,6 +16,7 @@ const ClassPriceList = ({ data }) => {
       </div>
       <div className="tooltip-wrapper">
         <Tooltip
+          isOpen={isLabelOpen}
           placeContent="bottom"
           label="Please contact us for more information."
           bg="white"
@@ -23,7 +27,14 @@ const ClassPriceList = ({ data }) => {
           color={theme.colors.greyText}
           aria-label="A tooltip"
         >
-          <p className="tooltip">Looking for private class?</p>
+          <p
+            className="tooltip"
+            onMouseEnter={() => setIsLabelOpen(true)}
+            onMouseLeave={() => setIsLabelOpen(false)}
+            onClick={() => setIsLabelOpen(true)}
+          >
+            Looking for private class?
+          </p>
         </Tooltip>
       </div>
     </Container>

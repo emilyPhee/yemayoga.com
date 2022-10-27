@@ -3,11 +3,14 @@ import { Container } from './style';
 import { Tooltip } from '@chakra-ui/react';
 import { theme } from '@styles/theme';
 import { useMediaQuery } from '@chakra-ui/react';
+import { useState } from 'react';
 
 const MoonDays = () => {
   const currentYear = new Date().getFullYear();
   const monthList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   const [isSmallerThan768] = useMediaQuery('(max-width: 768px)');
+
+  const [isLabelOpen, setIsLabelOpen] = useState(false);
 
   return (
     <Container>
@@ -23,6 +26,7 @@ const MoonDays = () => {
       </ul>
       <div className="tooltip-wrapper">
         <Tooltip
+          isOpen={isLabelOpen}
           placement="bottom"
           bg=" white"
           p="2rem"
@@ -35,7 +39,14 @@ const MoonDays = () => {
           label="Both full and new moon days are observed as yoga holidays in the Ashtanga Yoga tradition. What is the reasoning behind this? Like all things of a watery nature (human beings are about 70% water), we are affected by the phases of the moon."
           aria-label="A tooltip"
         >
-          <p className="tooltip">What is Moon days?</p>
+          <p
+            className="tooltip"
+            onMouseEnter={() => setIsLabelOpen(true)}
+            onMouseLeave={() => setIsLabelOpen(false)}
+            onClick={() => setIsLabelOpen(true)}
+          >
+            What is Moon days?
+          </p>
         </Tooltip>
       </div>
     </Container>

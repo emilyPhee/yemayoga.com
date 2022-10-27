@@ -36,11 +36,36 @@ export const Container = styled.div`
   .announcement {
     position: absolute;
     right: 3rem;
-    bottom: 50%;
+    bottom: 1rem;
     color: ${theme.colors.greyText};
   }
 
   .list-wrapper {
     line-height: 3.1;
+  }
+
+  ${theme.mediaQuery.tablet} {
+    .list-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .list-wrapper li:not(:last-child) {
+      border-bottom: 2px solid ${theme.colors.brandColor1};
+      margin: 1rem;
+    }
+
+    .price-wrapper {
+      flex-direction: column;
+      align-items: center;
+      width: 70%;
+    }
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    .class-price-wrapper {
+      padding: 2rem;
+    }
   }
 `;

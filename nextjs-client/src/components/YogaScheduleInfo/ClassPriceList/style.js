@@ -5,19 +5,18 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 7rem;
+  padding-bottom: 10rem;
 
   .price-grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 24rem;
-    width: 75%;
+    width: 55%;
     margin: 7rem 0 5rem 0;
-    row-gap: 1rem;
+    row-gap: 1.5rem;
   }
 
   .tooltip-wrapper {
-    width: 100%;
+    width: 55%;
     display: flex;
     justify-content: flex-end;
 
@@ -27,19 +26,18 @@ export const Container = styled.div`
       text-decoration: underline;
       color: ${theme.colors.greyText};
       cursor: pointer;
-      margin-right: 15%;
     }
   }
 
   ${theme.mediaQuery.tablet} {
     .price-grid-wrapper {
-      width: 90%;
+      width: 80%;
     }
   }
 
   ${theme.mediaQuery.smallScreen} {
     .price-grid-wrapper {
-      width: 90%;
+      width: 80%;
       grid-template-columns: 1fr;
     }
 
