@@ -51,6 +51,44 @@ const Container = styled.div`
 
     padding: 1rem 6rem;
   }
+
+  ${theme.mediaQuery.tablet} {
+    align-items: center;
+
+    .bottom-box {
+      flex-direction: column;
+    }
+
+    .left-box {
+    }
+
+    .right-box {
+      margin-top: 10rem;
+    }
+  }
+
+  ${theme.mediaQuery.smallScreen} {
+    .title {
+      margin-bottom: 4rem;
+    }
+
+    .bottom-box {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .left-box {
+      width: 80%;
+    }
+
+    .right-box {
+      padding: 1rem;
+      margin-bottom: 5rem;
+      width: 80%;
+      margin-top: 10rem;
+    }
+  }
 `;
 
 const MapContainer = styled.div`
