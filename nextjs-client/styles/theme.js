@@ -14,6 +14,8 @@ export const theme = {
     greyText: '#575757',
     lightGreyText: '#7A7A7A',
     whiteText: '#FFFFFF',
+    errorMessage: '#db6e6e',
+    successMessage: '#58a16c',
   },
   fonts: {
     cantarell: 'Cantarell, sans-serif',

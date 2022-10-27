@@ -19,7 +19,7 @@ const Container = styled.div`
   .contact-form {
     line-height: 2.5rem;
     .error-message {
-      color: #db6e6e;
+      color: ${theme.colors.errorMessage};
     }
     .form-footer {
       display: flex;
@@ -27,12 +27,12 @@ const Container = styled.div`
       margin-top: 7rem;
 
       .email-success-message {
-        color: #58a16c;
+        color: ${theme.colors.successMessage};
         font-size: 1.4rem;
         padding: 0 2rem;
       }
       .email-error-message {
-        color: #db6e6e;
+        color: ${theme.colors.errorMessage};
         font-size: 1.4rem;
         padding: 0 2rem;
       }
