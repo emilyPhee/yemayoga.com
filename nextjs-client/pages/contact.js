@@ -45,6 +45,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1% 2%;
 
     .map-wrapper {
       width: 100%;
@@ -52,7 +53,7 @@ const Container = styled.div`
   }
   .right-box {
     width: 40%;
-    padding: 1% 10%;
+    padding: 1% 5%;
   }
 
   ${theme.mediaQuery.tablet} {
@@ -68,6 +69,7 @@ const Container = styled.div`
     .right-box {
       margin-top: 10rem;
       width: 80%;
+      padding: 1%;
     }
   }
 
