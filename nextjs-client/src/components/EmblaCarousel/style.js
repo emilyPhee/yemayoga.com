@@ -53,24 +53,55 @@ export const Container = styled.div`
 
   .review-kr,
   .review-en {
-    font-size: 1.4rem;
     line-height: 3rem;
     margin-bottom: 2rem;
     height: 18rem;
-    overflow: scroll;
+    overflow-y: auto;
+    padding-right: 1.4rem;
     color: ${theme.colors.blackText};
   }
 
+  /* Custom Scroll Bar */
+  .review-kr::-webkit-scrollbar,
+  .review-en::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  .review-kr::-webkit-scrollbar-track,
+  .review-en::-webkit-scrollbar-track {
+    background-color: ${theme.colors.brandColor3};
+    border-radius: 100vw;
+  }
+
+  .review-kr::-webkit-scrollbar-thumb,
+  .review-en::-webkit-scrollbar-thumb {
+    background-color: ${theme.colors.brandColor1};
+    border: 1px solid ${theme.colors.brandColor3};
+    border-radius: 100vw;
+  }
+
+  /* Browser support setting (FireFox) */
+  @supports (
+    scrollbar-color: ${theme.colors.brandColor1} ${theme.colors.brandColor3}
+  ) {
+    * {
+      scrollbar-color: ${theme.colors.brandColor1} ${theme.colors.brandColor3};
+      scrollbar-width: auto;
+    }
+  }
+
   .review-en {
-    font-family: ${theme.fonts.nunito};
+    font-family: ${theme.fonts.nanumGothic};
+    font-size: 1.5rem;
   }
 
   .review-kr {
     font-family: ${theme.fonts.nanumGothic};
+    font-size: ${theme.sizes.bodyFontsSize};
   }
 
   .reviewer-name {
-    font-size: 1.3rem;
+    font-size: ${theme.sizes.bodyFontsSize};
     position: absolute;
     bottom: 2rem;
   }
