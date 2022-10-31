@@ -12,7 +12,7 @@ const YogaIntro = ({ data }) => {
           <div className="yoga-img">
             <Image
               alt="yoga class"
-              src={urlFor(image).width(300).height(300).url()}
+              src={urlFor(image).width(1500).height(1500).url()}
               layout="fill"
             />
           </div>

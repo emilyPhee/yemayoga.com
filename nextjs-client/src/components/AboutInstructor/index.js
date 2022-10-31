@@ -40,7 +40,7 @@ const AboutInstructor = ({ data }) => {
           <div className="instructor-img">
             <Image
               alt="instructor"
-              src={urlFor(instructor_img).width(300).height(400).url()}
+              src={urlFor(instructor_img).width(1200).height(1600).url()}
               layout="fill"
             />
           </div>
