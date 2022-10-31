@@ -49,13 +49,15 @@ export const Container = styled.div`
     position: relative;
     width: 7rem;
     height: 7rem;
+
+    left: -1.7rem;
   }
 
   .review-kr,
   .review-en {
     line-height: 3rem;
     margin-bottom: 2rem;
-    height: 18rem;
+    height: 18.5rem;
     overflow-y: auto;
     padding-right: 1.4rem;
     color: ${theme.colors.blackText};
@@ -103,7 +105,7 @@ export const Container = styled.div`
   .reviewer-name {
     font-size: ${theme.sizes.bodyFontsSize};
     position: absolute;
-    bottom: 2rem;
+    bottom: 4rem;
   }
 
   /* button style */
