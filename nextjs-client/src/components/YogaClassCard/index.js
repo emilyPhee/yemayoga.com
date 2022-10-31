@@ -13,7 +13,7 @@ const YogaClassCard = ({ data }) => {
           <div className="class-img">
             <Image
               alt="yoga class"
-              src={urlFor(image).width(250).height(300).url()}
+              src={urlFor(image).width(1250).height(1500).url()}
               layout="fill"
             />
           </div>
