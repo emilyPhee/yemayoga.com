@@ -7,6 +7,8 @@ import { theme } from '@styles/theme';
 import ClassReview from '@components/ClassReview';
 import { reviewQuery } from 'src/sanity/queries/review';
 
+import { Divider } from '@chakra-ui/react';
+
 const Container = styled.section`
   .home-intro {
     background: url('/images/home-intro2.jpg') center/cover no-repeat;
@@ -31,15 +33,8 @@ const Container = styled.section`
     width: 50rem;
   }
 
-  .line {
-    width: 90%;
-    height: 1px;
-    background-color: #e4e4e4;
-  }
-
-  .line-wrapper {
-    display: flex;
-    justify-content: center;
+  .divider-container {
+    padding: 0 5rem;
   }
 
   ${theme.mediaQuery.smallScreen} {
@@ -71,8 +66,8 @@ export default function Home({ data }) {
       </div>
 
       <YogaClassesList data={data.yogaClassData} />
-      <div className="line-wrapper">
-        <div className="line"></div>
+      <div className="divider-container">
+        <Divider />
       </div>
       <ClassReview reviewData={data.reviewData} />
     </Container>

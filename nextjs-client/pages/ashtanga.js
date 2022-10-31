@@ -7,17 +7,11 @@ import YogaSystemList from '@components/YogaClassInfo/YogaSystemList';
 import styled from '@emotion/styled';
 import client from 'src/sanity/client';
 import { ashtangaImageQuery, ashtangaPageQuery } from 'src/sanity/queries';
+import { Divider } from '@chakra-ui/react';
 
 const Container = styled.div`
-  .line {
-    width: 90%;
-    height: 1px;
-    background-color: #e4e4e4;
-  }
-
-  .line-wrapper {
-    display: flex;
-    justify-content: center;
+  .divider-container {
+    padding: 0 5rem;
   }
 `;
 
@@ -28,9 +22,8 @@ export default function Ashtanga({ data }) {
       <YogaDescription data={data.ashtangaPageData} />
       <YogaSystemList data={data.ashtangaPageData} />
       <YogaEtiquette data={data.ashtangaPageData} />
-
-      <div className="line-wrapper">
-        <div className="line"></div>
+      <div className="divider-container">
+        <Divider />
       </div>
       <MoonDays />
     </Container>
