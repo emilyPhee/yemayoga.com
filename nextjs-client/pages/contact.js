@@ -18,7 +18,7 @@ const Container = styled.div`
       font-size: ${theme.sizes.fontsTitleSize};
       font-family: ${theme.fonts.nanumGothic};
       text-align: center;
-      margin-top: 7rem;
+      margin-top: 5rem;
     }
   }
 
@@ -28,7 +28,7 @@ const Container = styled.div`
     padding: 7rem;
 
     .location-wrapper {
-      font-family: ${theme.fonts.nunito};
+      font-family: ${theme.fonts.nanumGothic};
       .location-title {
         font-size: 1.5rem;
         padding: 2rem 0 1rem 0;
