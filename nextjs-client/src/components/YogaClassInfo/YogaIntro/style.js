@@ -15,6 +15,7 @@ export const Container = styled.section`
     justify-content: center;
 
     padding: 2rem 4rem;
+    margin-bottom: 5rem;
   }
 
   .yoga-img-wrapper {
@@ -43,16 +44,8 @@ export const Container = styled.section`
     }
   }
 
-  .line-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  .line {
-    width: 90%;
-    height: 1px;
-    background-color: #e4e4e4;
-    margin-top: 7rem;
+  .divider-container {
+    padding: 0 5rem;
   }
 
   ${theme.mediaQuery.smallScreen} {

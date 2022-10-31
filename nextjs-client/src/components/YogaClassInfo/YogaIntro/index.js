@@ -1,6 +1,7 @@
 import { Container } from './style';
 import Image from 'next/image';
 import { urlFor } from 'src/sanity/image-url';
+import { Divider } from '@chakra-ui/react';
 
 const YogaIntro = ({ data }) => {
   const { name, image } = data[0];
@@ -25,8 +26,8 @@ const YogaIntro = ({ data }) => {
           <h2 className="description-title">{name.toUpperCase()}</h2>
         </div>
       </div>
-      <div className="line-wrapper">
-        <div className="line" />
+      <div className="divider-container">
+        <Divider />
       </div>
     </Container>
   );

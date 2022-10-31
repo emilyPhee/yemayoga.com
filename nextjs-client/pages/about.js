@@ -3,13 +3,23 @@ import Layout from '@components/Layout';
 import client from '../src/sanity/client';
 import { aboutQuery } from 'src/sanity/queries/about';
 import AboutInstructor from '@components/AboutInstructor';
+import styled from '@emotion/styled';
+import { Divider } from '@chakra-ui/react';
 
+const Container = styled.div`
+  .divider-container {
+    padding: 0 5rem;
+  }
+`;
 export default function About({ data }) {
   return (
-    <>
+    <Container>
       <AboutIntro data={data.aboutData} />
+      <div className="divider-container">
+        <Divider />
+      </div>
       <AboutInstructor data={data.aboutData} />
-    </>
+    </Container>
   );
 }
 
