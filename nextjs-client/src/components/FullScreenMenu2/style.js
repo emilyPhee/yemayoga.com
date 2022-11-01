@@ -22,6 +22,7 @@ export const Container = styled.div`
 
   .menu-items-wrapper {
     display: flex;
+    padding-left: 0.9rem;
   }
 
   .main-logo {
@@ -43,7 +44,7 @@ export const Container = styled.div`
     align-items: center;
 
     width: 20%;
-    padding-right: 2.6rem;
+    padding-right: 3.5rem;
 
     .insta-icon-wrapper {
       display: flex;
