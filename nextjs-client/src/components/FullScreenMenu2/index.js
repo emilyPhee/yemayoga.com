@@ -49,7 +49,13 @@ const FullScreenMenu2 = ({ currentPage }) => {
 
       <div className="user-links-container">
         <div className="insta-icon-wrapper">
-          <FontAwesomeIcon icon={faInstagram} />
+          <a
+            href="https://www.instagram.com/yemayoga/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} className="instagram-icon" />
+          </a>
         </div>
         <div className="language-toggle-wrapper">
           <LanguageToggle />

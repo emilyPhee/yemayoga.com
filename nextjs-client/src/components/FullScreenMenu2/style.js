@@ -23,6 +23,8 @@ export const Container = styled.div`
   .menu-items-wrapper {
     display: flex;
     padding-left: 0.9rem;
+    font-family: ${theme.fonts.nunito};
+    letter-spacing: 0.7px;
   }
 
   .main-logo {
@@ -52,9 +54,12 @@ export const Container = styled.div`
       align-items: center;
       width: 5rem;
       height: 5rem;
-
       font-size: 2.1rem;
       color: ${theme.colors.greyText};
+
+      .instagram-icon {
+        cursor: pointer;
+      }
     }
   }
 `;
