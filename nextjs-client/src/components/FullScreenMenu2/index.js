@@ -8,8 +8,10 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import LanguageToggle from '@components/LanguageToggle';
 
 const FullScreenMenu2 = ({ currentPage }) => {
+  const scrollPosition = useScrollPosition();
+
   return (
-    <Container>
+    <Container scroll={scrollPosition > 0}>
       <div className="menu-items-wrapper">
         <MenuItem
           active={

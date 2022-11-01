@@ -3,12 +3,22 @@ import { theme } from '@styles/theme';
 import { css } from '@emotion/react';
 
 export const Container = styled.div`
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
+  min-height: 7vh;
+  background-color: #fff;
 
   position: relative;
   padding: 0.8rem 0;
+  border-bottom: 2px solid #fff;
+  transition: all 200ms ease-in-out;
+
+  ${({ scroll }) =>
+    scroll
+      ? css`
+          border-bottom: 2px solid #f7f7f7;
+        `
+      : null}
 
   .menu-items-wrapper {
     display: flex;
