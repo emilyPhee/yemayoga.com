@@ -1,0 +1,60 @@
+import { Container, MenuItem } from './style';
+import { useScrollPosition } from 'src/hooks/useScrollPosition';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import LanguageToggle from '@components/LanguageToggle';
+
+const FullScreenMenu2 = ({ currentPage }) => {
+  return (
+    <Container>
+      <div className="menu-items-wrapper">
+        <MenuItem
+          active={
+            currentPage === 'home' ||
+            currentPage === 'ashtanga' ||
+            currentPage === 'vinyasa' ||
+            currentPage === 'private'
+          }
+        >
+          <Link href="/">Home</Link>
+        </MenuItem>
+
+        <MenuItem active={currentPage === 'about'}>
+          <Link href="/about">About</Link>
+        </MenuItem>
+
+        <MenuItem active={currentPage === 'schedule'}>
+          <Link href="/schedule">Schedule</Link>
+        </MenuItem>
+
+        <MenuItem active={currentPage === 'contact'}>
+          <Link href="/contact">Contact</Link>
+        </MenuItem>
+      </div>
+
+      <div className="main-logo">
+        <Link href="/">
+          <a>
+            <div className="logo-wrapper">
+              <Image src="/images/logo.png" alt="logo" layout="fill" />
+            </div>
+          </a>
+        </Link>
+      </div>
+
+      <div className="user-links-container">
+        <div className="insta-icon-wrapper">
+          <FontAwesomeIcon icon={faInstagram} />
+        </div>
+        <div className="language-toggle-wrapper">
+          <LanguageToggle />
+        </div>
+      </div>
+    </Container>
+  );
+};
+
+export default FullScreenMenu2;

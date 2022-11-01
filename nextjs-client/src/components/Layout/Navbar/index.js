@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Container, MenuItem } from './style';
 
 import FullScreenMenu from '@components/FullScreenMenu';
+import FullScreenMenu2 from '@components/FullScreenMenu2';
 import HamburgerMenu from '@components/HamburgerMenu';
 
 const useMediaQUery = width => {
@@ -35,7 +36,7 @@ const Navbar = ({ currentPage }) => {
       {isBreakpoint ? (
         <HamburgerMenu currentPage={currentPage} />
       ) : (
-        <FullScreenMenu currentPage={currentPage} />
+        <FullScreenMenu2 currentPage={currentPage} />
       )}
     </Container>
   );
