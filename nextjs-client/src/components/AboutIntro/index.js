@@ -16,6 +16,8 @@ const AboutIntro = ({ data }) => {
               alt="about"
               src={urlFor(about_img).width(1050).height(900).url()}
               layout="fill"
+              placeholder="blur"
+              blurDataURL={`/_next/image?url=${about_img}&w=16&q=1`}
             />
           </div>
         </div>

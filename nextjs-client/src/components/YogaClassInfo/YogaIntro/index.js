@@ -15,6 +15,8 @@ const YogaIntro = ({ data }) => {
               alt="yoga class"
               src={urlFor(image).width(1500).height(1500).url()}
               layout="fill"
+              placeholder="blur"
+              blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
             />
           </div>
         </div>
