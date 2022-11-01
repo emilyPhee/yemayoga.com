@@ -25,12 +25,13 @@ export const Container = styled.div`
     padding-left: 0.9rem;
     font-family: ${theme.fonts.nunito};
     letter-spacing: 0.7px;
+    width: 33.3%;
   }
 
   .main-logo {
     display: flex;
-    justify-content: flex-start;
-    width: 20%;
+    justify-content: center;
+    width: 33.3%;
   }
 
   .logo-wrapper {
@@ -43,9 +44,10 @@ export const Container = styled.div`
   .user-links-container {
     display: flex;
     justify-content: flex-end;
+
     align-items: center;
 
-    width: 20%;
+    width: 33.3%;
     padding-right: 3.5rem;
 
     .insta-icon-wrapper {
@@ -60,6 +62,14 @@ export const Container = styled.div`
       .instagram-icon {
         cursor: pointer;
       }
+    }
+  }
+
+  ${theme.mediaQuery.tablet} {
+    .main-logo {
+      display: flex;
+      justify-content: center;
+      width: 10%;
     }
   }
 `;
@@ -80,4 +90,8 @@ export const MenuItem = styled.div`
           color: ${theme.colors.navbarActive};
         `
       : null}
+
+  ${theme.mediaQuery.tablet} {
+    padding: 1.5rem 1.2rem;
+  }
 `;
