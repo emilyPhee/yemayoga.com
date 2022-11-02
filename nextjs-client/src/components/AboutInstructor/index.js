@@ -47,7 +47,9 @@ const AboutInstructor = ({ data }) => {
               src={urlFor(instructor_img).width(1200).height(1600).url()}
               layout="fill"
               placeholder="blur"
-              blurDataURL={`/_next/image?url=${instructor_img}&w=16&q=1`}
+              blurDataURL={`/_next/image?url=${urlFor(
+                instructor_img
+              )}&w=16&q=1`}
             />
           </div>
         </div>

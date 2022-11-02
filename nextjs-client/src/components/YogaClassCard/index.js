@@ -16,7 +16,7 @@ const YogaClassCard = ({ data }) => {
               src={urlFor(image).width(1250).height(1500).url()}
               layout="fill"
               placeholder="blur"
-              blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
+              blurDataURL={`/_next/image?url=${urlFor(image)}&w=16&q=1`}
             />
           </div>
           <h4 className="name">{name}</h4>
