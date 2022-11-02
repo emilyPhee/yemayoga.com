@@ -4,6 +4,7 @@ import { urlFor } from 'src/sanity/image-url';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
 import { PortableText } from '@portabletext/react';
+import { AnimatedDivElement } from '@styles/shared-styled-component';
 
 const AboutInstructor = ({ data }) => {
   const { preferredLanguage } = useLanguages();
@@ -24,7 +25,10 @@ const AboutInstructor = ({ data }) => {
           <h4 className="sub-name">{instructor_sub_name}</h4>
         </div>
 
-        <div className="instructor-intro">
+        <AnimatedDivElement
+          key={String(preferredLanguage)}
+          className="instructor-intro"
+        >
           <PortableText
             value={
               preferredLanguage === supportLanguages.English
@@ -32,7 +36,7 @@ const AboutInstructor = ({ data }) => {
                 : introduction_kr
             }
           />
-        </div>
+        </AnimatedDivElement>
       </div>
 
       <div className="right-box">

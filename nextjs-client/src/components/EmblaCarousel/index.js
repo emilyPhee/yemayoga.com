@@ -6,6 +6,7 @@ import Image from 'next/image';
 import ClassNames from 'embla-carousel-class-names';
 
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
+import { AnimatedParagraph } from '@styles/shared-styled-component';
 
 export const PrevButton = ({ enabled, onClick }) => (
   <button
@@ -76,9 +77,19 @@ export const EmblaCarousel = ({ reviewData }) => {
                   />
                 </div>
                 {preferredLanguage === supportLanguages.English ? (
-                  <div className="review-en">{review.content_en}</div>
+                  <AnimatedParagraph
+                    key={review.content_en}
+                    className="review-en"
+                  >
+                    {review.content_en}
+                  </AnimatedParagraph>
                 ) : (
-                  <div className="review-kr">{review.content_kr}</div>
+                  <AnimatedParagraph
+                    key={review.content_kr}
+                    className="review-kr"
+                  >
+                    {review.content_kr}
+                  </AnimatedParagraph>
                 )}
                 <p className="reviewer-name">{review.name}</p>
               </div>
