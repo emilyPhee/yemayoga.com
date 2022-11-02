@@ -18,3 +18,7 @@ export const AnimatedParagraph = styled.p`
 export const AnimatedDivElement = styled.div`
   animation: ${loadAnimate} 0.4s ease-in-out;
 `;
+
+export const AnimatedOrderedListElement = styled.ol`
+  animation: ${loadAnimate} 0.4s ease-in-out;
+`;
