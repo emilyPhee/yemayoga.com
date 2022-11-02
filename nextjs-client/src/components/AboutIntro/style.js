@@ -50,6 +50,11 @@ export const Container = styled.section`
     flex-direction: column;
     padding: 5rem 0 1rem 0;
 
+    .about-img {
+      width: 33rem;
+      height: 28rem;
+    }
+
     .left-box {
       width: 90%;
       display: flex;
@@ -61,8 +66,12 @@ export const Container = styled.section`
       width: 90%;
     }
 
+    .title,
+    .sub-title {
+      padding: 0 1rem;
+    }
     .intro-wrapper {
-      padding: 3rem 0;
+      padding: 3rem 1rem;
       height: auto;
     }
   }

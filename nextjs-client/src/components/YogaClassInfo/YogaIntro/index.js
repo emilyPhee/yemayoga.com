@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { urlFor } from 'src/sanity/image-url';
 import { Divider } from '@chakra-ui/react';
 
-const YogaIntro = ({ data }) => {
+const YogaIntro = ({ data, yogaQuote }) => {
   const { name, image } = data[0];
 
   return (
@@ -19,10 +19,7 @@ const YogaIntro = ({ data }) => {
           </div>
         </div>
         <div className="description-wrapper">
-          <p className="sub-title">
-            The body benefits from movement, and the mind benefits from
-            stillness.
-          </p>
+          <p className="sub-title">{yogaQuote}</p>
           <h2 className="description-title">{name.toUpperCase()}</h2>
         </div>
       </div>
