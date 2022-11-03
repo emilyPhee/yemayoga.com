@@ -68,8 +68,7 @@ export const Container = styled.div`
   .date-time-wrapper {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-
+    white-space: nowrap;
     .class-time {
       letter-spacing: 0.5px;
     }
@@ -88,6 +87,10 @@ export const Container = styled.div`
     .price-list {
       text-align: end;
     }
+  }
+
+  .day {
+    margin-right: 7%;
   }
 
   li {
