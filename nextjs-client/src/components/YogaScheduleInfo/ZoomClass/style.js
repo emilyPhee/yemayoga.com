@@ -30,6 +30,7 @@ export const Container = styled.div`
     margin-bottom: 7rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
   }
 
   .level {
@@ -67,8 +68,7 @@ export const Container = styled.div`
   .date-time-wrapper {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-
+    white-space: nowrap;
     .class-time {
       letter-spacing: 0.5px;
     }
@@ -87,6 +87,10 @@ export const Container = styled.div`
     .price-list {
       text-align: end;
     }
+  }
+
+  .day {
+    margin-right: 7%;
   }
 
   li {

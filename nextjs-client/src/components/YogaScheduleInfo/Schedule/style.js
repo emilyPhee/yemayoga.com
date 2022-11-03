@@ -5,6 +5,7 @@ export const Container = styled.div`
   margin: 0.3rem;
   font-family: ${theme.fonts.nanumGothic};
   color: ${theme.colors.blackText};
+  height: 90%;
 
   .title-wrapper {
     background-color: ${theme.colors.brandColor1};
@@ -20,7 +21,7 @@ export const Container = styled.div`
 
   .yoga-schedule-wrapper {
     background-color: ${theme.colors.brandColor2};
-    padding: 2.5rem 3.5rem;
+    padding: 2.5rem 12%;
     height: 90%;
   }
 
@@ -40,15 +41,18 @@ export const Container = styled.div`
     font-size: ${theme.sizes.bodyFontsSize};
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 
     .class-time {
       letter-spacing: 0.5px;
+      white-space: nowrap;
     }
   }
 
   .announcement {
-    margin-top: 3rem;
+    margin-top: 17%;
+    padding-bottom: 1.5rem;
+    white-space: nowrap;
+
     font-size: 1.2rem;
   }
 
@@ -70,6 +74,7 @@ export const Container = styled.div`
   }
 
   ${theme.mediaQuery.smallScreen} {
+    height: 98%;
     .schedule-title {
       font-size: 1.5rem;
     }
