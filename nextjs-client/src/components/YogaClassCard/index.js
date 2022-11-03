@@ -5,10 +5,13 @@ import Link from 'next/link';
 
 const YogaClassCard = ({ data }) => {
   const { duration, level, name, image } = data;
+  const yogaClassNameList = ['Ashtanga', 'Vinyasa', 'Private'];
 
   return (
     <Container>
-      <Link href={`/${name.toLowerCase()}`}>
+      <Link
+        href={yogaClassNameList.includes(name) ? `/${name.toLowerCase()}` : '/'}
+      >
         <div className="card-wrapper">
           <div className="class-img">
             <Image
