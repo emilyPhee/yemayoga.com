@@ -41,15 +41,14 @@ export const Container = styled.div`
     font-size: ${theme.sizes.bodyFontsSize};
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 
     .class-time {
       letter-spacing: 0.5px;
+      white-space: nowrap;
     }
   }
 
   .announcement {
-    /* margin-top: 3rem; */
     margin-top: 17%;
     padding-bottom: 1.5rem;
     white-space: nowrap;
