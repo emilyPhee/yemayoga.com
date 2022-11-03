@@ -5,6 +5,7 @@ export const Container = styled.div`
   margin: 0.3rem;
   font-family: ${theme.fonts.nanumGothic};
   color: ${theme.colors.blackText};
+  height: 90%;
 
   .title-wrapper {
     background-color: ${theme.colors.brandColor1};
@@ -48,7 +49,11 @@ export const Container = styled.div`
   }
 
   .announcement {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
+    margin-top: 17%;
+    padding-bottom: 1.5rem;
+    white-space: nowrap;
+
     font-size: 1.2rem;
   }
 
@@ -70,6 +75,7 @@ export const Container = styled.div`
   }
 
   ${theme.mediaQuery.smallScreen} {
+    height: 98%;
     .schedule-title {
       font-size: 1.5rem;
     }

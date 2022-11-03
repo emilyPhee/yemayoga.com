@@ -6,11 +6,13 @@ export const Container = styled.div`
   margin: 0.3rem;
   margin-bottom: 2rem;
   color: ${theme.colors.blackText};
+  height: 93%;
 
   .title-wrapper {
     display: flex;
     justify-content: center;
     background-color: ${theme.colors.brandColor1};
+    margin-bottom: 0.7rem;
 
     .price-title {
       font-size: 1.6rem;
@@ -64,6 +66,7 @@ export const Container = styled.div`
   }
 
   ${theme.mediaQuery.smallScreen} {
+    height: 94%;
     .class-price-wrapper {
       padding: 2rem;
     }

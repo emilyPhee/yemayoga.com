@@ -13,6 +13,7 @@ export const Container = styled.div`
     width: 55%;
     margin: 7rem 0 5rem 0;
     row-gap: 1.5rem;
+    grid-auto-rows: 1fr;
   }
 
   .tooltip-wrapper {
