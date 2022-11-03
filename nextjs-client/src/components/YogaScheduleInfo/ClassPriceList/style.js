@@ -46,7 +46,7 @@ export const Container = styled.div`
     .price-grid-wrapper {
       width: 80%;
       grid-template-columns: 1fr;
-      row-gap: 2.5rem;
+      row-gap: 2.7rem;
     }
 
     .tooltip-wrapper {
