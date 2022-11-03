@@ -48,6 +48,11 @@ export const Container = styled.div`
     .left-box {
       justify-content: center;
       width: 30rem;
+
+      .system-img {
+        width: 33rem;
+        height: 30rem;
+      }
     }
   }
 `;

@@ -18,7 +18,10 @@ const Container = styled.div`
 export default function Ashtanga({ data }) {
   return (
     <Container>
-      <YogaIntro data={data.ashtangaImageData} />
+      <YogaIntro
+        data={data.ashtangaImageData}
+        yogaQuote={data.ashtangaPageData.yoga_quote}
+      />
       <YogaDescription data={data.ashtangaPageData} />
       <YogaSystemList data={data.ashtangaPageData} />
       <YogaEtiquette data={data.ashtangaPageData} />
