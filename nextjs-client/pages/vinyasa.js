@@ -9,7 +9,10 @@ import { vinyasaImageQuery, vinyasaPageQuery } from 'src/sanity/queries';
 export default function Vinyasa({ data }) {
   return (
     <>
-      <YogaIntro data={data.vinyasaImageData} />
+      <YogaIntro
+        data={data.vinyasaImageData}
+        yogaQuote={data.vinyasaPageData.yoga_quote}
+      />
       <YogaDescription data={data.vinyasaPageData} />
       <YogaSystemList data={data.vinyasaPageData} />
       <YogaEtiquette data={data.vinyasaPageData} />
