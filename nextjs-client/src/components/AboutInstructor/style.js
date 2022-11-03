@@ -10,6 +10,8 @@ export const Container = styled.section`
 
   .left-box {
     width: 60rem;
+    padding-left: 3rem;
+    padding-right: 1rem;
 
     .name-wrapper {
       font-family: ${theme.fonts.nanumGothic};
@@ -34,7 +36,7 @@ export const Container = styled.section`
 
   .right-box {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     width: 45rem;
     padding: 2rem;
   }

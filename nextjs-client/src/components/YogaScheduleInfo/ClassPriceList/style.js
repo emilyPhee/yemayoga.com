@@ -12,7 +12,7 @@ export const Container = styled.div`
     grid-template-columns: 1fr 1fr;
     width: 55%;
     margin: 7rem 0 5rem 0;
-    row-gap: 1.5rem;
+    row-gap: 2rem;
     grid-auto-rows: 1fr;
   }
 
