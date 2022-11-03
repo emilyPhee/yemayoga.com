@@ -47,7 +47,7 @@ export const Container = styled.section`
 
   ${theme.mediaQuery.smallScreen} {
     flex-direction: column;
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     padding-bottom: 7rem;
 
     .left-box {

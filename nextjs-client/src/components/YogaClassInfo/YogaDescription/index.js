@@ -1,6 +1,7 @@
 import { Container } from './style';
 import { PortableText } from '@portabletext/react';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
+import { AnimatedDivElement } from '@styles/shared-styled-component';
 
 const YogaDescription = ({ data, language }) => {
   const { preferredLanguage } = useLanguages();
@@ -19,7 +20,10 @@ const YogaDescription = ({ data, language }) => {
         <p className="sub-title">{short_description}</p>
       </div>
       <div className="right-box">
-        <div className="description">
+        <AnimatedDivElement
+          key={String(preferredLanguage)}
+          className="description"
+        >
           <PortableText
             value={
               preferredLanguage === supportLanguages.English
@@ -27,7 +31,7 @@ const YogaDescription = ({ data, language }) => {
                 : yoga_description_kr
             }
           />
-        </div>
+        </AnimatedDivElement>
       </div>
     </Container>
   );

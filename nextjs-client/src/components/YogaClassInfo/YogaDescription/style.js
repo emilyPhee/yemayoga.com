@@ -38,8 +38,9 @@ export const Container = styled.section`
   }
 
   ${theme.mediaQuery.smallScreen} {
-    padding: 1rem;
+    padding: 1.5rem;
     flex-direction: column;
+    align-items: center;
 
     .left-box {
       width: 90%;

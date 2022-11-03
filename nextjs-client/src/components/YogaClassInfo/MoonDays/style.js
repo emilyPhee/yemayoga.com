@@ -52,11 +52,11 @@ export const Container = styled.section`
 
     .tooltip-wrapper {
       justify-content: center;
-    }
 
-    .tooltip {
-      margin: 0;
-      margin-top: 3rem;
+      .tooltip {
+        margin-right: 0rem;
+        margin-top: 5rem;
+      }
     }
   }
 `;

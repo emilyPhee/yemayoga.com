@@ -16,6 +16,16 @@ import { useRef } from 'react';
 
 const Container = styled.div`
   font-size: ${theme.sizes.bodyFontsSize};
+  .grecaptcha-badge {
+    visibility: hidden;
+  }
+
+  .recaptcha-terms {
+    color: ${theme.colors.lightGreyText};
+    text-align: right;
+    margin-top: 5rem;
+  }
+
   .contact-form {
     line-height: 2.5rem;
     .error-message {
@@ -114,14 +124,15 @@ const EmailContactForm = () => {
 
   return (
     <Container>
-      <ReCAPTCHA
-        ref={recaptchaRef}
-        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-        size="invisible"
-      />
       <form className="contact-form" onSubmit={handleSubmit(onFormSubmit)}>
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+          size="invisible"
+          render="explicit"
+        />
         <FormControl height="5rem">
-          <FormLabel fontSize="1.6rem" fontFamily={theme.fonts.nunito}>
+          <FormLabel fontSize="1.6rem" fontFamily={theme.fonts.nanumGothic}>
             Name
           </FormLabel>
           <Input
@@ -139,7 +150,7 @@ const EmailContactForm = () => {
           </div>
         </FormControl>
         <FormControl marginTop={20} height="5rem">
-          <FormLabel fontSize="1.6rem" fontFamily={theme.fonts.nunito}>
+          <FormLabel fontSize="1.6rem" fontFamily={theme.fonts.nanumGothic}>
             Email
           </FormLabel>
           <Input
@@ -157,7 +168,7 @@ const EmailContactForm = () => {
           </div>
         </FormControl>
         <FormControl marginTop={20} height="5rem">
-          <FormLabel fontSize="1.6rem" fontFamily={theme.fonts.nunito}>
+          <FormLabel fontSize="1.6rem" fontFamily={theme.fonts.nanumGothic}>
             Message
           </FormLabel>
           <Textarea
@@ -187,7 +198,7 @@ const EmailContactForm = () => {
             </div>
           ) : null}
           <Button
-            fontSize="1.6rem"
+            fontSize="1.7rem"
             fontFamily={theme.fonts.nunito}
             type="submit"
             size="md"
@@ -196,6 +207,23 @@ const EmailContactForm = () => {
             Submit
           </Button>
         </div>
+        <p className="recaptcha-terms">
+          This site is protected by reCAPTCHA and the Google&nbsp;
+          <a
+            href="https://policies.google.com/privacy"
+            style={{ color: theme.colors.link }}
+          >
+            Privacy Policy
+          </a>
+          &nbsp;and&nbsp;
+          <a
+            href="https://policies.google.com/terms"
+            style={{ color: theme.colors.link }}
+          >
+            Terms of Service
+          </a>
+          &nbsp;apply.
+        </p>
       </form>
     </Container>
   );

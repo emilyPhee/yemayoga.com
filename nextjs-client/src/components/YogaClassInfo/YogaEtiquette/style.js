@@ -19,7 +19,6 @@ export const Container = styled.section`
 
   .right-box {
     width: 60rem;
-    padding-left: 2%;
   }
 
   .title {
@@ -42,7 +41,7 @@ export const Container = styled.section`
     }
 
     .right-box {
-      padding: 0 1rem;
+      padding: 0 0.5rem;
       width: 90%;
     }
 

@@ -5,16 +5,21 @@ import Link from 'next/link';
 
 const YogaClassCard = ({ data }) => {
   const { duration, level, name, image } = data;
+  const yogaClassNameList = ['Ashtanga', 'Vinyasa', 'Private'];
 
   return (
     <Container>
-      <Link href={`/${name.toLowerCase()}`}>
+      <Link
+        href={yogaClassNameList.includes(name) ? `/${name.toLowerCase()}` : '/'}
+      >
         <div className="card-wrapper">
           <div className="class-img">
             <Image
               alt="yoga class"
               src={urlFor(image).width(1250).height(1500).url()}
               layout="fill"
+              placeholder="blur"
+              blurDataURL={`/_next/image?url=${urlFor(image)}&w=16&q=1`}
             />
           </div>
           <h4 className="name">{name}</h4>
