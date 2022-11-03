@@ -18,7 +18,7 @@ const ZoomClass = ({ data, formatTime }) => {
             <ul className="list-wrapper">
               {USASchedule.day.map((day, inx) => (
                 <li className="date-time-wrapper" key={inx}>
-                  <div>{day}</div>
+                  <div className="day">{day}</div>
                   <div className="class-time">
                     {formatTime(USASchedule.start_time, USASchedule.end_time)}
                   </div>
@@ -33,7 +33,7 @@ const ZoomClass = ({ data, formatTime }) => {
             <ul className="list-wrapper">
               {koreaSchedule.day.map((day, inx) => (
                 <li className="date-time-wrapper" key={inx}>
-                  <p>{day}</p>
+                  <p className="day">{day}</p>
                   <p className="class-time">
                     {formatTime(
                       koreaSchedule.start_time,
