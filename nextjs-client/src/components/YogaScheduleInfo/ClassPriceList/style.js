@@ -51,6 +51,7 @@ export const Container = styled.div`
 
     .tooltip-wrapper {
       justify-content: center;
+      margin-top: 3rem;
 
       .tooltip {
         margin: 0 1rem;
