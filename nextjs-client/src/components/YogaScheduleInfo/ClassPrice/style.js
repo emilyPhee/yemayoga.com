@@ -6,7 +6,7 @@ export const Container = styled.div`
   margin: 0.3rem;
   margin-bottom: 2rem;
   color: ${theme.colors.blackText};
-  height: 93%;
+  height: 90%;
 
   .title-wrapper {
     display: flex;
@@ -67,6 +67,7 @@ export const Container = styled.div`
     height: 94%;
     .class-price-wrapper {
       padding: 2rem;
+      margin-bottom: 3rem;
     }
   }
 `;

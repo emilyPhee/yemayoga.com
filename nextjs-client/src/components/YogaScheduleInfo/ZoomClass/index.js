@@ -12,7 +12,6 @@ const ZoomClass = ({ data, formatTime }) => {
       </div>
       <div className="grid-wrapper">
         <div className="USA-schedule">
-          <h4 className="level">{USASchedule.level.toUpperCase()}</h4>
           <div className="schedule-container">
             <h4 className="usa-schedule-title">{USASchedule.title}</h4>
             <ul className="list-wrapper">
@@ -50,11 +49,19 @@ const ZoomClass = ({ data, formatTime }) => {
             <h4 className="price-title">Price</h4>
             {zoom_class_price.map((price, inx) => (
               <ul className="list-wrapper price-list" key={inx}>
-                <li>around ${price.amount}</li>
+                <li>around ${price.amount} / month</li>
                 <li>{price.announcement}</li>
               </ul>
             ))}
           </div>
+          <a
+            href="https://pf.kakao.com/_hsxmxbl"
+            target="_blank"
+            rel="noreferrer"
+            className="registration-link"
+          >
+            등록 문의
+          </a>
         </div>
       </div>
     </Container>
