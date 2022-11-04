@@ -20,14 +20,16 @@ export default {
     {
       title: 'About Introduction (KR)',
       name: 'about_intro_kr',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
       description: 'Please type the about Introduction in Korean.',
       validation: Rule => Rule.required().max(400),
     },
     {
       title: 'About Introduction (EN)',
       name: 'about_intro_en',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
       description: 'Please type the about Introduction in English.',
       validation: Rule => Rule.required().max(400),
     },
