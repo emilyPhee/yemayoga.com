@@ -13,9 +13,6 @@ export const Container = styled.li`
     background-color: black;
   }
 
-  .card-wrapper:hover {
-  }
-
   .class-img {
     transition: all 200ms ease-in-out;
     width: 25rem;
@@ -29,10 +26,13 @@ export const Container = styled.li`
 
   .name {
     position: absolute;
-    bottom: 1.5rem;
-    left: 2rem;
+    /* bottom: 1.5rem;
+    left: 2rem; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: ${theme.colors.whiteText};
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     letter-spacing: 0.1rem;
   }
 
@@ -47,6 +47,7 @@ export const Container = styled.li`
 
   .level {
     padding-bottom: 0.3rem;
+    margin-top: 1.2rem;
   }
 
   ${theme.mediaQuery.smallScreen} {

@@ -18,7 +18,7 @@ export const Container = styled.div`
     font-size: ${theme.sizes.fontsTitleSize};
     font-family: ${theme.fonts.nanumGothic};
     text-align: center;
-    margin-top: 7rem;
+    margin: 8rem 0;
   }
 `;
 

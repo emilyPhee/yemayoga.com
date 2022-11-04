@@ -11,7 +11,7 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 55%;
-    margin: 7rem 0 5rem 0;
+    margin: 0 0 7rem 0;
     row-gap: 1.5rem;
     grid-auto-rows: 1fr;
   }

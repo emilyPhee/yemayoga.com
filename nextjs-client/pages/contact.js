@@ -18,14 +18,14 @@ const Container = styled.div`
       font-size: ${theme.sizes.fontsTitleSize};
       font-family: ${theme.fonts.nanumGothic};
       text-align: center;
-      margin-top: 5rem;
+      margin: 7rem 0;
     }
   }
 
   .bottom-box {
     display: flex;
     justify-content: center;
-    padding: 7rem;
+    padding: 0 4rem;
 
     .location-wrapper {
       font-family: ${theme.fonts.nanumGothic};
