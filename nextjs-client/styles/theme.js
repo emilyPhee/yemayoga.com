@@ -30,7 +30,7 @@ export const theme = {
     bodyFontsSize: '1.4rem',
     fontsTitleSize: '2.2rem',
     fontsDescriptionTitle: '2.2rem',
-    fontsDescriptionTitleSub: '1.3rem',
+    fontsDescriptionTitleSub: '1.45rem',
     fontsMediumDescriptionSize: '1.7rem',
     fontsMediumDescriptionSubSize: '1.2rem',
     fontsSystemTitle: '2rem',

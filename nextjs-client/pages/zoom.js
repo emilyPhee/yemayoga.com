@@ -14,12 +14,12 @@ const Container = styled.div`
 `;
 
 export default function Zoom({ data }) {
-  console.log(data.zoomPageData);
   return (
     <Container>
       <YogaIntro
         data={data.zoomImageData}
         yogaQuote={data.zoomPageData.yoga_quote}
+        yogaFullName={data.zoomPageData.yoga_name}
       />
       <YogaDescription data={data.zoomPageData} />
       <YogaSystemList data={data.zoomPageData} />

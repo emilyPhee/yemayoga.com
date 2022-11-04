@@ -15,6 +15,7 @@ export default function Private({ data }) {
       <YogaIntro
         data={data.privateImageData}
         yogaQuote={data.privatePageData.yoga_quote}
+        yogaFullName={data.privatePageData.yoga_name}
       />
       <YogaDescription data={data.privatePageData} />
       <YogaSystemList data={data.privatePageData} />

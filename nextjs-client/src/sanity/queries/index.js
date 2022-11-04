@@ -7,50 +7,50 @@ export const yogaClassesQuery = `
 
 // get yoga class image
 export const ashtangaImageQuery = `
-*[_type == 'yogaClass' && name == 'Ashtanga'] 
+*[_type == 'yogaClass' ] 
 	{
   		name, image
-	}
+	}[2]
 `;
 
 export const vinyasaImageQuery = `
-*[_type == 'yogaClass' && name == 'Vinyasa'] 
+*[_type == 'yogaClass'] 
 	{
   		name, image
-	}
+	}[3]
 `;
 
 export const privateImageQuery = `
-*[_type == 'yogaClass' && name == 'Private'] 
+*[_type == 'yogaClass' ] 
 	{
   		name, image
-	}
+	}[1]
 `;
 
 export const zoomImageQuery = `
-*[_type == 'yogaClass' && name == 'Zoom'] 
+*[_type == 'yogaClass'] 
 	{
   		name, image
-	}
+	}[0]
 `;
 
 // get yoga page data
 export const ashtangaPageQuery = `
-	*[_type == 'yogaPage' && yoga_name == 'Ashtanga'] 
+	*[_type == 'yogaPage'] 
 	{
 		 yoga_name, yoga_quote, short_description, yoga_description_kr, yoga_description_en, yoga_systems, etiquette_kr, etiquette_en
-	}[0]
+	}[1]
 `;
 
 export const vinyasaPageQuery = `
-	*[_type == 'yogaPage' && yoga_name == 'Vinyasa'] 
+	*[_type == 'yogaPage'] 
 	{
 		yoga_name, yoga_quote, short_description, yoga_description_kr, yoga_description_en, yoga_systems, etiquette_kr, etiquette_en
-	}[0]
+	}[2]
 `;
 
 export const privatePageQuery = `
-	*[_type == 'yogaPage' && yoga_name == 'Private']
+	*[_type == 'yogaPage']
 
 	{
 		yoga_name, yoga_quote, short_description, yoga_description_kr, yoga_description_en, yoga_systems, etiquette_kr, etiquette_en
@@ -58,9 +58,9 @@ export const privatePageQuery = `
 `;
 
 export const zoomPageQuery = `
-	*[_type == 'yogaPage' && yoga_name == 'Zoom']
+	*[_type == 'yogaPage']
 
 	{
 		yoga_name, yoga_quote, short_description, yoga_description_kr, yoga_description_en, yoga_systems, etiquette_kr, etiquette_en
-	}[0]
+	}[3]
 `;
