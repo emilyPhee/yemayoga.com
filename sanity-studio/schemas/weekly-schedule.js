@@ -12,7 +12,6 @@ export default {
       title: 'Day of the Week',
       name: 'day',
       type: 'string',
-      // of: [{ type: 'string' }],
       options: {
         list: [
           { title: 'Monday', value: 'Mon' },

@@ -14,6 +14,7 @@ import schedule from './schedule';
 import price from './price';
 import classPrice from './class-price';
 import zoomClass from './zoom-class';
+import zoomClassSchedule from './zoom-class-schedule';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -34,5 +35,6 @@ export default createSchema({
     price,
     classPrice,
     zoomClass,
+    zoomClassSchedule,
   ]),
 });
