@@ -12,7 +12,10 @@ const Container = styled.div``;
 export default function Private({ data }) {
   return (
     <Container>
-      <YogaIntro data={data.privateImageData} />
+      <YogaIntro
+        data={data.privateImageData}
+        yogaQuote={data.privatePageData.yoga_quote}
+      />
       <YogaDescription data={data.privatePageData} />
       <YogaSystemList data={data.privatePageData} />
       <YogaEtiquette data={data.privatePageData} />

@@ -12,7 +12,7 @@ export const Container = styled.div`
     grid-template-columns: 1fr 1fr;
     width: 55%;
     margin: 7rem 0 5rem 0;
-    row-gap: 2rem;
+    row-gap: 1.5rem;
     grid-auto-rows: 1fr;
   }
 
@@ -34,16 +34,24 @@ export const Container = styled.div`
     .price-grid-wrapper {
       width: 80%;
     }
+
+    .tooltip-wrapper {
+      width: 100%;
+      justify-content: center;
+      margin-top: 5rem;
+    }
   }
 
   ${theme.mediaQuery.smallScreen} {
     .price-grid-wrapper {
       width: 80%;
       grid-template-columns: 1fr;
+      row-gap: 2.7rem;
     }
 
     .tooltip-wrapper {
       justify-content: center;
+      margin-top: 3rem;
 
       .tooltip {
         margin: 0 1rem;
