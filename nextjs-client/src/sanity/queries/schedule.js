@@ -6,11 +6,11 @@ export const scheduleQuery = `
 `;
 
 export const zoomClassQuery = `
-    *[_type == 'zoom_class'] 
+     *[_type == 'zoom_class'] 
     {
-        yoga_name, zoom_class_schedule, zoom_class_price
+        yoga_name, zoom_schedule, zoom_class_price
 
-    }[0]
+    }
 `;
 
 export const priceQuery = `
