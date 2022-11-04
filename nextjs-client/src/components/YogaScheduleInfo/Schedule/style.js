@@ -3,6 +3,7 @@ import { theme } from '@styles/theme';
 
 export const Container = styled.div`
   margin: 0.3rem;
+  margin-bottom: 0;
   font-family: ${theme.fonts.nanumGothic};
   color: ${theme.colors.blackText};
   height: 90%;
@@ -30,7 +31,7 @@ export const Container = styled.div`
     font-weight: bold;
     letter-spacing: 0.3rem;
     color: ${theme.colors.lightGreyText};
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
   }
 
   .time-list {
@@ -81,7 +82,7 @@ export const Container = styled.div`
 
     .yoga-schedule-wrapper {
       background-color: ${theme.colors.brandColor2};
-      padding: 2rem 3rem;
+      padding: 2rem 3rem 0.5rem 3rem;
       height: 85%;
     }
   }

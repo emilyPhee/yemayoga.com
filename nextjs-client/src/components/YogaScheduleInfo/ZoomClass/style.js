@@ -58,7 +58,7 @@ export const Container = styled.div`
   .USA-schedule,
   .Korea-schedule,
   .price {
-    padding: 20% 15%;
+    padding: 8% 14%;
     background-color: ${theme.colors.brandColor2};
   }
 
@@ -123,6 +123,10 @@ export const Container = styled.div`
   ${theme.mediaQuery.smallScreen} {
     .title-wrapper {
       width: 80%;
+    }
+
+    .grid-wrapper {
+      gap: 1rem;
     }
 
     .zoom-class-title {
