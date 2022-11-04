@@ -11,7 +11,7 @@ export const Container = styled.div`
   padding-top: 7rem;
 
   .title-wrapper {
-    width: 55%;
+    width: 65%;
     display: flex;
     justify-content: center;
     background-color: ${theme.colors.brandColor1};
@@ -19,13 +19,13 @@ export const Container = styled.div`
     .zoom-class-title {
       font-size: 1.6rem;
       padding: 1rem 3rem;
+      white-space: nowrap;
     }
   }
 
   .grid-wrapper {
-    background-color: ${theme.colors.brandColor2};
-    gap: 3rem;
-    width: 55%;
+    gap: 0.7rem;
+    width: 65%;
     margin: 0.7rem;
     margin-bottom: 7rem;
     display: grid;
@@ -49,20 +49,17 @@ export const Container = styled.div`
     .usa-schedule-title,
     .korea-schedule-title,
     .price-title {
-      align-self: flex-end;
       color: ${theme.colors.greyText};
+      font-size: 1.6rem;
+      white-space: nowrap;
     }
-  }
-
-  .USA-schedule {
-    position: relative;
   }
 
   .USA-schedule,
   .Korea-schedule,
   .price {
-    padding: 25% 15%;
-    margin-top: 1rem;
+    padding: 20% 15%;
+    background-color: ${theme.colors.brandColor2};
   }
 
   .date-time-wrapper {
@@ -79,13 +76,22 @@ export const Container = styled.div`
     line-height: 3.1rem;
   }
 
-  .price {
-    .price-title {
-      margin-right: 0;
-    }
+  .list-wrapper > li {
+    white-space: nowrap;
+  }
 
-    .price-list {
-      text-align: end;
+  .price {
+    position: relative;
+
+    .registration-link {
+      position: absolute;
+      right: 15%;
+      bottom: 10%;
+      border-bottom: 1px solid ${theme.colors.lightGreyText};
+      font-size: 1.3rem;
+      color: ${theme.colors.blackText};
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
     }
   }
 
@@ -99,18 +105,17 @@ export const Container = styled.div`
 
   ${theme.mediaQuery.tablet} {
     .title-wrapper {
-      width: 70%;
+      width: 80%;
     }
 
     .grid-wrapper {
-      gap: 1px;
-      width: 70%;
+      width: 80%;
+      grid-auto-rows: 22rem;
     }
 
     .korea-schedule-title,
     .price-title,
     .usa-schedule-title {
-      margin-top: 2rem;
       margin-right: 1.5rem;
     }
   }
