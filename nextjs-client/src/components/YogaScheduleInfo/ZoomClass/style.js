@@ -8,7 +8,6 @@ export const Container = styled.div`
   font-size: ${theme.sizes.bodyFontsSize};
   font-family: ${theme.fonts.nanumGothic};
   color: ${theme.colors.blackText};
-  padding-top: 7rem;
 
   .title-wrapper {
     width: 65%;

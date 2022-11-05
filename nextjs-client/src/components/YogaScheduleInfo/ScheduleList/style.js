@@ -12,7 +12,6 @@ export const Container = styled.div`
 
     width: 75%;
     display: inline-grid;
-    margin: 7rem 0;
   }
 
   ${theme.mediaQuery.tablet} {

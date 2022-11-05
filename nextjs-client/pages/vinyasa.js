@@ -12,6 +12,7 @@ export default function Vinyasa({ data }) {
       <YogaIntro
         data={data.vinyasaImageData}
         yogaQuote={data.vinyasaPageData.yoga_quote}
+        yogaFullName={data.vinyasaPageData.yoga_name}
       />
       <YogaDescription data={data.vinyasaPageData} />
       <YogaSystemList data={data.vinyasaPageData} />

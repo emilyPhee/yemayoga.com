@@ -18,7 +18,8 @@ const FullScreenMenu2 = ({ currentPage }) => {
             currentPage === 'home' ||
             currentPage === 'ashtanga' ||
             currentPage === 'vinyasa' ||
-            currentPage === 'private'
+            currentPage === 'private' ||
+            currentPage === 'zoom'
           }
         >
           <Link href="/">Home</Link>

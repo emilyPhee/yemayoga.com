@@ -14,10 +14,16 @@ const Footer = () => {
           United States <br />
           yemadoesyoga@gmail.com
         </p>
-        <div className="insta-link-wrapper">
-          <FontAwesomeIcon icon={faInstagram} />
-          <p>yemayoga</p>
-        </div>
+        <a
+          href="https://www.instagram.com/yemayoga/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="insta-link-wrapper">
+            <FontAwesomeIcon icon={faInstagram} />
+            <p>yemayoga</p>
+          </div>
+        </a>
       </div>
       <div className="right-box">
         <Image

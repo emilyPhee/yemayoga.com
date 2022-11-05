@@ -37,6 +37,9 @@ export const Container = styled.section`
     }
   }
 
+  ${theme.mediaQuery.tablet} {
+  }
+
   ${theme.mediaQuery.smallScreen} {
     padding: 1.5rem;
     flex-direction: column;

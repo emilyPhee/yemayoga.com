@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: 4rem 0;
+  margin-top: 0;
   color: ${theme.colors.blackText};
 
   .left-box {
@@ -25,14 +26,33 @@ export const Container = styled.div`
     font-family: ${theme.fonts.nunito};
     padding: 2rem;
 
-    .title {
+    .system-title {
       font-size: ${theme.sizes.fontsSystemTitle};
       margin-top: 1rem;
+      margin-bottom: 2.5rem;
     }
 
     .description {
       font-size: ${theme.sizes.bodyFontsSize};
       line-height: 220%;
+    }
+  }
+
+  ${theme.mediaQuery.tablet} {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7rem;
+
+    .right-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 85%;
+    }
+
+    .left-box {
+      width: 85%;
+      justify-content: center;
     }
   }
 

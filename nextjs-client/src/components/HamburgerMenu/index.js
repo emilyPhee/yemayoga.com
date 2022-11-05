@@ -53,7 +53,8 @@ const HamburgerMenu = ({ currentPage }) => {
             currentPage === 'home' ||
             currentPage === 'ashtanga' ||
             currentPage === 'vinyasa' ||
-            currentPage === 'private'
+            currentPage === 'private' ||
+            currentPage === 'zoom'
           }
           onClick={() => setOpenMenu(false)}
         >
