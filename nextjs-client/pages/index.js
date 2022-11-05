@@ -58,7 +58,7 @@ export default function Home({ data }) {
     <Container>
       <div className="home-intro">
         <div className="intro-wrapper">
-          <h1 className="title">Breathe and move with Yemayoga </h1>
+          <h1 className="title">Breathe and flow with Yemayoga </h1>
           <p className="introduction">
             See yourself grow through yoga and learn how you feel you can do it.
           </p>
