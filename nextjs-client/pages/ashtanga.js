@@ -21,6 +21,7 @@ export default function Ashtanga({ data }) {
       <YogaIntro
         data={data.ashtangaImageData}
         yogaQuote={data.ashtangaPageData.yoga_quote}
+        yogaFullName={data.ashtangaPageData.yoga_name}
       />
       <YogaDescription data={data.ashtangaPageData} />
       <YogaSystemList data={data.ashtangaPageData} />

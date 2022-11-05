@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const YogaClassCard = ({ data }) => {
   const { duration, level, name, image } = data;
-  const yogaClassNameList = ['Ashtanga', 'Vinyasa', 'Private'];
+  const yogaClassNameList = ['Ashtanga', 'Vinyasa', 'Private', 'Zoom'];
 
   return (
     <Container>

@@ -17,15 +17,17 @@ const Container = styled.div`
       letter-spacing: 0.1rem;
       font-size: ${theme.sizes.fontsTitleSize};
       font-family: ${theme.fonts.nanumGothic};
+      color: ${theme.colors.greyText};
       text-align: center;
-      margin-top: 5rem;
+      margin: 7rem 0;
     }
   }
 
   .bottom-box {
     display: flex;
     justify-content: center;
-    padding: 7rem;
+    padding: 0 4rem;
+    padding-bottom: 7rem;
 
     .location-wrapper {
       font-family: ${theme.fonts.nanumGothic};

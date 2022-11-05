@@ -9,10 +9,10 @@ export default {
       type: 'string',
     },
     {
-      title: 'Zoom Class Schedule',
-      name: 'zoom_class_schedule',
+      title: 'Zoom Schedule',
+      name: 'zoom_schedule',
       type: 'array',
-      of: [{ type: 'weeklySchedule' }],
+      of: [{ type: 'zoomClassSchedule' }],
     },
     {
       title: 'Zoom Class Price',

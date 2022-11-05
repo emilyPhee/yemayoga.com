@@ -25,7 +25,7 @@ const YogaSystem = ({ yogaSystem }) => {
         </div>
       </div>
       <div className="right-box">
-        <h2 className="title">{title}</h2>
+        <h2 className="system-title">{title}</h2>
         <AnimatedDivElement
           key={String(preferredLanguage)}
           className="description"

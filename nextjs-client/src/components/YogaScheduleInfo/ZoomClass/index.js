@@ -1,9 +1,9 @@
 import { Container } from './style';
 
 const ZoomClass = ({ data, formatTime }) => {
-  const { yoga_name, zoom_class_price, zoom_class_schedule } = data;
-  const USASchedule = zoom_class_schedule[0];
-  const koreaSchedule = zoom_class_schedule[1];
+  const { yoga_name, zoom_schedule, zoom_class_price } = data[0];
+  const USASchedule = zoom_schedule[0];
+  const koreaSchedule = zoom_schedule[1];
 
   return (
     <Container>
@@ -13,13 +13,13 @@ const ZoomClass = ({ data, formatTime }) => {
       <div className="grid-wrapper">
         <div className="USA-schedule">
           <div className="schedule-container">
-            <h4 className="usa-schedule-title">{USASchedule.title}</h4>
+            <h4 className="usa-schedule-title">{USASchedule.time_zone}</h4>
             <ul className="list-wrapper">
-              {USASchedule.day.map((day, inx) => (
+              {USASchedule.zoom_class_schedule.map((schedule, inx) => (
                 <li className="date-time-wrapper" key={inx}>
-                  <div className="day">{day}</div>
+                  <div className="day">{schedule.day}</div>
                   <div className="class-time">
-                    {formatTime(USASchedule.start_time, USASchedule.end_time)}
+                    {formatTime(schedule.start_time, schedule.end_time)}
                   </div>
                 </li>
               ))}
@@ -28,17 +28,14 @@ const ZoomClass = ({ data, formatTime }) => {
         </div>
         <div className="Korea-schedule">
           <div className="schedule-container">
-            <h4 className="korea-schedule-title">{koreaSchedule.title}</h4>
+            <h4 className="korea-schedule-title">{koreaSchedule.time_zone}</h4>
             <ul className="list-wrapper">
-              {koreaSchedule.day.map((day, inx) => (
+              {koreaSchedule.zoom_class_schedule.map((schedule, inx) => (
                 <li className="date-time-wrapper" key={inx}>
-                  <p className="day">{day}</p>
-                  <p className="class-time">
-                    {formatTime(
-                      koreaSchedule.start_time,
-                      koreaSchedule.end_time
-                    )}
-                  </p>
+                  <div className="day">{schedule.day}</div>
+                  <div className="class-time">
+                    {formatTime(schedule.start_time, schedule.end_time)}
+                  </div>
                 </li>
               ))}
             </ul>
