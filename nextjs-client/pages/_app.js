@@ -8,13 +8,14 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
-  const getLayout = Component.getLayout || ((page) => page);
+  const getLayout = Component.getLayout || (page => page);
 
   return (
     <>
       <Head>
         <title>Yemayoga</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="google" content="notranslate"></meta>
         <meta
           name="keywords"
           content="yemayoga, irvine, yoga, yoga studio, yoga class"
