@@ -25,6 +25,7 @@ export const Container = styled.section`
     font-size: ${theme.sizes.fontsTitleSize};
     font-family: ${theme.fonts.nanumGothic};
     padding-bottom: 0.5rem;
+    padding: 0 1rem;
   }
 
   .etiquette-list {
@@ -32,11 +33,26 @@ export const Container = styled.section`
     line-height: 4rem;
   }
 
+  ${theme.mediaQuery.tablet} {
+    flex-direction: column;
+    .title {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .right-box {
+      width: 85%;
+    }
+
+    .left-box {
+      width: 85%;
+    }
+  }
   ${theme.mediaQuery.smallScreen} {
     flex-direction: column;
 
     .title {
-      padding: 3rem 2rem;
+      padding: 4rem 0;
       text-align: center;
     }
 
