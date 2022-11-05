@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: 4rem 0;
+  margin-top: 0;
   color: ${theme.colors.blackText};
 
   .left-box {
