@@ -1,13 +1,8 @@
 import '../styles/globals.css';
-import { extendTheme } from '@chakra-ui/react';
+import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
 import { ThemeProvider } from '@emotion/react';
 import { LanguageProvider } from '@contexts/languageContext';
-import Head from 'next/head';
-
-const theme = extendTheme({});
-
-// fontawesome
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
@@ -27,18 +22,18 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="Yemayoga" />
         <meta name="twitter:title" content="Yemayoga" />
 
-        <meta name="description" content="Breathe and move with Yemayoga" />
+        <meta name="description" content="Breathe and flow with Yemayoga" />
         <meta
           property="og:description"
-          content="Breathe and move with Yemayoga"
+          content="Breathe and flow with Yemayoga"
         />
         <meta
           name="twitter:description"
-          content="Breathe and move with Yemayoga"
+          content="Breathe and flow with Yemayoga"
         />
 
-        <meta property="og:image" content="/images/home-intro2.jpg" />
-        <meta name="twitter:image" content="/images/home-intro2.jpg" />
+        <meta property="og:image" content="/images/link-preview.jpg" />
+        <meta name="twitter:image" content="/images/link-preview.jpg" />
       </Head>
       <ThemeProvider theme={{}}>
         <ChakraProvider>
