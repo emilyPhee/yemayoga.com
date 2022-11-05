@@ -17,6 +17,7 @@ export const Container = styled.div`
     letter-spacing: 0.1rem;
     font-size: ${theme.sizes.fontsTitleSize};
     font-family: ${theme.fonts.nanumGothic};
+    color: ${theme.colors.greyText};
     text-align: center;
     margin: 8rem 0;
   }

@@ -10,6 +10,7 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 8rem;
   }
 
   .title {
