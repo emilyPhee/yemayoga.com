@@ -71,7 +71,7 @@ export const Container = styled.div`
 export const MenuItem = styled.div`
   color: ${theme.colors.navbarInactive};
   padding: 1.5rem 2.6rem;
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   transition: color 200ms ease-in-out;
   display: flex;
   align-items: center;
