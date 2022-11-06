@@ -5,6 +5,7 @@ import { ThemeProvider } from '@emotion/react';
 import { LanguageProvider } from '@contexts/languageContext';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Yemayoga</title>
+
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="google" content="notranslate"></meta>
         <meta
