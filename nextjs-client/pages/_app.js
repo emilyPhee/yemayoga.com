@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Yemayoga</title>
+        <link rel="shortcut icon" type="image/svg" href="/images/favicon.svg" />
 
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="google" content="notranslate"></meta>

@@ -31,12 +31,14 @@ export const Container = styled.div`
   .main-logo {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 33.3%;
   }
 
   .logo-wrapper {
-    width: 12rem;
-    height: 5.4rem;
+    display: flex;
+
+    align-items: center;
     position: relative;
     cursor: pointer;
   }
@@ -76,7 +78,7 @@ export const Container = styled.div`
 
 export const MenuItem = styled.div`
   color: ${theme.colors.navbarInactive};
-  padding: 1.5rem 2.6rem;
+  padding: 1.4rem 2.6rem 1.5rem 2.6rem;
   font-size: 1.6rem;
   transition: color 200ms ease-in-out;
 
