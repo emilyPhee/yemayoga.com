@@ -39,7 +39,13 @@ const HamburgerMenu = ({ currentPage }) => {
 
         <div className="right-box">
           <div className="insta-icon-wrapper">
-            <FontAwesomeIcon icon={faInstagram} />
+            <a
+              href="https://www.instagram.com/yemayoga/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
           </div>
           <div className="language-toggle-wrapper">
             <LanguageToggle />
