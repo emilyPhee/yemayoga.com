@@ -32,7 +32,7 @@ const HamburgerMenu = ({ currentPage }) => {
         <Link href="/">
           <a>
             <div className="logo-wrapper">
-              <Image src="/images/logo.png" alt="logo" layout="fill" />
+              <Image src="/images/logo.svg" alt="logo" layout="fill" />
             </div>
           </a>
         </Link>
