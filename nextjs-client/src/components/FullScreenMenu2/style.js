@@ -63,7 +63,7 @@ export const Container = styled.div`
     .main-logo {
       display: flex;
       justify-content: center;
-      width: 10%;
+      width: 15%;
     }
   }
 `;
