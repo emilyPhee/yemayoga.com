@@ -2,10 +2,7 @@ import { Container } from './style';
 import Image from 'next/image';
 import { urlFor } from 'src/sanity/image-url';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
-import {
-  AnimatedDivElement,
-  AnimatedParagraph,
-} from '@styles/shared-styled-component';
+import { AnimatedDivElement } from '@styles/shared-styled-component';
 import { PortableText } from '@portabletext/react';
 
 const AboutIntro = ({ data }) => {
@@ -46,15 +43,6 @@ const AboutIntro = ({ data }) => {
               }
             />
           </AnimatedDivElement>
-          {/* {preferredLanguage === supportLanguages.English ? (
-            <AnimatedParagraph key={about_intro_en} className="about-intro">
-              {about_intro_en}
-            </AnimatedParagraph>
-          ) : (
-            <AnimatedParagraph key={about_intro_kr} className="about-intro">
-              {about_intro_kr}
-            </AnimatedParagraph>
-          )} */}
         </div>
       </div>
     </Container>
