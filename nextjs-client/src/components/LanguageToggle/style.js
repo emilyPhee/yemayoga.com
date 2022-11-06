@@ -4,7 +4,7 @@ import { css } from '@emotion/react';
 
 export const Container = styled.div`
   .language-toggle {
-    width: 4.8rem;
+    width: 5rem;
     height: 5rem;
 
     display: flex;
@@ -19,7 +19,7 @@ export const Container = styled.div`
 `;
 
 export const LanguageToggleWrapper = styled.div`
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: ${theme.colors.navbarInactive};
 
   transition: color 200ms ease-in-out;
@@ -28,7 +28,7 @@ export const LanguageToggleWrapper = styled.div`
     selected
       ? css`
           color: ${theme.colors.navbarActive};
-          font-size: 1.5rem;
+          font-size: 1.6rem;
           padding-bottom: 1px;
         `
       : null}

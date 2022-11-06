@@ -31,14 +31,8 @@ export const Container = styled.div`
   .main-logo {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 33.3%;
-  }
-
-  .logo-wrapper {
-    width: 12rem;
-    height: 5.4rem;
-    position: relative;
-    cursor: pointer;
   }
 
   .user-links-container {
@@ -69,7 +63,7 @@ export const Container = styled.div`
     .main-logo {
       display: flex;
       justify-content: center;
-      width: 10%;
+      width: 15%;
     }
   }
 `;
@@ -77,8 +71,10 @@ export const Container = styled.div`
 export const MenuItem = styled.div`
   color: ${theme.colors.navbarInactive};
   padding: 1.5rem 2.6rem;
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   transition: color 200ms ease-in-out;
+  display: flex;
+  align-items: center;
 
   &:hover {
     color: ${theme.colors.navbarActive};

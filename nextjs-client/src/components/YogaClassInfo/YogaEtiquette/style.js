@@ -57,7 +57,7 @@ export const Container = styled.section`
     }
 
     .right-box {
-      padding: 0 0.5rem;
+      /* padding: 0 0.5rem; */
       width: 90%;
     }
 

@@ -63,6 +63,7 @@ export const Container = styled.div`
 
     .right-box {
       width: 90%;
+      padding: 0;
     }
 
     .left-box {
