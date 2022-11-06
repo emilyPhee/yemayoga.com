@@ -50,6 +50,7 @@ export const Container = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 3rem;
     }
 
     .list-wrapper li:not(:last-child) {
@@ -60,6 +61,9 @@ export const Container = styled.div`
       flex-direction: column;
       align-items: center;
       width: 70%;
+    }
+
+    .class-price-wrapper {
     }
   }
 
