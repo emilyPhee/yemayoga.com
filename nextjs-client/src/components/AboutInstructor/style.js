@@ -49,15 +49,17 @@ export const Container = styled.section`
 
   ${theme.mediaQuery.smallScreen} {
     flex-direction: column;
-    padding: 4rem 1rem;
+    padding: 4rem 0;
     padding-bottom: 7rem;
 
     .left-box {
       width: 90%;
+      padding: 0 1rem;
     }
     .right-box {
       width: 90%;
       margin-top: 7rem;
+      justify-content: center;
     }
   }
 `;

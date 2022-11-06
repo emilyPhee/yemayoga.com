@@ -4,9 +4,8 @@ import { theme } from '@styles/theme';
 export const Container = styled.div`
   font-family: ${theme.fonts.nanumGothic};
   margin: 0.3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: ${theme.colors.blackText};
-  height: 90%;
 
   .title-wrapper {
     display: flex;
@@ -23,7 +22,8 @@ export const Container = styled.div`
   .class-price-wrapper {
     background-color: ${theme.colors.brandColor2};
     font-size: ${theme.sizes.bodyFontsSize};
-    height: 90%;
+    height: 80%;
+    height: 1fr;
     padding: 2rem;
     position: relative;
 
@@ -50,6 +50,7 @@ export const Container = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 3rem;
     }
 
     .list-wrapper li:not(:last-child) {
@@ -60,6 +61,9 @@ export const Container = styled.div`
       flex-direction: column;
       align-items: center;
       width: 70%;
+    }
+
+    .class-price-wrapper {
     }
   }
 

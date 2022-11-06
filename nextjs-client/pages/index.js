@@ -49,10 +49,9 @@ const Container = styled.section`
     }
     .title {
       font-size: 3rem;
-      /* width: 90%; */
     }
     .introduction {
-      font-size: 1.7rem;
+      font-size: 1.65rem;
       width: 95%;
       line-height: 3rem;
     }
