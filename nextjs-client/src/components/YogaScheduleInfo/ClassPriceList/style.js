@@ -8,11 +8,13 @@ export const Container = styled.div`
   padding-bottom: 10rem;
 
   .price-grid-wrapper {
+    background-color: pink;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+
     width: 55%;
-    margin: 0 0 7rem 0;
-    row-gap: 1.5rem;
+    margin: 0 0 5rem 0;
     grid-auto-rows: 1fr;
   }
 
@@ -38,7 +40,6 @@ export const Container = styled.div`
     .tooltip-wrapper {
       width: 100%;
       justify-content: center;
-      margin-top: 5rem;
     }
   }
 
@@ -46,7 +47,7 @@ export const Container = styled.div`
     .price-grid-wrapper {
       width: 80%;
       grid-template-columns: 1fr;
-      row-gap: 2.7rem;
+      row-gap: 0rem;
     }
 
     .tooltip-wrapper {

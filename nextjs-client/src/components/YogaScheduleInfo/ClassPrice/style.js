@@ -4,9 +4,8 @@ import { theme } from '@styles/theme';
 export const Container = styled.div`
   font-family: ${theme.fonts.nanumGothic};
   margin: 0.3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: ${theme.colors.blackText};
-  height: 90%;
 
   .title-wrapper {
     display: flex;
@@ -23,7 +22,8 @@ export const Container = styled.div`
   .class-price-wrapper {
     background-color: ${theme.colors.brandColor2};
     font-size: ${theme.sizes.bodyFontsSize};
-    height: 90%;
+    height: 80%;
+    height: 1fr;
     padding: 2rem;
     position: relative;
 
