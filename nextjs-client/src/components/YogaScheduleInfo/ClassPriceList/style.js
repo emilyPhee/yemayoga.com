@@ -8,7 +8,6 @@ export const Container = styled.div`
   padding-bottom: 10rem;
 
   .price-grid-wrapper {
-    background-color: pink;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
