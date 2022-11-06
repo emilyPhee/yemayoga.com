@@ -6,6 +6,8 @@ import { yogaClassesQuery } from '../src/sanity/queries/index';
 import { theme } from '@styles/theme';
 import ClassReview from '@components/ClassReview';
 import { reviewQuery } from 'src/sanity/queries/review';
+import { AnimatedParagraph } from '@styles/shared-styled-component';
+import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
 import { Divider } from '@chakra-ui/react';
 
@@ -21,7 +23,7 @@ const Container = styled.section`
   .intro-wrapper {
     position: absolute;
     top: 25%;
-    left: 20%;
+    left: 18%;
   }
 
   .title {
@@ -29,8 +31,10 @@ const Container = styled.section`
   }
 
   .introduction {
+    margin-top: 2rem;
     font-size: 2rem;
     width: 50rem;
+    line-height: 3.5rem;
   }
 
   .divider-container {
@@ -38,9 +42,10 @@ const Container = styled.section`
   }
 
   ${theme.mediaQuery.smallScreen} {
-    .home-intro {
-      padding: 0;
-      padding: 12rem 0 0 5rem;
+    .intro-wrapper {
+      position: absolute;
+      top: 20%;
+      left: 10%;
     }
     .title {
       font-size: 3rem;
@@ -48,20 +53,39 @@ const Container = styled.section`
     }
     .introduction {
       font-size: 1.7rem;
-      width: 90%;
+      width: 95%;
+      line-height: 3rem;
     }
   }
 `;
 
 export default function Home({ data }) {
+  const { preferredLanguage } = useLanguages();
   return (
     <Container>
       <div className="home-intro">
         <div className="intro-wrapper">
-          <h1 className="title">Breathe and move with Yemayoga </h1>
-          <p className="introduction">
-            See yourself grow through yoga and learn how you feel you can do it.
-          </p>
+          <h1 className="title">Breathe and flow with Yemayoga </h1>
+          <AnimatedParagraph
+            key={String(preferredLanguage)}
+            className="introduction"
+          >
+            {preferredLanguage === supportLanguages.English ? (
+              <>
+                Experience your growth and gain confidence.
+                <br />
+                Discover your value through yoga practices with us.
+              </>
+            ) : (
+              <>
+                요가를 통해서 스스로 성장하는 모습을 보고
+                <br />
+                그로 인해서 자신이 할 수 있다는 그 마음을 알아가는 것.
+                <br />
+                자신의 가치를 더 알아가는 요가 수련을 함께 합니다.
+              </>
+            )}
+          </AnimatedParagraph>
         </div>
       </div>
 
