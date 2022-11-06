@@ -40,15 +40,8 @@ const FullScreenMenu2 = ({ currentPage }) => {
 
       <div className="main-logo">
         <Link href="/">
-          <a>
-            <div className="logo-wrapper">
-              <Image
-                src="/images/logo.svg"
-                alt="logo"
-                width={150}
-                height={53.8}
-              />
-            </div>
+          <a style={{ fontSize: 0, cursor: 'pointer' }}>
+            <Image src="/images/logo.svg" alt="logo" width={150} height={65} />
           </a>
         </Link>
       </div>

@@ -35,14 +35,6 @@ export const Container = styled.div`
     width: 33.3%;
   }
 
-  .logo-wrapper {
-    display: flex;
-
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-  }
-
   .user-links-container {
     display: flex;
     justify-content: flex-end;
@@ -78,9 +70,11 @@ export const Container = styled.div`
 
 export const MenuItem = styled.div`
   color: ${theme.colors.navbarInactive};
-  padding: 1.4rem 2.6rem 1.5rem 2.6rem;
+  padding: 1.5rem 2.6rem;
   font-size: 1.6rem;
   transition: color 200ms ease-in-out;
+  display: flex;
+  align-items: center;
 
   &:hover {
     color: ${theme.colors.navbarActive};
