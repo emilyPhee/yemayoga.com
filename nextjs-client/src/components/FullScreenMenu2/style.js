@@ -26,13 +26,14 @@ export const Container = styled.div`
     font-family: ${theme.fonts.nunito};
     letter-spacing: 0.7px;
     width: 33.3%;
+    z-index: 5;
   }
 
   .main-logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 33.3%;
+    max-width: 20%;
   }
 
   .user-links-container {
@@ -63,14 +64,15 @@ export const Container = styled.div`
     .main-logo {
       display: flex;
       justify-content: center;
-      width: 15%;
+      width: 13%;
     }
   }
 `;
 
 export const MenuItem = styled.div`
   color: ${theme.colors.navbarInactive};
-  padding: 1.5rem 2.6rem;
+  /* padding: 1.5rem 2.6rem; */
+  padding: 4% 5%;
   font-size: 1.65rem;
   transition: color 200ms ease-in-out;
   display: flex;
