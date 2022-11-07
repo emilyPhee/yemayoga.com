@@ -31,7 +31,7 @@ const ClassPriceList = ({ data }) => {
           bg="white"
           p="1rem 2rem"
           maxW="30rem"
-          fontFamily={theme.fonts.nunito}
+          fontFamily={theme.fonts.nanumGothic}
           fontSize={theme.sizes.bodyFontsSize}
           color={theme.colors.greyText}
           aria-label="A tooltip"
