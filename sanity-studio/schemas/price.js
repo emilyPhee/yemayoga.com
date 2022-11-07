@@ -26,7 +26,8 @@ export default {
       title: 'Amount',
       name: 'amount',
       type: 'number',
-      validation: Rule => Rule.min(1).required(),
+      description: 'Please Enter $ amount',
+      validation: (Rule) => Rule.min(1).required(),
     },
     {
       title: 'Announcement (Optional)',

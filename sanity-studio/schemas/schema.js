@@ -25,13 +25,13 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     yogaClass,
-    review,
+    yogaPage,
     system,
+    review,
     about,
     schedule,
     weeklySchedule,
     yogaTime,
-    yogaPage,
     price,
     classPrice,
     zoomClass,

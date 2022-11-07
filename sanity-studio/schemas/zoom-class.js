@@ -1,5 +1,5 @@
 export default {
-  title: 'Zoom Class',
+  title: 'Zoom Class Schedule & Price',
   name: 'zoom_class',
   type: 'document',
   fields: [
