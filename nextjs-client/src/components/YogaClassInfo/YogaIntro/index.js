@@ -13,7 +13,7 @@ const YogaIntro = ({ data, yogaQuote, yogaFullName }) => {
           <div className="yoga-img">
             <Image
               alt="yoga class"
-              src={urlFor(image).width(1500).height(1500).url()}
+              src={urlFor(image).width(1125).height(1125).url()}
               layout="fill"
               placeholder="blur"
               blurDataURL={`/_next/image?url=${urlFor(image)}&w=16&q=1`}
