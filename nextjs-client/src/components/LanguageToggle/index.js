@@ -21,13 +21,13 @@ const LanguageToggle = () => {
         <LanguageToggleWrapper
           selected={currentLanguage === supportLanguages.Korean}
         >
-          <p>KR</p>
+          <span>KR</span>
         </LanguageToggleWrapper>
         <div className="toggle-divider" />
         <LanguageToggleWrapper
           selected={currentLanguage === supportLanguages.English}
         >
-          <p>EN</p>
+          <span>EN</span>
         </LanguageToggleWrapper>
       </button>
     </Container>

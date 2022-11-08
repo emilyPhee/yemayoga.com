@@ -30,7 +30,7 @@ export const Container = styled.section`
 
   .instructor-intro {
     font-size: ${theme.sizes.bodyFontsSize};
-    line-height: 210%;
+    line-height: 1.8;
     font-family: ${theme.fonts.nanumGothic};
   }
 
