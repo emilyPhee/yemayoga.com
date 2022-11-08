@@ -10,12 +10,13 @@ const ClassPriceList = ({ data }) => {
 
   const { preferredLanguage } = useLanguages();
 
-  const privateLessonMsgKr = '요가 개인레슨은 저희에게 문의해 주세요.';
+  const privateLessonMsgKr =
+    '요가 개인레슨은 이메일이나 카톡으로 문의해 주세요.';
   const privateLessonMsgEn = 'Please contact us for more information.';
   return (
     <Container>
       <div className="price-grid-wrapper">
-        {data.map(price => (
+        {data.map((price) => (
           <ClassPrice key={price._id} priceData={price} />
         ))}
       </div>
@@ -29,7 +30,7 @@ const ClassPriceList = ({ data }) => {
               : privateLessonMsgKr
           }
           bg="white"
-          p="1rem 2rem"
+          p="1rem 1rem"
           maxW="30rem"
           fontFamily={theme.fonts.nanumGothic}
           fontSize={theme.sizes.bodyFontsSize}
