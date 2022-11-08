@@ -1,9 +1,9 @@
 export default {
-  title: 'Class review',
+  title: 'Home - Reviews',
   name: 'review',
   type: 'document',
-  validation: Rule =>
-    Rule.custom(fields => {
+  validation: (Rule) =>
+    Rule.custom((fields) => {
       if (fields.content_kr || fields.content_en) {
         return true;
       }
@@ -15,7 +15,7 @@ export default {
       title: 'Reviewer',
       name: 'name',
       type: 'string',
-      validation: Rule => Rule.optional().max(80),
+      validation: (Rule) => Rule.optional().max(80),
     },
     {
       title: 'Review content (KR)',
@@ -23,12 +23,17 @@ export default {
       type: 'text',
       description: 'Please type the review in Korean.',
     },
-
     {
       title: 'Review content (EN)',
       name: 'content_en',
       type: 'text',
       description: 'Please type the review in English.',
+    },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+      hidden: true,
     },
   ],
 };

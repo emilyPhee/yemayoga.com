@@ -1,5 +1,5 @@
 export default {
-  title: 'Schedule',
+  title: 'Schedules',
   name: 'schedule',
   type: 'document',
   fields: [

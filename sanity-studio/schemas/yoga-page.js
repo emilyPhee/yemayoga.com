@@ -1,5 +1,5 @@
 export default {
-  title: 'Yoga Page',
+  title: 'Yoga Detail Pages',
   name: 'yogaPage',
   type: 'document',
   fields: [
