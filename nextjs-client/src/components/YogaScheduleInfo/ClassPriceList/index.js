@@ -3,10 +3,15 @@ import { Tooltip } from '@chakra-ui/react';
 import { theme } from '@styles/theme';
 import { Container } from './style';
 import { useState } from 'react';
+import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
 const ClassPriceList = ({ data }) => {
   const [isLabelOpen, setIsLabelOpen] = useState(false);
 
+  const { preferredLanguage } = useLanguages();
+
+  const privateLessonMsgKr = '요가 개인레슨은 저희에게 문의해 주세요.';
+  const privateLessonMsgEn = 'Please contact us for more information.';
   return (
     <Container>
       <div className="price-grid-wrapper">
@@ -18,11 +23,15 @@ const ClassPriceList = ({ data }) => {
         <Tooltip
           isOpen={isLabelOpen}
           placeContent="bottom"
-          label="Please contact us for more information."
+          label={
+            preferredLanguage === supportLanguages.English
+              ? privateLessonMsgEn
+              : privateLessonMsgKr
+          }
           bg="white"
           p="1rem 2rem"
           maxW="30rem"
-          fontFamily={theme.fonts.nunito}
+          fontFamily={theme.fonts.nanumGothic}
           fontSize={theme.sizes.bodyFontsSize}
           color={theme.colors.greyText}
           aria-label="A tooltip"

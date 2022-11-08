@@ -13,10 +13,10 @@ const Schedule = ({ schedule, formatTime }) => {
         <ul className="time-list">
           {yoga_schedule.map((schedule, inx) => (
             <li className="date-time-wrapper" key={inx.toString()}>
-              <p className="day">{schedule.day}</p>
-              <p className="class-time">
+              <span className="day">{schedule.day}</span>
+              <span className="class-time">
                 {formatTime(schedule.start_time, schedule.end_time)}
-              </p>
+              </span>
             </li>
           ))}
         </ul>

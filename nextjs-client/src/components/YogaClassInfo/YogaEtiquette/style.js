@@ -18,19 +18,19 @@ export const Container = styled.section`
   }
 
   .right-box {
-    width: 60rem;
+    width: 65rem;
   }
 
   .title {
     font-size: ${theme.sizes.fontsTitleSize};
     font-family: ${theme.fonts.nanumGothic};
     padding-bottom: 0.5rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .etiquette-list {
     font-size: ${theme.sizes.bodyFontsSize};
-    line-height: 4rem;
+    line-height: 3.5rem;
   }
 
   ${theme.mediaQuery.tablet} {

@@ -43,7 +43,7 @@ export const Container = styled.section`
 
   .about-intro {
     font-size: ${theme.sizes.bodyFontsSize};
-    line-height: 180%;
+    line-height: 1.8;
   }
 
   ${theme.mediaQuery.smallScreen} {

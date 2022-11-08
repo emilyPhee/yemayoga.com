@@ -22,7 +22,7 @@ export const Container = styled.div`
   }
 
   .right-box {
-    width: 60rem;
+    width: 65rem;
     font-family: ${theme.fonts.nunito};
     padding: 2rem;
 
@@ -34,7 +34,7 @@ export const Container = styled.div`
 
     .description {
       font-size: ${theme.sizes.bodyFontsSize};
-      line-height: 220%;
+      line-height: 1.8;
     }
   }
 

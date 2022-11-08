@@ -26,13 +26,13 @@ export const Container = styled.section`
   }
 
   .right-box {
-    width: 60rem;
+    width: 65rem;
     margin: 3rem;
 
     .description {
       display: inline-block;
       font-size: ${theme.sizes.bodyFontsSize};
-      line-height: 200%;
+      line-height: 1.8;
       font-family: ${theme.fonts.nunito};
     }
   }
