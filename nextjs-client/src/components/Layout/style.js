@@ -11,6 +11,7 @@ export const Container = styled.div`
     height: 6rem;
     bottom: 3rem;
     right: 3rem;
+    z-index: 7;
     background-color: ${theme.colors.kakaoTalkLink};
     border-radius: 50%;
     display: flex;

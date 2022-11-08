@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15rem 1rem;
+  padding: 15rem 2rem;
   color: ${theme.colors.blackText};
 
   .left-box {
@@ -36,7 +36,7 @@ export const Container = styled.section`
 
   .right-box {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 45rem;
     padding: 2rem;
   }

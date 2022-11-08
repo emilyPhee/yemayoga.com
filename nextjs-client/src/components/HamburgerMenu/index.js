@@ -54,39 +54,44 @@ const HamburgerMenu = ({ currentPage }) => {
       </div>
 
       <div className={`bottom-box ${openMenu ? 'open' : null}`}>
-        <MenuItem
-          active={
-            currentPage === 'home' ||
-            currentPage === 'ashtanga' ||
-            currentPage === 'vinyasa' ||
-            currentPage === 'private' ||
-            currentPage === 'zoom'
-          }
-          onClick={() => setOpenMenu(false)}
-        >
-          <Link href="/">Home</Link>
-        </MenuItem>
-
-        <MenuItem
-          active={currentPage === 'about'}
-          onClick={() => setOpenMenu(false)}
-        >
-          <Link href="/about">About</Link>
-        </MenuItem>
-
-        <MenuItem
-          active={currentPage === 'schedule'}
-          onClick={() => setOpenMenu(false)}
-        >
-          <Link href="/schedule">Schedule</Link>
-        </MenuItem>
-
-        <MenuItem
-          active={currentPage === 'contact'}
-          onClick={() => setOpenMenu(false)}
-        >
-          <Link href="/contact">Contact</Link>
-        </MenuItem>
+        <Link href="/">
+          <MenuItem
+            active={
+              currentPage === 'home' ||
+              currentPage === 'ashtanga' ||
+              currentPage === 'vinyasa' ||
+              currentPage === 'private' ||
+              currentPage === 'zoom'
+            }
+            onClick={() => setOpenMenu(false)}
+          >
+            Home
+          </MenuItem>
+        </Link>
+        <Link href="/about">
+          <MenuItem
+            active={currentPage === 'about'}
+            onClick={() => setOpenMenu(false)}
+          >
+            About
+          </MenuItem>
+        </Link>
+        <Link href="/schedule">
+          <MenuItem
+            active={currentPage === 'schedule'}
+            onClick={() => setOpenMenu(false)}
+          >
+            Schedule
+          </MenuItem>
+        </Link>
+        <Link href="/contact">
+          <MenuItem
+            active={currentPage === 'contact'}
+            onClick={() => setOpenMenu(false)}
+          >
+            Contact
+          </MenuItem>
+        </Link>
       </div>
     </Container>
   );

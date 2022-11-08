@@ -14,7 +14,9 @@ export const Container = styled.section`
   }
 
   .left-box {
-    width: 50rem;
+    width: 55rem;
+    display: flex;
+    justify-content: center;
   }
 
   .right-box {
