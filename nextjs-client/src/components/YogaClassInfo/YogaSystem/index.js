@@ -16,7 +16,7 @@ const YogaSystem = ({ yogaSystem }) => {
           <div className="system-img">
             <Image
               alt="yoga system"
-              src={urlFor(image).width(1050).height(960).url()}
+              src={urlFor(image).width(788).height(720).url()}
               layout="fill"
               placeholder="blur"
               blurDataURL={`/_next/image?url=${urlFor(image)}&w=16&q=1`}

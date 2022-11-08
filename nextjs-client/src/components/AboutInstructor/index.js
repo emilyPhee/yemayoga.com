@@ -44,7 +44,7 @@ const AboutInstructor = ({ data }) => {
           <div className="instructor-img">
             <Image
               alt="instructor"
-              src={urlFor(instructor_img).width(1200).height(1600).url()}
+              src={urlFor(instructor_img).width(900).height(1200).url()}
               layout="fill"
               placeholder="blur"
               blurDataURL={`/_next/image?url=${urlFor(
