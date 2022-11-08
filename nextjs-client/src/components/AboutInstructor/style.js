@@ -9,9 +9,9 @@ export const Container = styled.section`
   color: ${theme.colors.blackText};
 
   .left-box {
-    width: 60rem;
-    padding-left: 3rem;
-    padding-right: 1rem;
+    width: 65rem;
+
+    padding: 0 1rem;
 
     .name-wrapper {
       font-family: ${theme.fonts.nanumGothic};
