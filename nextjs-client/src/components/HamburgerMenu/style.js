@@ -92,19 +92,16 @@ export const Container = styled.div`
   .bottom-box.open {
     left: 0;
   }
-
-  ${theme.mediaQuery.smallScreen} {
-  }
 `;
 
 export const MenuItem = styled.div`
   background-color: #fff;
   border-bottom: solid 1px #f0f0f0;
-
   color: ${theme.colors.navbarInactive};
   padding: 2rem 2.6rem;
   font-size: 1.5rem;
   transition: color 200ms ease-in-out;
+  cursor: pointer;
 
   &:hover {
     color: ${theme.colors.navbarActive};
