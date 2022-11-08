@@ -10,7 +10,7 @@ export const Container = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
 
-    width: 75%;
+    width: 77%;
     display: inline-grid;
   }
 

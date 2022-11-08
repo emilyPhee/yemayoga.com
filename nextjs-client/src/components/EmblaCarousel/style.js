@@ -149,7 +149,7 @@ export const Container = styled.div`
     }
 
     .embla {
-      max-width: 80%;
+      max-width: 83%;
     }
 
     .embla__slide {
