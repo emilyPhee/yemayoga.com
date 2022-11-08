@@ -24,6 +24,10 @@ html {
   font-family: 'Nunito', sans-serif;
 }
 
+p {
+  margin-bottom: 0.7rem !important;
+}
+
 @media screen and (min-width: 1400px) {
   html {
     font-size: 63.75%;
