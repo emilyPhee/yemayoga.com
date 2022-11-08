@@ -25,8 +25,8 @@ const YogaClassCard = ({ data }) => {
           <h4 className="name">{name}</h4>
         </div>
       </Link>
-      <p className="level">{level.join(' | ')}</p>
-      {duration ? <p className="duration">{`${duration} min`}</p> : null}
+      <span className="level">{level.join(' | ')}</span>
+      {duration ? <span className="duration">{`${duration} min`}</span> : null}
     </Container>
   );
 };
