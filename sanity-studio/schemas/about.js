@@ -1,5 +1,5 @@
 export default {
-  title: 'About Yemayoga',
+  title: 'About',
   name: 'about',
   type: 'document',
   fields: [
@@ -15,7 +15,7 @@ export default {
       title: 'About Title',
       name: 'about_title',
       type: 'string',
-      validation: Rule => Rule.required().max(100),
+      validation: (Rule) => Rule.required().max(100),
     },
     {
       title: 'About Introduction (KR)',
@@ -23,7 +23,7 @@ export default {
       type: 'array',
       of: [{ type: 'block' }],
       description: 'Please type the about Introduction in Korean.',
-      validation: Rule => Rule.required().max(400),
+      validation: (Rule) => Rule.required().max(400),
     },
     {
       title: 'About Introduction (EN)',
@@ -31,7 +31,7 @@ export default {
       type: 'array',
       of: [{ type: 'block' }],
       description: 'Please type the about Introduction in English.',
-      validation: Rule => Rule.required().max(400),
+      validation: (Rule) => Rule.required().max(400),
     },
     {
       title: 'Instructor Name',
@@ -43,7 +43,7 @@ export default {
       name: 'instructor_sub_name',
       type: 'string',
       description: 'Please type the secondary name (Optional).',
-      validation: Rule => Rule.optional().max(20),
+      validation: (Rule) => Rule.optional().max(20),
     },
     {
       title: 'Instructor Introduction (KR)',
@@ -51,7 +51,7 @@ export default {
       type: 'array',
       of: [{ type: 'block' }],
       description: 'Please type the introduction in Korean.',
-      validation: Rule => Rule.required().max(1300),
+      validation: (Rule) => Rule.required().max(1300),
     },
     {
       title: 'Instructor Introduction (EN)',
@@ -59,7 +59,7 @@ export default {
       type: 'array',
       of: [{ type: 'block' }],
       description: 'Please type the introduction in English.',
-      validation: Rule => Rule.required().max(1300),
+      validation: (Rule) => Rule.required().max(1300),
     },
     {
       title: 'Instructor Image',

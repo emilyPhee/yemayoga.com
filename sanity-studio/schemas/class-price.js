@@ -1,5 +1,5 @@
 export default {
-  title: 'Class Price',
+  title: 'Prices',
   name: 'classPrice',
   type: 'document',
   fields: [

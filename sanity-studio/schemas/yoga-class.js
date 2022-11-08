@@ -1,5 +1,5 @@
 export default {
-  title: 'Yoga Class (home/main)',
+  title: 'Home - Classes',
   name: 'yogaClass',
   type: 'document',
   fields: [
@@ -7,7 +7,7 @@ export default {
       title: 'Name',
       name: 'name',
       type: 'string',
-      validation: Rule => Rule.required().max(80),
+      validation: (Rule) => Rule.required().max(80),
     },
     {
       title: 'Card image',
@@ -21,7 +21,7 @@ export default {
       title: 'Duration in minutes',
       name: 'duration',
       type: 'number',
-      validation: Rule => Rule.min(1).max(1000),
+      validation: (Rule) => Rule.min(1).max(1000),
     },
     {
       title: 'Level',
