@@ -17,22 +17,21 @@ export const Container = styled.li`
     transition: all 200ms ease-in-out;
     width: 25rem;
     height: 30rem;
+    opacity: 0.85;
   }
 
   .class-img:hover {
-    opacity: 0.6;
+    opacity: 0.5;
     cursor: pointer;
   }
 
   .name {
     position: absolute;
-    /* bottom: 1.5rem;
-    left: 2rem; */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     color: ${theme.colors.whiteText};
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     letter-spacing: 0.1rem;
   }
 
