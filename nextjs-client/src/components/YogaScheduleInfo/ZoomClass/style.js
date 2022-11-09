@@ -128,10 +128,6 @@ export const Container = styled.div`
       gap: 1rem;
     }
 
-    .zoom-class-title {
-      font-size: 1.3rem;
-    }
-
     .grid-wrapper {
       grid-template-columns: 1fr;
       width: 80%;

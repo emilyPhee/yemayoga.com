@@ -65,7 +65,6 @@ export const Container = styled.div`
     }
 
     .schedule-title {
-      font-size: 1.5rem;
       padding: 1rem;
     }
 
