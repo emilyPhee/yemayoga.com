@@ -21,7 +21,7 @@ const Footer = () => {
         >
           <div className="insta-link-wrapper">
             <FontAwesomeIcon icon={faInstagram} />
-            <p>yemayoga</p>
+            <span>yemayoga</span>
           </div>
         </a>
       </div>
@@ -35,9 +35,9 @@ const Footer = () => {
         />
       </div>
 
-      <p className="copyright">
+      <span className="copyright">
         © {new Date().getFullYear()} Yemayoga. All right reserved
-      </p>
+      </span>
     </Container>
   );
 };

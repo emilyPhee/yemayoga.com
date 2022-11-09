@@ -4,6 +4,7 @@ import { urlFor } from 'src/sanity/image-url';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 import { PortableText } from '@portabletext/react';
 import { AnimatedDivElement } from '@styles/shared-styled-component';
+import { components } from '@styles/shared-styled-component';
 
 const YogaSystem = ({ yogaSystem }) => {
   const { title, image, description_en, description_kr } = yogaSystem;
@@ -36,6 +37,7 @@ const YogaSystem = ({ yogaSystem }) => {
                 ? description_en
                 : description_kr
             }
+            components={components}
           />
         </AnimatedDivElement>
       </div>

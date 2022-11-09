@@ -2,6 +2,7 @@ import { Container } from './style';
 import { PortableText } from '@portabletext/react';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 import { AnimatedDivElement } from '@styles/shared-styled-component';
+import { components } from '@styles/shared-styled-component';
 
 const YogaDescription = ({ data, language }) => {
   const { preferredLanguage } = useLanguages();
@@ -30,6 +31,7 @@ const YogaDescription = ({ data, language }) => {
                 ? yoga_description_en
                 : yoga_description_kr
             }
+            components={components}
           />
         </AnimatedDivElement>
       </div>

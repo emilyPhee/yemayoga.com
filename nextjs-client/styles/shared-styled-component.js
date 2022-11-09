@@ -1,6 +1,14 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
+export const components = {
+  block: {
+    normal: ({ children }) => (
+      <p style={{ marginBottom: '1rem' }}>{children}</p>
+    ),
+  },
+};
+
 const loadAnimate = keyframes`
     from {
         opacity: 0;

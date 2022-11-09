@@ -65,7 +65,6 @@ export const Container = styled.div`
     }
 
     .schedule-title {
-      font-size: 1.5rem;
       padding: 1rem;
     }
 
@@ -76,9 +75,6 @@ export const Container = styled.div`
 
   ${theme.mediaQuery.smallScreen} {
     height: 98%;
-    .schedule-title {
-      font-size: 1.5rem;
-    }
 
     .yoga-schedule-wrapper {
       background-color: ${theme.colors.brandColor2};

@@ -4,6 +4,7 @@ import { urlFor } from 'src/sanity/image-url';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 import { AnimatedDivElement } from '@styles/shared-styled-component';
 import { PortableText } from '@portabletext/react';
+import { components } from '@styles/shared-styled-component';
 
 const AboutIntro = ({ data }) => {
   const { about_img, about_title, about_intro_kr, about_intro_en } = data[0];
@@ -41,6 +42,7 @@ const AboutIntro = ({ data }) => {
                   ? about_intro_en
                   : about_intro_kr
               }
+              components={components}
             />
           </AnimatedDivElement>
         </div>
