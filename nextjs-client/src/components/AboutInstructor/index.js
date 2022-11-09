@@ -5,6 +5,7 @@ import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
 import { PortableText } from '@portabletext/react';
 import { AnimatedDivElement } from '@styles/shared-styled-component';
+import { components } from '@styles/shared-styled-component';
 
 const AboutInstructor = ({ data }) => {
   const { preferredLanguage } = useLanguages();
@@ -35,6 +36,7 @@ const AboutInstructor = ({ data }) => {
                 ? introduction_en
                 : introduction_kr
             }
+            components={components}
           />
         </AnimatedDivElement>
       </div>
