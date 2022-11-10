@@ -64,7 +64,7 @@ export default function Home({ data }) {
     <Container>
       <div className="home-intro">
         <div className="intro-wrapper">
-          <h1 className="title">Breathe and flow with Yemayoga </h1>
+          <h1 className="title">breathe and flow with Yemayoga </h1>
           <AnimatedParagraph
             key={String(preferredLanguage)}
             className="introduction"
