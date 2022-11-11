@@ -1,5 +1,9 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+import { theme } from '@styles/theme';
+
+import { supportLanguages } from '@contexts/languageContext';
 
 export const components = {
   block: {
@@ -29,4 +33,23 @@ export const AnimatedDivElement = styled.div`
 
 export const AnimatedOrderedListElement = styled.ol`
   animation: ${loadAnimate} 0.4s ease-in-out;
+`;
+
+export const AnimatedLanguageParagraph = styled(AnimatedParagraph)`
+  ${({ preferredLanguage }) =>
+    preferredLanguage === supportLanguages.English
+      ? css`
+          font-size: 2.3rem;
+
+          ${theme.mediaQuery.smallScreen} {
+            font-size: 1.6rem;
+          }
+        `
+      : css`
+          font-size: 2rem;
+
+          ${theme.mediaQuery.smallScreen} {
+            font-size: 1.5rem;
+          }
+        `}
 `;
