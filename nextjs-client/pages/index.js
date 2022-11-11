@@ -45,14 +45,15 @@ const Container = styled.section`
     .intro-wrapper {
       position: absolute;
       top: 20%;
-      left: 10%;
+      left: 7.3%;
     }
     .title {
-      font-size: 3rem;
+      font-size: 2.8rem;
     }
     .introduction {
-      font-size: 1.65rem;
-      width: 95%;
+      font-size: 1.5rem;
+
+      width: 97%;
       line-height: 3rem;
     }
   }
@@ -81,7 +82,7 @@ export default function Home({ data }) {
                 <br />
                 그로 인해서 자신이 할 수 있다는 그 마음을 알아가는 것.
                 <br />
-                자신의 가치를 더 알아가는 요가 수련을 함께 합니다.
+                자신의 가치를 알아가는 요가 수련을 함께 합니다.
               </>
             )}
           </AnimatedParagraph>
