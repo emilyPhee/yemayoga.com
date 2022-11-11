@@ -6,7 +6,7 @@ import { yogaClassesQuery } from '../src/sanity/queries/index';
 import { theme } from '@styles/theme';
 import ClassReview from '@components/ClassReview';
 import { reviewQuery } from 'src/sanity/queries/review';
-import { AnimatedParagraph } from '@styles/shared-styled-component';
+import { AnimatedLanguageParagraph } from '@styles/shared-styled-component';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
 import { Divider } from '@chakra-ui/react';
@@ -32,7 +32,6 @@ const Container = styled.section`
 
   .introduction {
     margin-top: 2rem;
-    font-size: 2rem;
     width: 50rem;
     line-height: 3.5rem;
   }
@@ -45,14 +44,13 @@ const Container = styled.section`
     .intro-wrapper {
       position: absolute;
       top: 20%;
-      left: 10%;
+      left: 7.3%;
     }
     .title {
       font-size: 3rem;
     }
     .introduction {
-      font-size: 1.65rem;
-      width: 95%;
+      width: 97%;
       line-height: 3rem;
     }
   }
@@ -65,9 +63,10 @@ export default function Home({ data }) {
       <div className="home-intro">
         <div className="intro-wrapper">
           <h1 className="title">breathe and flow with Yemayoga </h1>
-          <AnimatedParagraph
+          <AnimatedLanguageParagraph
             key={String(preferredLanguage)}
             className="introduction"
+            preferredLanguage={preferredLanguage}
           >
             {preferredLanguage === supportLanguages.English ? (
               <>
@@ -81,10 +80,10 @@ export default function Home({ data }) {
                 <br />
                 그로 인해서 자신이 할 수 있다는 그 마음을 알아가는 것.
                 <br />
-                자신의 가치를 더 알아가는 요가 수련을 함께 합니다.
+                자신의 가치를 알아가는 요가 수련을 함께 합니다.
               </>
             )}
-          </AnimatedParagraph>
+          </AnimatedLanguageParagraph>
         </div>
       </div>
 
