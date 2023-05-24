@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   .grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     grid-auto-rows: 1fr;
 
     width: 77%;
