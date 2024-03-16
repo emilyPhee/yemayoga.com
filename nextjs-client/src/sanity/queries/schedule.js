@@ -19,3 +19,10 @@ export const priceQuery = `
     title, price, _id
    }
 `;
+
+export const isUnderMaintenanceQuery = `
+   *[_type == 'schedule_maintenance']
+   {
+    is_under_maintenance
+   }
+`;

@@ -4,6 +4,7 @@ import {
   scheduleQuery,
   zoomClassQuery,
   priceQuery,
+  isUnderMaintenanceQuery,
 } from 'src/sanity/queries/schedule';
 import client from 'src/sanity/client';
 import styled from '@emotion/styled';
@@ -13,6 +14,8 @@ import ClassPriceList from '@components/YogaScheduleInfo/ClassPriceList';
 
 export const Container = styled.div`
   background-color: ${theme.colors.brandColor3};
+  position: relative;
+
   .title {
     letter-spacing: 0.1rem;
     font-size: ${theme.sizes.fontsTitleSize};
@@ -20,6 +23,16 @@ export const Container = styled.div`
     color: ${theme.colors.greyText};
     text-align: center;
     margin: 8rem 0;
+  }
+
+  .maintenance-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 `;
 
@@ -33,8 +46,17 @@ const formatTime = (start_time, end_time) => {
   return `${start_time.hour}:${startTimeMinute} - ${end_time.hour}:${endTimeMinute} ${end_time.period}`;
 };
 export default function Schedule({ data }) {
+  const isUnderMaintenance =
+    data.isUnderMaintenanceData?.[0].is_under_maintenance;
+
   return (
     <Container>
+      {isUnderMaintenance && (
+        <div className="maintenance-overlay">
+          <p>요가 수업 스케줄 업데이트 중입니다.</p>
+          <p>The class schedules are being updated.</p>
+        </div>
+      )}
       <h1 className="title">Schedule</h1>
       <ScheduleList data={data.scheduleData} formatTime={formatTime} />
 
@@ -55,8 +77,14 @@ export async function getStaticProps() {
   const scheduleData = await client.fetch(scheduleQuery);
   const zoomClassData = await client.fetch(zoomClassQuery);
   const classPriceData = await client.fetch(priceQuery);
+  const isUnderMaintenanceData = await client.fetch(isUnderMaintenanceQuery);
 
-  const data = { scheduleData, zoomClassData, classPriceData };
+  const data = {
+    scheduleData,
+    zoomClassData,
+    classPriceData,
+    isUnderMaintenanceData,
+  };
 
   return {
     props: {
