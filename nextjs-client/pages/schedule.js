@@ -11,6 +11,7 @@ import styled from '@emotion/styled';
 import { theme } from '@styles/theme';
 import ZoomClass from '@components/YogaScheduleInfo/ZoomClass';
 import ClassPriceList from '@components/YogaScheduleInfo/ClassPriceList';
+import Overlay from '@components/Overlay';
 
 export const Container = styled.div`
   background-color: ${theme.colors.brandColor3};
@@ -23,16 +24,6 @@ export const Container = styled.div`
     color: ${theme.colors.greyText};
     text-align: center;
     margin: 8rem 0;
-  }
-
-  .maintenance-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: rgba(255, 255, 255, 0.8);
   }
 `;
 
@@ -52,10 +43,10 @@ export default function Schedule({ data }) {
   return (
     <Container>
       {isUnderMaintenance && (
-        <div className="maintenance-overlay">
-          <p>요가 수업 스케줄 업데이트 중입니다.</p>
-          <p>The class schedules are being updated.</p>
-        </div>
+        <Overlay
+          krMessage={'요가 수업 스케줄 업데이트 중입니다.'}
+          engMessage={'The class schedules are being updated.'}
+        />
       )}
       <h1 className="title">Schedule</h1>
       <ScheduleList data={data.scheduleData} formatTime={formatTime} />

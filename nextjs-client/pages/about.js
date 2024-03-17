@@ -5,8 +5,11 @@ import { aboutQuery } from 'src/sanity/queries/about';
 import AboutInstructor from '@components/AboutInstructor';
 import styled from '@emotion/styled';
 import { Divider } from '@chakra-ui/react';
+import Overlay from '@components/Overlay';
 
 const Container = styled.div`
+  position: relative;
+
   .divider-container {
     padding: 0 5rem;
   }
@@ -14,6 +17,10 @@ const Container = styled.div`
 export default function About({ data }) {
   return (
     <Container>
+      <Overlay
+        krMessage={'홈페이지 업데이트 중입니다.'}
+        engMessage={'The homepage is being updated.'}
+      />
       <AboutIntro data={data.aboutData} />
       <div className="divider-container">
         <Divider />

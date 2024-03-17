@@ -10,8 +10,11 @@ import { AnimatedLanguageParagraph } from '@styles/shared-styled-component';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
 import { Divider } from '@chakra-ui/react';
+import Overlay from '@components/Overlay';
 
 const Container = styled.section`
+  position: relative;
+
   .home-intro {
     background: url('/images/home-intro2.jpg') center/cover no-repeat;
     height: 100vh;
@@ -60,6 +63,10 @@ export default function Home({ data }) {
   const { preferredLanguage } = useLanguages();
   return (
     <Container>
+      <Overlay
+        krMessage={'홈페이지 업데이트 중입니다.'}
+        engMessage={'The homepage is being updated.'}
+      />
       <div className="home-intro">
         <div className="intro-wrapper">
           <h1 className="title">breathe and flow with Yemayoga </h1>

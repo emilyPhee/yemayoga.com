@@ -4,10 +4,12 @@ import { theme } from '@styles/theme';
 import Layout from '@components/Layout';
 import styled from '@emotion/styled';
 import EmailContactForm from '@components/EmailContactForm';
+import Overlay from '@components/Overlay';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
 
   .top-box {
     display: flex;
@@ -119,6 +121,10 @@ export default function Contact() {
 
   return (
     <Container>
+      <Overlay
+        krMessage={'홈페이지 업데이트 중입니다.'}
+        engMessage={'The homepage is being updated.'}
+      />
       <div className="top-box">
         <h1 className="title">Contact & Location</h1>
       </div>
