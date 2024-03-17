@@ -10,6 +10,7 @@ export const Container = styled.section`
   font-family: ${theme.fonts.nunito};
   position: relative;
   padding: 3rem ${theme.sizes.paddingFullScreen};
+  z-index: 4;
 
   .left-box {
     margin-top: 2rem;

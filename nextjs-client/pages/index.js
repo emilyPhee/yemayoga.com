@@ -10,8 +10,12 @@ import { AnimatedLanguageParagraph } from '@styles/shared-styled-component';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
 import { Divider } from '@chakra-ui/react';
+import Overlay from '@components/Overlay';
+import { homeMaintenanceQuery } from 'src/sanity/queries/page-maintenance';
 
 const Container = styled.section`
+  position: relative;
+
   .home-intro {
     background: url('/images/home-intro2.jpg') center/cover no-repeat;
     height: 100vh;
@@ -57,9 +61,19 @@ const Container = styled.section`
 `;
 
 export default function Home({ data }) {
+  const isUnderMaintenance =
+    data.isUnderMaintenanceData?.[0].home_under_maintenance;
+
   const { preferredLanguage } = useLanguages();
   return (
     <Container>
+      {isUnderMaintenance && (
+        <Overlay
+          krMessage={'페이지 업데이트 중입니다.'}
+          engMessage={'The page is being updated.'}
+        />
+      )}
+
       <div className="home-intro">
         <div className="intro-wrapper">
           <h1 className="title">breathe and flow with Yemayoga </h1>
@@ -103,8 +117,9 @@ Home.getLayout = function getLayout(page) {
 export async function getStaticProps() {
   const yogaClassData = await client.fetch(yogaClassesQuery);
   const reviewData = await client.fetch(reviewQuery);
+  const isUnderMaintenanceData = await client.fetch(homeMaintenanceQuery);
 
-  const data = { yogaClassData, reviewData };
+  const data = { yogaClassData, reviewData, isUnderMaintenanceData };
 
   return {
     props: {
