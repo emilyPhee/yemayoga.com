@@ -5,6 +5,8 @@ import Layout from '@components/Layout';
 import styled from '@emotion/styled';
 import EmailContactForm from '@components/EmailContactForm';
 import Overlay from '@components/Overlay';
+import { contactMaintenanceQuery } from 'src/sanity/queries/page-maintenance';
+import client from '../src/sanity/client';
 
 const Container = styled.div`
   display: flex;
@@ -112,19 +114,24 @@ const MapContainer = styled.div`
   }
 `;
 
-export default function Contact() {
+export default function Contact({ data }) {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   });
+
+  const isUnderMaintenance =
+    data.isUnderMaintenanceData?.[0].contact_under_maintenance;
 
   if (!isLoaded) return <div>Loading...</div>;
 
   return (
     <Container>
-      <Overlay
-        krMessage={'홈페이지 업데이트 중입니다.'}
-        engMessage={'The homepage is being updated.'}
-      />
+      {isUnderMaintenance && (
+        <Overlay
+          krMessage={'페이지 업데이트 중입니다.'}
+          engMessage={'The page is being updated.'}
+        />
+      )}
       <div className="top-box">
         <h1 className="title">Contact & Location</h1>
       </div>
@@ -172,4 +179,16 @@ function Map() {
       </GoogleMap>
     </MapContainer>
   );
+}
+
+export async function getStaticProps() {
+  const isUnderMaintenanceData = await client.fetch(contactMaintenanceQuery);
+
+  const data = { isUnderMaintenanceData };
+
+  return {
+    props: {
+      data,
+    },
+  };
 }

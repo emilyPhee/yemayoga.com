@@ -4,7 +4,6 @@ import {
   scheduleQuery,
   zoomClassQuery,
   priceQuery,
-  isUnderMaintenanceQuery,
 } from 'src/sanity/queries/schedule';
 import client from 'src/sanity/client';
 import styled from '@emotion/styled';
@@ -12,6 +11,7 @@ import { theme } from '@styles/theme';
 import ZoomClass from '@components/YogaScheduleInfo/ZoomClass';
 import ClassPriceList from '@components/YogaScheduleInfo/ClassPriceList';
 import Overlay from '@components/Overlay';
+import { scheduleMaintenanceQuery } from 'src/sanity/queries/page-maintenance';
 
 export const Container = styled.div`
   background-color: ${theme.colors.brandColor3};
@@ -38,7 +38,7 @@ const formatTime = (start_time, end_time) => {
 };
 export default function Schedule({ data }) {
   const isUnderMaintenance =
-    data.isUnderMaintenanceData?.[0].is_under_maintenance;
+    data.isUnderMaintenanceData?.[0].schedule_under_maintenance;
 
   return (
     <Container>
@@ -68,7 +68,7 @@ export async function getStaticProps() {
   const scheduleData = await client.fetch(scheduleQuery);
   const zoomClassData = await client.fetch(zoomClassQuery);
   const classPriceData = await client.fetch(priceQuery);
-  const isUnderMaintenanceData = await client.fetch(isUnderMaintenanceQuery);
+  const isUnderMaintenanceData = await client.fetch(scheduleMaintenanceQuery);
 
   const data = {
     scheduleData,

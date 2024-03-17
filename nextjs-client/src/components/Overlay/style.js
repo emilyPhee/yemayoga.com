@@ -15,7 +15,6 @@ export const Container = styled.div`
       background-color: ${theme.colors.mainBackground};
       border: 2px solid ${theme.colors.brandColor1};
       color: ${theme.colors.blackText};
-      font-weight: 500;
       padding: 4rem 6rem;
       position: absolute;
       top: 20rem;
@@ -26,6 +25,23 @@ export const Container = styled.div`
     .kr-msg,
     .eng-msg {
       font-size: 2rem;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .kr-msg {
+      font-family: ${theme.fonts.nanumGothic};
+      margin-bottom: 1rem;
+    }
+
+    .eng-msg {
+      font-family: ${theme.fonts.nunito};
+    }
+
+    .email {
+      font-size: 1.4rem;
+      text-align: center;
+      margin-top: 2rem;
     }
 
     ${theme.mediaQuery.tablet} {
