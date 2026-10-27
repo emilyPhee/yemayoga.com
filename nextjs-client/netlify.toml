@@ -4,3 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "24"
+
+# Existing Netlify sites may not auto-enable the runtime after removing v4.
+# Resolve this adapter from package-lock.json so routes/functions are generated.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

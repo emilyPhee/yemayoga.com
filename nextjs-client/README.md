@@ -34,12 +34,17 @@ In the existing Netlify site's build settings, confirm:
 - Environment variables: all names in `.env.example`, with real integration
   credentials stored in Netlify rather than committed to Git
 
-`netlify.toml` pins Node 24, matching `.nvmrc` and `package.json`. The legacy
-explicit `@netlify/plugin-nextjs` entry has been removed so Netlify can apply
-its current Next.js adapter automatically. Check the deploy log for Node 24,
-Next.js 16, and the current adapter. Remove any conflicting legacy adapter pins
-in the Netlify UI. Clear the build cache for the first deployment after this
-upgrade.
+`netlify.toml` pins Node 24, matching `.nvmrc` and `package.json`. It explicitly
+enables `@netlify/plugin-nextjs`, whose v5 version is locked in `package-lock.json`.
+This existing Netlify site did not auto-enable the adapter after the v4 entry
+was removed. Without the adapter, publishing raw `.next` output succeeds but
+serves Netlify 404 pages because no routes or server functions are generated.
+
+Check the deploy log for Node 24, Next.js 16, and `Using Next.js Runtime - v5`.
+The adapter must run after `next build`, and the deploy must include its server
+function. If the runtime line is missing or the deploy reports zero functions,
+do not consider that deployment healthy. Remove conflicting legacy adapter pins
+in the Netlify UI. Clear the build cache for the first deploy after this fix.
 
 ## Deploying from Sanity
 
