@@ -24,7 +24,8 @@ const useMediaQUery = width => {
     if (media.matches) {
       setTargetReached(true);
     }
-  }, []);
+    return () => media.removeEventListener('change', updateTarget);
+  }, [width, updateTarget]);
   return targetReached;
 };
 

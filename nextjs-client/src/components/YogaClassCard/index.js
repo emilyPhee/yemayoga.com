@@ -1,5 +1,5 @@
 import { Container } from './style';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { urlFor } from '../../sanity/image-url';
 import Link from 'next/link';
 

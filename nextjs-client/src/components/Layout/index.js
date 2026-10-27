@@ -1,7 +1,7 @@
 import Footer from './Footer';
 import Navbar from './Navbar';
 import { Container } from './style';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 const Layout = ({ currentPage, children }) => {
   return (
     <Container>

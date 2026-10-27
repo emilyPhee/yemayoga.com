@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import LanguageToggle from '@components/LanguageToggle';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 
 import { Container, MenuItem } from './style';
@@ -30,11 +30,11 @@ const HamburgerMenu = ({ currentPage }) => {
         </div>
 
         <Link href="/">
-          <a>
+          <div className="logo-link">
             <div className="logo-wrapper">
               <Image src="/images/logo.svg" alt="logo" layout="fill" />
             </div>
-          </a>
+          </div>
         </Link>
 
         <div className="right-box">

@@ -7,7 +7,7 @@ const YogaSystemList = ({ data }) => {
 
   return (
     <Container>
-      {yoga_systems === undefined ? (
+      {!Array.isArray(yoga_systems) || yoga_systems.length === 0 ? (
         <div className="divider-container">
           <Divider />
         </div>

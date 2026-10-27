@@ -1,5 +1,5 @@
 import { useScrollPosition } from 'src/hooks/useScrollPosition';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { Container, MenuItem } from './style';
 import Link from 'next/link';
 
@@ -14,11 +14,11 @@ const FullScreenMenu = ({ currentPage }) => {
     <Container scroll={scrollPosition > 0}>
       <div className="left-box">
         <Link href="/">
-          <a>
+          <div className="logo-link">
             <div className="logo-wrapper">
               <Image src="/images/logo.png" alt="logo" layout="fill" />
             </div>
-          </a>
+          </div>
         </Link>
 
         <div className="menu-items-wrapper">

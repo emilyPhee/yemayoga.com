@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { Container } from './style';
 
 import useEmblaCarousel from 'embla-carousel-react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import ClassNames from 'embla-carousel-class-names';
 
 import { supportLanguages, useLanguages } from '@contexts/languageContext';

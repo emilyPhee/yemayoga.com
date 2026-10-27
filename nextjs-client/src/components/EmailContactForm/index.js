@@ -69,7 +69,7 @@ const EmailContactForm = () => {
 
   useEffect(() => {
     reset();
-  }, [emailSuccess]);
+  }, [emailSuccess, reset]);
 
   const onFormSubmit = async entered_values => {
     setEmailSending(true);
