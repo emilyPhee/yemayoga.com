@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Yema Yoga website
 
-## Getting Started
+Next.js Pages Router website with English/Korean content from Sanity. The
+separate `../sanity-studio` app manages content and the Netlify deployment widget.
 
-First, run the development server:
+## Local development and checks
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Use Node.js 24 (`nvm use` reads `.nvmrc`) and npm. `package-lock.json` is the
+single dependency lockfile; do not regenerate a Yarn lockfile.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Copy `.env.example` to `.env.local` and fill in the contact integration values.
+   The public Sanity project/dataset values already match the Studio.
+2. Run `npm ci`.
+3. Run `npm run dev` and visit http://localhost:3000.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Run `npm run lint` and `npm run build` before deploying. The production build
+reads published Sanity content and needs network access. The Sanity variables
+are required to build; Maps, reCAPTCHA, and SMTP settings are also required to
+fully exercise the contact page and email delivery. `npm start` serves the
+completed production build locally.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The site stays on React 18 for compatibility with the existing UI libraries.
+Next.js 16 supports this in Pages Router but warns that Next.js 17 will require
+React 19. Existing image layouts use `next/legacy/image` during this migration.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Netlify deployment
 
-## Learn More
+In the existing Netlify site's build settings, confirm:
 
-To learn more about Next.js, take a look at the following resources:
+- Base directory: `nextjs-client`
+- Build command: `npm run build`
+- Publish directory: `.next` (relative to the base directory)
+- Production branch: the branch containing these changes
+- Environment variables: all names in `.env.example`, with real integration
+  credentials stored in Netlify rather than committed to Git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`netlify.toml` pins Node 24, matching `.nvmrc` and `package.json`. The legacy
+explicit `@netlify/plugin-nextjs` entry has been removed so Netlify can apply
+its current Next.js adapter automatically. Check the deploy log for Node 24,
+Next.js 16, and the current adapter. Remove any conflicting legacy adapter pins
+in the Netlify UI. Clear the build cache for the first deployment after this
+upgrade.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deploying from Sanity
 
-## Deploy on Vercel
+The existing widget in `../sanity-studio/src/dashboardConfig.js` triggers the
+Netlify website build hook. It does not build the website inside Sanity Studio.
+No widget changes are needed if the existing site and hook are still valid.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push the website changes to the branch targeted by the Netlify build hook.
+2. Complete the first successful Netlify deployment with the cache cleared.
+3. Publish a content update in Sanity, then use its deployment widget.
+4. Confirm that Netlify creates a new successful deploy from the expected branch.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If clicking the widget creates no deployment, confirm builds are active and
+the hook still exists under Netlify's Continuous deployment > Build hooks.
+If it must be replaced, update `buildHookId` in the Studio's dashboard config
+and redeploy the Studio. If a deployment starts but fails, inspect its build
+log: that is a website build failure rather than a missing trigger.
+
+Maintenance switches are content settings. Leave them enabled until the
+instructor has approved the current location, schedule, and prices. Publishing
+a switch change also requires a website rebuild.

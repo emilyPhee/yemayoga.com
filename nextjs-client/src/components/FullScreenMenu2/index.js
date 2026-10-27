@@ -1,6 +1,6 @@
 import { Container, MenuItem } from './style';
 import { useScrollPosition } from 'src/hooks/useScrollPosition';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -39,10 +39,8 @@ const FullScreenMenu2 = ({ currentPage }) => {
       </div>
 
       <div className="main-logo">
-        <Link href="/">
-          <a style={{ fontSize: 0, cursor: 'pointer' }}>
-            <Image src="/images/logo.svg" alt="logo" width={150} height={65} />
-          </a>
+        <Link href="/" style={{ fontSize: 0, cursor: 'pointer' }}>
+          <Image src="/images/logo.svg" alt="logo" width={150} height={65} />
         </Link>
       </div>
 

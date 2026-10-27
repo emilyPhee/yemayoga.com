@@ -1,5 +1,5 @@
 import { Container } from './style';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { urlFor } from 'src/sanity/image-url';
 import { supportLanguages, useLanguages } from '@contexts/languageContext';
 
