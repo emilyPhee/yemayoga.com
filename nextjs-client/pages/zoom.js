@@ -34,6 +34,8 @@ Zoom.getLayout = function getLayout(page) {
 
 export async function getStaticProps() {
   const zoomPageData = await client.fetch(zoomPageQuery);
+  if (!zoomPageData) return { notFound: true };
+
   const zoomImageData = await client.fetch(zoomImageQuery);
 
   const data = { zoomPageData, zoomImageData };

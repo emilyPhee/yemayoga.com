@@ -40,6 +40,8 @@ Ashtanga.getLayout = function getLayout(page) {
 
 export async function getStaticProps() {
   const ashtangaPageData = await client.fetch(ashtangaPageQuery);
+  if (!ashtangaPageData) return { notFound: true };
+
   const ashtangaImageData = await client.fetch(ashtangaImageQuery);
 
   const data = { ashtangaPageData, ashtangaImageData };

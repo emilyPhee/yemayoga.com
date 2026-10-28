@@ -30,6 +30,8 @@ Private.getLayout = function getLayout(page) {
 
 export async function getStaticProps() {
   const privatePageData = await client.fetch(privatePageQuery);
+  if (!privatePageData) return { notFound: true };
+
   const privateImageData = await client.fetch(privateImageQuery);
 
   const data = { privatePageData, privateImageData };

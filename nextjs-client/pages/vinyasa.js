@@ -27,6 +27,8 @@ Vinyasa.getLayout = function getLayout(page) {
 
 export async function getStaticProps() {
   const vinyasaPageData = await client.fetch(vinyasaPageQuery);
+  if (!vinyasaPageData) return { notFound: true };
+
   const vinyasaImageData = await client.fetch(vinyasaImageQuery);
 
   const data = { vinyasaPageData, vinyasaImageData };
