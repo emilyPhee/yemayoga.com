@@ -10,6 +10,7 @@ const YogaClassCard = ({ data }) => {
   return (
     <Container>
       <Link
+        className="class-link"
         href={yogaClassNameList.includes(name) ? `/${name.toLowerCase()}` : '/'}
       >
         <div className="card-wrapper">
@@ -22,7 +23,9 @@ const YogaClassCard = ({ data }) => {
               blurDataURL={`/_next/image?url=${urlFor(image)}&w=16&q=1`}
             />
           </div>
-          <h4 className="name">{name}</h4>
+          <h3 className="name" data-long-title={name.length > 24}>
+            {name}
+          </h3>
         </div>
       </Link>
       <span className="level">{level.join(' | ')}</span>
