@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="left-box">
         <h4 className="title">YEMAYOGA</h4>
         <p className="info">
-          Irvine Blvd - Yale <br />
+          Great Park <br />
           Irvine, CA <br />
           United States <br />
           yemadoesyoga@gmail.com

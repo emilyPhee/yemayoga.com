@@ -142,7 +142,7 @@ export default function Contact({ data }) {
             <div className="location-wrapper">
               <h2 className="location-title">Studio Location</h2>
               <p className="location-content">
-                Irvine Blvd - Yale <br />
+                Great Park <br />
                 Irvine, CA <br />
                 United States
               </p>
@@ -163,11 +163,12 @@ Contact.getLayout = function getLayout(page) {
 };
 
 function Map() {
-  const center = useMemo(() => ({ lat: 33.7144, lng: -117.761 }), []);
+  // Great Park neighborhood's place location from the supplied Google Maps link.
+  const center = useMemo(() => ({ lat: 33.6826683, lng: -117.7320792 }), []);
   return (
     <MapContainer>
       <GoogleMap
-        zoom={15}
+        zoom={14}
         center={center}
         mapContainerClassName="map-container"
         options={{
@@ -175,7 +176,7 @@ function Map() {
           mapTypeControl: false,
         }}
       >
-        <MarkerF position={{ lat: 33.7144, lng: -117.761 }} />
+        <MarkerF position={center} title="Great Park neighborhood, Irvine" />
       </GoogleMap>
     </MapContainer>
   );
