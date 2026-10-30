@@ -19,6 +19,10 @@ export const theme = {
     kakaoTalkLink: '#DAC34D',
     link: '#6d99c7',
   },
+  spacing: {
+    cardGap: '0.7rem',
+    cardGapMobile: '1rem',
+  },
   fonts: {
     cantarell: 'Cantarell, sans-serif',
     nanumGothic: 'Nanum Gothic, sans-serif',

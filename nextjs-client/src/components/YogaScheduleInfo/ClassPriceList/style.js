@@ -11,6 +11,7 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+    gap: ${theme.spacing.cardGap};
 
     width: 55%;
     margin: 0 0 5rem 0;
@@ -46,7 +47,7 @@ export const Container = styled.div`
     .price-grid-wrapper {
       width: 80%;
       grid-template-columns: 1fr;
-      row-gap: 0rem;
+      gap: ${theme.spacing.cardGapMobile};
     }
 
     .tooltip-wrapper {

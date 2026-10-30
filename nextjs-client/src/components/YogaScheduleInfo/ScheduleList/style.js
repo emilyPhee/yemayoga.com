@@ -7,26 +7,25 @@ export const Container = styled.div`
 
   .grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    grid-auto-rows: 1fr;
-
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 34rem));
+    justify-content: center;
+    gap: ${theme.spacing.cardGap};
     width: 77%;
-    display: inline-grid;
+    max-width: 144rem;
   }
 
   ${theme.mediaQuery.tablet} {
     .grid-wrapper {
-      grid-template-columns: 1fr 1fr;
-      gap: 3px;
       width: 80%;
     }
   }
 
   ${theme.mediaQuery.smallScreen} {
     .grid-wrapper {
-      grid-template-columns: 1fr;
-      width: 80%;
-      gap: 1px;
+      grid-template-columns: minmax(0, 1fr);
+      width: calc(100% - 4rem);
+      max-width: 34rem;
+      gap: ${theme.spacing.cardGapMobile};
     }
   }
 `;

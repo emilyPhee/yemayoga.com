@@ -23,9 +23,9 @@ export const Container = styled.div`
   }
 
   .grid-wrapper {
-    gap: 0.7rem;
+    gap: ${theme.spacing.cardGap};
     width: 65%;
-    margin: 0.7rem;
+    margin: ${theme.spacing.cardGap} 0;
     margin-bottom: 7rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -125,7 +125,7 @@ export const Container = styled.div`
     }
 
     .grid-wrapper {
-      gap: 1rem;
+      gap: ${theme.spacing.cardGapMobile};
     }
 
     .grid-wrapper {

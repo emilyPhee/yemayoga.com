@@ -3,15 +3,16 @@ import { theme } from '@styles/theme';
 
 export const Container = styled.div`
   font-family: ${theme.fonts.nanumGothic};
-  margin: 0.3rem;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   color: ${theme.colors.blackText};
 
   .title-wrapper {
     display: flex;
     justify-content: center;
     background-color: ${theme.colors.brandColor1};
-    margin-bottom: 0.7rem;
+    margin-bottom: ${theme.spacing.cardGap};
 
     .price-title {
       font-size: 1.6rem;
@@ -22,8 +23,7 @@ export const Container = styled.div`
   .class-price-wrapper {
     background-color: ${theme.colors.brandColor2};
     font-size: ${theme.sizes.bodyFontsSize};
-    height: 80%;
-    height: 1fr;
+    flex: 1;
     padding: 2rem;
     position: relative;
 
@@ -68,10 +68,8 @@ export const Container = styled.div`
   }
 
   ${theme.mediaQuery.smallScreen} {
-    height: 94%;
     .class-price-wrapper {
       padding: 2rem;
-      margin-bottom: 3rem;
     }
   }
 `;
