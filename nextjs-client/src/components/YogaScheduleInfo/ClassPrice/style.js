@@ -16,7 +16,11 @@ export const Container = styled.div`
 
     .price-title {
       font-size: 1.6rem;
-      padding: 1rem 3rem;
+      padding: ${theme.spacing.cardHeaderPadding} ${theme.spacing.cardPadding};
+      line-height: 1.5;
+      text-align: center;
+      text-wrap: balance;
+      overflow-wrap: anywhere;
     }
   }
 
@@ -24,52 +28,44 @@ export const Container = styled.div`
     background-color: ${theme.colors.brandColor2};
     font-size: ${theme.sizes.bodyFontsSize};
     flex: 1;
-    padding: 2rem;
-    position: relative;
+    padding: ${theme.spacing.cardPadding};
 
     .price-wrapper {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 0.4rem 1.6rem;
       letter-spacing: 0.5px;
+      font-variant-numeric: tabular-nums;
+      overflow-wrap: anywhere;
+
+      > div:nth-child(2) {
+        text-align: right;
+        white-space: nowrap;
+      }
     }
   }
 
   .announcement {
-    position: absolute;
-    right: 3rem;
-    bottom: 1rem;
+    grid-column: 1 / -1;
+    text-align: right;
+    font-size: 1.2rem;
+    line-height: 1.6;
     color: ${theme.colors.greyText};
   }
 
   .list-wrapper {
-    line-height: 3;
-  }
-
-  ${theme.mediaQuery.tablet} {
-    .list-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 3rem;
-    }
-
-    .list-wrapper li:not(:last-child) {
-      border-bottom: 1px solid ${theme.colors.brandColor1};
-    }
-
-    .price-wrapper {
-      flex-direction: column;
-      align-items: center;
-      width: 70%;
-    }
-
-    .class-price-wrapper {
-    }
+    display: grid;
+    gap: 1.2rem;
+    line-height: 2;
   }
 
   ${theme.mediaQuery.smallScreen} {
+    .title-wrapper .price-title {
+      padding-inline: ${theme.spacing.cardPaddingMobile};
+    }
+
     .class-price-wrapper {
-      padding: 2rem;
+      padding: ${theme.spacing.cardPaddingMobile};
     }
   }
 `;

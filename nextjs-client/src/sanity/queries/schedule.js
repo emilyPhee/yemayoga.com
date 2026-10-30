@@ -1,7 +1,7 @@
 export const scheduleQuery = `
     *[_type == 'schedule'] | order(order asc)
     {
-        level, yoga_schedule, yoga_name, announcement
+        _id, level, yoga_schedule, yoga_name, announcement
     }
 `;
 

@@ -17,8 +17,11 @@ export const Container = styled.div`
 
     .zoom-class-title {
       font-size: 1.6rem;
-      padding: 1rem 3rem;
-      white-space: nowrap;
+      padding: ${theme.spacing.cardHeaderPadding} ${theme.spacing.cardPadding};
+      line-height: 1.5;
+      text-align: center;
+      text-wrap: balance;
+      overflow-wrap: anywhere;
     }
   }
 
@@ -28,7 +31,7 @@ export const Container = styled.div`
     margin: ${theme.spacing.cardGap} 0;
     margin-bottom: 7rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-auto-rows: 1fr;
   }
 
@@ -50,52 +53,71 @@ export const Container = styled.div`
     .price-title {
       color: ${theme.colors.greyText};
       font-size: 1.6rem;
-      white-space: nowrap;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
     }
   }
 
   .USA-schedule,
   .Korea-schedule,
   .price {
-    padding: 8% 14%;
+    padding: ${theme.spacing.cardPadding};
+    min-width: 0;
     background-color: ${theme.colors.brandColor2};
   }
 
   .date-time-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    white-space: nowrap;
+    gap: 0 1.6rem;
+    font-variant-numeric: tabular-nums;
     .class-time {
       letter-spacing: 0.5px;
+      white-space: nowrap;
     }
   }
 
   .list-wrapper {
-    margin-top: 2rem;
+    margin-top: ${theme.spacing.cardContentGap};
     line-height: 3.1rem;
   }
 
   .list-wrapper > li {
-    white-space: nowrap;
+    overflow-wrap: anywhere;
   }
 
   .price {
-    position: relative;
+    display: flex;
+    flex-direction: column;
 
     .registration-link {
-      position: absolute;
-      right: 15%;
-      bottom: 10%;
-      border-bottom: 1px solid ${theme.colors.lightGreyText};
+      align-self: flex-end;
+      display: inline-flex;
+      align-items: center;
+      min-height: 4.4rem;
+      margin-top: auto;
+      padding-top: 1.6rem;
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
       font-size: 1.3rem;
       color: ${theme.colors.blackText};
       cursor: pointer;
-      transition: all 200ms ease-in-out;
+    }
+
+    .registration-link:hover,
+    .registration-link:focus-visible {
+      color: ${theme.colors.blackText};
+    }
+
+    .registration-link:focus-visible {
+      outline: 2px solid ${theme.colors.blackText};
+      outline-offset: 4px;
     }
   }
 
   .day {
-    margin-right: 7%;
+    flex-shrink: 0;
   }
 
   li {
@@ -109,19 +131,16 @@ export const Container = styled.div`
 
     .grid-wrapper {
       width: 80%;
-      grid-auto-rows: 22rem;
-    }
-
-    .korea-schedule-title,
-    .price-title,
-    .usa-schedule-title {
-      margin-right: 1.5rem;
     }
   }
 
   ${theme.mediaQuery.smallScreen} {
     .title-wrapper {
       width: 80%;
+
+      .zoom-class-title {
+        padding-inline: ${theme.spacing.cardPaddingMobile};
+      }
     }
 
     .grid-wrapper {
@@ -131,20 +150,14 @@ export const Container = styled.div`
     .grid-wrapper {
       grid-template-columns: 1fr;
       width: 80%;
-      grid-auto-rows: 17rem;
+      grid-auto-rows: auto;
       padding-bottom: 3rem;
     }
 
     .USA-schedule,
     .Korea-schedule,
     .price {
-      padding: 3rem;
-    }
-
-    .korea-schedule-title,
-    .price-title,
-    .usa-schedule-title {
-      margin-right: 0;
+      padding: ${theme.spacing.cardPaddingMobile};
     }
 
     .date-time-wrapper {

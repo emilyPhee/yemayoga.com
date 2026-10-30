@@ -26,7 +26,9 @@ const ClassPrice = ({ priceData }) => {
                 {formatClassCount(p.class_count, p.class_count_options)}
               </div>
               <div>{formatPrice(p.amount, p.class_count_options)}</div>
-              <div className="announcement">{p.announcement}</div>
+              {p.announcement && (
+                <div className="announcement">{p.announcement}</div>
+              )}
             </li>
           ))}
         </ul>

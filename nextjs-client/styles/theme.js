@@ -22,6 +22,10 @@ export const theme = {
   spacing: {
     cardGap: '0.7rem',
     cardGapMobile: '1rem',
+    cardPadding: '2.4rem',
+    cardPaddingMobile: '2rem',
+    cardHeaderPadding: '1.2rem',
+    cardContentGap: '2rem',
   },
   fonts: {
     cantarell: 'Cantarell, sans-serif',
